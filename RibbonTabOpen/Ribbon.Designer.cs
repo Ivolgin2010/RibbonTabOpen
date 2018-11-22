@@ -89,7 +89,7 @@
             this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton12);
             this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton8);
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(451, 179);
+            this.ribbon1.Size = new System.Drawing.Size(451, 176);
             this.ribbon1.TabIndex = 0;
             this.ribbon1.Tabs.Add(this.ribbonTab1);
             this.ribbon1.Tabs.Add(this.ribbonTab2);
@@ -191,6 +191,7 @@
             this.ribbonButton1.Image = global::RibbonTabOpen.Properties.Resources.data1;
             this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
             this.ribbonButton1.Text = "Ввод данных";
+            this.ribbonButton1.ToolTip = "ввод анкетных данных";
             this.ribbonButton1.Click += new System.EventHandler(this.click);
             // 
             // ribbonPanel3
@@ -203,6 +204,7 @@
             this.ribbonButton2.Image = global::RibbonTabOpen.Properties.Resources.run1;
             this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
             this.ribbonButton2.Text = "Пуск";
+            this.ribbonButton2.ToolTip = "запуск расчета";
             // 
             // ribbonPanel4
             // 
@@ -217,12 +219,14 @@
             this.ribbonButton3.Image = global::RibbonTabOpen.Properties.Resources.report;
             this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
             this.ribbonButton3.Text = "Создать отчет";
+            this.ribbonButton3.ToolTip = "создать отчет";
             // 
             // ribbonButton4
             // 
             this.ribbonButton4.Image = global::RibbonTabOpen.Properties.Resources.open;
             this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
             this.ribbonButton4.Text = "Просмотр отчета";
+            this.ribbonButton4.ToolTip = "просмотр отчета";
             this.ribbonButton4.Click += new System.EventHandler(this.click_Viewer);
             // 
             // ribbonButton5
@@ -230,6 +234,7 @@
             this.ribbonButton5.Image = global::RibbonTabOpen.Properties.Resources.plot;
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "График";
+            this.ribbonButton5.ToolTip = "построить результирующий график";
             this.ribbonButton5.Click += new System.EventHandler(this.click_Plot);
             // 
             // ribbonButton6
@@ -237,6 +242,7 @@
             this.ribbonButton6.Image = global::RibbonTabOpen.Properties.Resources.print2;
             this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
             this.ribbonButton6.Text = "Печать отчета";
+            this.ribbonButton6.ToolTip = "напечатать отчет";
             this.ribbonButton6.Click += new System.EventHandler(this.click_Print);
             // 
             // ribbonTab2
@@ -254,6 +260,7 @@
             this.ribbonButton7.Image = global::RibbonTabOpen.Properties.Resources.help;
             this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
             this.ribbonButton7.Text = "Помощь";
+            this.ribbonButton7.ToolTip = "вызов справки по программе";
             this.ribbonButton7.Click += new System.EventHandler(this.click_Help);
             // 
             // ribbonPanel1
@@ -267,6 +274,7 @@
             this.ClientSize = new System.Drawing.Size(451, 203);
             this.Controls.Add(this.ribbon1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

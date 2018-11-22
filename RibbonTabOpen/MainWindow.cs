@@ -39,5 +39,10 @@ namespace RibbonTabOpen
             AboutBox newFrame1 = new AboutBox();
             newFrame1.Show();
         }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

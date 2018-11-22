@@ -64,7 +64,8 @@ namespace RibbonTabOpen
 
         private void click_Help(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "C:\\My folder\\Downhole Heating Software Creation\\С#\\GUI C# code\\GUI help.chm", HelpNavigator.TopicId, "30");
+           // Help.ShowHelp(this, "C:\\My folder\\Downhole Heating Software Creation\\С#\\GUI C# code\\GUI help.chm", HelpNavigator.TopicId, "30");
+            Help.ShowHelp(this, "C:\\Users\\i.geraskin\\source\\repos\\RibbonTabOpen\\RibbonTabOpen\\html\\help.html", HelpNavigator.TopicId, "30");
         }
 
         private void click_Plot(object sender, EventArgs e)

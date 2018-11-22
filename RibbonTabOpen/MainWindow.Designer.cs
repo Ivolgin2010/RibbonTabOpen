@@ -125,7 +125,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(40, 40);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "расчет обогрева скважины с ЭЦН";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
@@ -135,7 +135,7 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(40, 40);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "ресчет обогрева скважины со станком-качалкой";
             // 
             // toolStripButton3
             // 
@@ -144,7 +144,7 @@
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(40, 40);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Text = "расчет обогрева скважины газлифт";
             // 
             // toolStripButton4
             // 
@@ -153,7 +153,7 @@
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(40, 40);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Text = "расчет обогрева скважины винтовой насос";
             // 
             // ribbonUpDown1
             // 
@@ -175,6 +175,7 @@
             this.MinimizeBox = false;
             this.Name = "MainWindow";
             this.Text = "Обогрев скважины";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
