@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonTabOpen", "RibbonTabOpen\RibbonTabOpen.csproj", "{DAC4B4AD-37AF-4E2C-B775-53041F53D660}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI Software", "RibbonTabOpen\GUI Software.csproj", "{DAC4B4AD-37AF-4E2C-B775-53041F53D660}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{2DD56AC4-BD93-45D6-AE03-6F3A6AFEF20F}"
 EndProject
