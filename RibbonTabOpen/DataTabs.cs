@@ -73,7 +73,7 @@ namespace RibbonTabOpen
 
         private void Button14_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Ваши данные сохранены?", "Сообщение", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Ваши данные были сохранены?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 this.Close();
@@ -84,9 +84,40 @@ namespace RibbonTabOpen
             }
         }
 
+        // Проверяем заполнение полей на Первой вкладки
+
         private void NextButton1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 1;
+            // задаем значения
+            int.TryParse(textBox1.Text, out int TextBox1);
+            int.TryParse(textBox2.Text, out int TextBox2);
+            int.TryParse(textBox2.Text, out int TextBox3);
+            int.TryParse(textBox2.Text, out int TextBox4);
+            int.TryParse(textBox2.Text, out int TextBox5);
+            int.TryParse(textBox2.Text, out int TextBox6);
+            int.TryParse(textBox2.Text, out int TextBox7);
+            int.TryParse(textBox2.Text, out int TextBox8);
+            int.TryParse(textBox2.Text, out int TextBox9);
+
+            // проверяем
+            if (string.IsNullOrEmpty(textBox1.Text)
+                || string.IsNullOrEmpty(textBox2.Text)
+                || string.IsNullOrEmpty(textBox3.Text)
+                || string.IsNullOrEmpty(textBox4.Text)
+                || string.IsNullOrEmpty(textBox5.Text)
+                || string.IsNullOrEmpty(textBox6.Text)
+                || string.IsNullOrEmpty(textBox7.Text)
+                || string.IsNullOrEmpty(textBox8.Text)
+                || string.IsNullOrEmpty(textBox9.Text)
+                )              
+            {
+                MessageBox.Show("Для перехода к следующей вкладке, пожалуйста, заполните все пустые поля", "Ошибка заполнения поля", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // переключаемся на вторую вкладку
+                tabControl1.SelectedIndex = 1;
+            }            
         }
 
         private void DataTabs_Load(object sender, EventArgs e)
@@ -114,11 +145,13 @@ namespace RibbonTabOpen
             tabControl1.SelectedIndex = 5;
         }
 
+        // Делаем проверку первого поля
+
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
             // добавляем проверку значения
 
-           int.TryParse(textBox1.Text, out int TextBox1); // сохраняем значение поля в переменной
+           int.TryParse(textBox1.Text, out int TextBox1); // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
 
             // проверяем если поле пустое            
             if (string.IsNullOrEmpty(textBox1.Text))
@@ -128,8 +161,8 @@ namespace RibbonTabOpen
             }       
             else 
             {
-                // проверяем значение 
-                if (TextBox1 >= 0 && TextBox1 < 5000)
+                // проверяем значение в поле 
+                if (TextBox1 >= 0 && TextBox1 <= 5000)
                 {
                     textBox1.ForeColor = Color.Black; // делаем черный
                 }
@@ -137,7 +170,7 @@ namespace RibbonTabOpen
                 {
                     textBox1.ForeColor = Color.Red; // делаем красный
 
-                    // выводим сообщение об ошибке
+                    // выводим сообщение об ошибке используя ErrorProvider
                     errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона!");                
                 }
             }
