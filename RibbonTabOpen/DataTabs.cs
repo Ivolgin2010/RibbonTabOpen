@@ -12,7 +12,7 @@ namespace RibbonTabOpen
 {
     public partial class DataTabs : Form
     {
-        private int n;
+        //private int n;
 
         public DataTabs()
 
@@ -20,58 +20,58 @@ namespace RibbonTabOpen
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void Button9_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void Button11_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void Button15_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void textBox39_TextChanged(object sender, EventArgs e)
+        private void TextBox39_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void Button13_Click(object sender, EventArgs e)
         {
             AddWindow newFrame2 = new AddWindow();
             newFrame2.Show();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void Button14_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Ваши данные сохранены?", "Сообщение", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -114,7 +114,7 @@ namespace RibbonTabOpen
             tabControl1.SelectedIndex = 5;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
             // добавляем сюда проверку значения
             

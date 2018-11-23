@@ -64,29 +64,29 @@
             this.ribbonOrbMenuItem1.Image = global::RibbonTabOpen.Properties.Resources.Open_32x32;
             this.ribbonOrbMenuItem1.SmallImage = global::RibbonTabOpen.Properties.Resources.Open_32x32;
             this.ribbonOrbMenuItem1.Text = "Открыть";
-            this.ribbonOrbMenuItem1.Click += new System.EventHandler(this.click_OpenRibbon);
+            this.ribbonOrbMenuItem1.Click += new System.EventHandler(this.Click_OpenRibbon);
             // 
             // ribbonOrbMenuItem3
             // 
             this.ribbonOrbMenuItem3.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.Image")));
-            this.ribbonOrbMenuItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.SmallImage")));
+            this.ribbonOrbMenuItem3.Image = global::RibbonTabOpen.Properties.Resources.SaveAs_32x32;
+            this.ribbonOrbMenuItem3.SmallImage = global::RibbonTabOpen.Properties.Resources.SaveAs_32x32;
             this.ribbonOrbMenuItem3.Text = "Сохранить как...";
             // 
             // ribbonOrbMenuItem5
             // 
             this.ribbonOrbMenuItem5.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem5.Image")));
-            this.ribbonOrbMenuItem5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem5.SmallImage")));
+            this.ribbonOrbMenuItem5.Image = global::RibbonTabOpen.Properties.Resources.Close_32x32;
+            this.ribbonOrbMenuItem5.SmallImage = global::RibbonTabOpen.Properties.Resources.Close_32x32;
             this.ribbonOrbMenuItem5.Text = "Выход";
-            this.ribbonOrbMenuItem5.Click += new System.EventHandler(this.close);
+            this.ribbonOrbMenuItem5.Click += new System.EventHandler(this.Close);
             // 
             // ribbonOrbRecentItem1
             // 
             this.ribbonOrbRecentItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbRecentItem1.Image")));
             this.ribbonOrbRecentItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbRecentItem1.SmallImage")));
             this.ribbonOrbRecentItem1.Text = "История сохранения";
-            this.ribbonOrbRecentItem1.Click += new System.EventHandler(this.click_History);
+            this.ribbonOrbRecentItem1.Click += new System.EventHandler(this.Click_History);
             // 
             // ribbonButton9
             // 
@@ -145,7 +145,7 @@
             this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
             this.ribbonButton1.Text = "Ввод данных";
             this.ribbonButton1.ToolTip = "ввод анкетных данных";
-            this.ribbonButton1.Click += new System.EventHandler(this.click);
+            this.ribbonButton1.Click += new System.EventHandler(this.Click);
             // 
             // ribbonPanel3
             // 
@@ -180,7 +180,7 @@
             this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
             this.ribbonButton4.Text = "Просмотр отчета";
             this.ribbonButton4.ToolTip = "просмотр отчета";
-            this.ribbonButton4.Click += new System.EventHandler(this.click_Viewer);
+            this.ribbonButton4.Click += new System.EventHandler(this.Click_Viewer);
             // 
             // ribbonButton5
             // 
@@ -188,7 +188,7 @@
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "График";
             this.ribbonButton5.ToolTip = "построить результирующий график";
-            this.ribbonButton5.Click += new System.EventHandler(this.click_Plot);
+            this.ribbonButton5.Click += new System.EventHandler(this.Click_Plot);
             // 
             // ribbonButton6
             // 
@@ -196,7 +196,7 @@
             this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
             this.ribbonButton6.Text = "Печать отчета";
             this.ribbonButton6.ToolTip = "напечатать отчет";
-            this.ribbonButton6.Click += new System.EventHandler(this.click_Print);
+            this.ribbonButton6.Click += new System.EventHandler(this.Click_Print);
             // 
             // ribbonTab2
             // 
@@ -214,7 +214,7 @@
             this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
             this.ribbonButton7.Text = "Помощь";
             this.ribbonButton7.ToolTip = "вызов справки по программе";
-            this.ribbonButton7.Click += new System.EventHandler(this.click_Help);
+            this.ribbonButton7.Click += new System.EventHandler(this.Click_Help);
             // 
             // ribbonPanel1
             // 
@@ -250,7 +250,7 @@
             this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem5);
             this.ribbon1.OrbDropDown.Name = "";
             this.ribbon1.OrbDropDown.RecentItems.Add(this.ribbonOrbRecentItem1);
-            this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 248);
+            this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 204);
             this.ribbon1.OrbDropDown.TabIndex = 0;
             this.ribbon1.OrbImage = null;
             this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2010;
@@ -271,7 +271,7 @@
             this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 26, 20, 0);
             this.ribbon1.Text = "ribbon1";
             this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Blue;
-            this.ribbon1.Click += new System.EventHandler(this.ribbon1_Click);
+            this.ribbon1.Click += new System.EventHandler(this.Ribbon1_Click);
             // 
             // Ribbon
             // 
@@ -307,7 +307,7 @@
         private System.Windows.Forms.RibbonPanel ribbonPanel1;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem1;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem3;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem4;
+  
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem5;
         private System.Windows.Forms.RibbonOrbRecentItem ribbonOrbRecentItem1;
         private System.Windows.Forms.RibbonButton ribbonButton7;

@@ -18,19 +18,22 @@ namespace RibbonTabOpen
             InitializeComponent();
         }
 
-        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ОткрытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog2 = new OpenFileDialog();
-
-            openFileDialog2.InitialDirectory = "c:\\";
-            openFileDialog2.Filter = "Файлы txt (*.txt)| *.txt";            
-            openFileDialog2.FilterIndex = 2;
-            openFileDialog2.RestoreDirectory = true;
-
-            if (openFileDialog2.ShowDialog() == DialogResult.OK);
+            OpenFileDialog openFileDialog2 = new OpenFileDialog
             {
-                //string filename = openFileDialog2.FileName;
-                //string text = File.ReadAllText(filename);
+                InitialDirectory = "c:\\",
+                Filter = "Файлы txt (*.txt)| *.txt",
+                FilterIndex = 2,
+                RestoreDirectory = true
+            };
+
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                ;
+            }
+
+            {
                 using (StreamReader sr = new StreamReader(openFileDialog2.FileName))
                 {
                     txtText.Text = sr.ReadToEnd();
@@ -38,12 +41,12 @@ namespace RibbonTabOpen
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }

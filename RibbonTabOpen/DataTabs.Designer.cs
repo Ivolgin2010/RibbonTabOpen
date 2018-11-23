@@ -563,7 +563,7 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // label1
             // 
@@ -582,7 +582,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Закрыть";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // NextButton1
             // 
@@ -602,7 +602,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Загрузить данные";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // tabPage2
             // 
@@ -751,7 +751,7 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "Закрыть";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // NextButton2
             // 
@@ -784,7 +784,7 @@
             this.button7.TabIndex = 2;
             this.button7.Text = "Закрыть";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // NextButton3
             // 
@@ -962,7 +962,7 @@
             this.button9.TabIndex = 2;
             this.button9.Text = "Закрыть";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // NextButton4
             // 
@@ -1295,7 +1295,7 @@
             this.button11.TabIndex = 2;
             this.button11.Text = "Закрыть";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.Click += new System.EventHandler(this.Button11_Click);
             // 
             // NextButton5
             // 
@@ -1629,7 +1629,7 @@
             this.button15.TabIndex = 3;
             this.button15.Text = "Закрыть";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.Click += new System.EventHandler(this.Button15_Click);
             // 
             // NextButton
             // 
@@ -1639,7 +1639,7 @@
             this.NextButton.TabIndex = 2;
             this.NextButton.Text = "Далее";
             this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.button14_Click);
+            this.NextButton.Click += new System.EventHandler(this.Button14_Click);
             // 
             // button13
             // 
@@ -1649,7 +1649,7 @@
             this.button13.TabIndex = 1;
             this.button13.Text = "Сохранить данные";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button13.Click += new System.EventHandler(this.Button13_Click);
             // 
             // groupBox9
             // 
@@ -1989,7 +1989,7 @@
             this.textBox39.Size = new System.Drawing.Size(100, 20);
             this.textBox39.TabIndex = 1;
             this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox39.TextChanged += new System.EventHandler(this.textBox39_TextChanged);
+            this.textBox39.TextChanged += new System.EventHandler(this.TextBox39_TextChanged);
             // 
             // label76
             // 
