@@ -118,18 +118,14 @@ namespace RibbonTabOpen
         {
             // добавляем проверку значения
 
-            int TextBox1; // задаем имя проверяемой переменной
-            //string NullTextBox = textBox1.Text;
+           int.TryParse(textBox1.Text, out int TextBox1); // сохраняем значение поля в переменной
 
-            TextBox1 = int.Parse(textBox1.Text); // сохраняем значение поля в переменной
-            
             // проверяем если поле пустое            
             if (string.IsNullOrEmpty(textBox1.Text))
             {
-                ToolTip toolTip = new ToolTip();
-                toolTip.SetToolTip(textBox1, "Введите значение");
+                // очищаем ErrorProvider
+                errorProvider1.Clear();
             }       
-
             else 
             {
                 // проверяем значение 
@@ -142,10 +138,9 @@ namespace RibbonTabOpen
                     textBox1.ForeColor = Color.Red; // делаем красный
 
                     // выводим сообщение об ошибке
-                    ToolTip toolTip = new ToolTip();
-                    toolTip.SetToolTip(textBox1, "Внимание ошибка! Значение параметра находится вне допустимого диапазона");
+                    errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона!");                
                 }
-              }
+            }
         }
     }
 }
