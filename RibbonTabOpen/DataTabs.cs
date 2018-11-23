@@ -116,18 +116,36 @@ namespace RibbonTabOpen
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            // добавляем сюда проверку значения
+            // добавляем проверку значения
+
+            int TextBox1; // задаем имя проверяемой переменной
+            //string NullTextBox = textBox1.Text;
+
+            TextBox1 = int.Parse(textBox1.Text); // сохраняем значение поля в переменной
             
-
+            // проверяем если поле пустое            
+            if (string.IsNullOrEmpty(textBox1.Text))
             {
-                textBox1.ForeColor = Color.Red; // меняем цвет текста
-                                                //textBox1.BorderColor = Color.Red;
-                                                //ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Red, textBoxBorderStyle.Solid);
-
-                // выводим сообщение об ошибке
                 ToolTip toolTip = new ToolTip();
-                toolTip.SetToolTip(textBox1, "Внимание ошибка! Значение параметра находится вне допустимого диапазона");
-            }
+                toolTip.SetToolTip(textBox1, "Введите значение");
+            }       
+
+            else 
+            {
+                // проверяем значение 
+                if (TextBox1 >= 0 && TextBox1 < 5000)
+                {
+                    textBox1.ForeColor = Color.Black; // делаем черный
+                }
+                else
+                {
+                    textBox1.ForeColor = Color.Red; // делаем красный
+
+                    // выводим сообщение об ошибке
+                    ToolTip toolTip = new ToolTip();
+                    toolTip.SetToolTip(textBox1, "Внимание ошибка! Значение параметра находится вне допустимого диапазона");
+                }
+              }
         }
     }
 }

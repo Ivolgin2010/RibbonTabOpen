@@ -45,12 +45,12 @@ namespace RibbonTabOpen
            
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void ToolStripButton2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        private void ToolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
         }
