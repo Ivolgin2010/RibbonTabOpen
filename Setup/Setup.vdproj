@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Setup"
+"ProjectName" = "8:Downhole Heating Program"
 "LanguageId" = "3:1049"
 "CodePage" = "3:1251"
 "UILanguageId" = "3:1049"
@@ -57,12 +57,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0B2F03A77D20A662C6E6D80BC66C9287"
-        "OwnerKey" = "8:_A0CF91F4D19640FA8120B346227373E5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0FE583DF8ACAAE091FE7AD19CCD5EF68"
         "OwnerKey" = "8:_A0CF91F4D19640FA8120B346227373E5"
         "MsmSig" = "8:_UNDEFINED"
@@ -106,12 +100,6 @@
         "Entry"
         {
         "MsmKey" = "8:_15DA721D012BB25E798EF75B26834D52"
-        "OwnerKey" = "8:_A0CF91F4D19640FA8120B346227373E5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_20AAD96B0ABBC5D69CA591670A58A51A"
         "OwnerKey" = "8:_A0CF91F4D19640FA8120B346227373E5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -239,6 +227,12 @@
         {
         "MsmKey" = "8:_20AAD96B0ABBC5D69CA591670A58A51A"
         "OwnerKey" = "8:_A1C5D04263492ED0840016D76FCA9133"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_20AAD96B0ABBC5D69CA591670A58A51A"
+        "OwnerKey" = "8:_A0CF91F4D19640FA8120B346227373E5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -513,6 +507,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A37DE8349BD6CCB32E4D043277654DFD"
+        "OwnerKey" = "8:_A0CF91F4D19640FA8120B346227373E5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B7F75A3AE885C3B75AF29C75F3CEE00B"
         "OwnerKey" = "8:_3B97543AB7BC749EE6D1AC32A8E50314"
         "MsmSig" = "8:_UNDEFINED"
@@ -736,7 +736,7 @@
         "Entry"
         {
         "MsmKey" = "8:_E72AD7EBBC9FE6F1F7AE767E9CDC84DB"
-        "OwnerKey" = "8:_47C21E03CEE849EA30D61C3CEA147E20"
+        "OwnerKey" = "8:_BFC535CB03A092631918A021F7B3AC0B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -748,7 +748,7 @@
         "Entry"
         {
         "MsmKey" = "8:_E72AD7EBBC9FE6F1F7AE767E9CDC84DB"
-        "OwnerKey" = "8:_BFC535CB03A092631918A021F7B3AC0B"
+        "OwnerKey" = "8:_47C21E03CEE849EA30D61C3CEA147E20"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -761,12 +761,6 @@
         {
         "MsmKey" = "8:_FCD36CAEE8515F2288AE999E4A96A952"
         "OwnerKey" = "8:_BFC535CB03A092631918A021F7B3AC0B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E72AD7EBBC9FE6F1F7AE767E9CDC84DB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -784,7 +778,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0B2F03A77D20A662C6E6D80BC66C9287"
+        "OwnerKey" = "8:_A37DE8349BD6CCB32E4D043277654DFD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -910,6 +904,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E72AD7EBBC9FE6F1F7AE767E9CDC84DB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_20AAD96B0ABBC5D69CA591670A58A51A"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -931,6 +931,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -947,6 +963,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -990,37 +1014,6 @@
                     }
                 }
             "SourcePath" = "8:DevExpress.XtraLayout.v18.1.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_F4F939A4EBD04B5A808F6787C5AA0588"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0B2F03A77D20A662C6E6D80BC66C9287"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_0B2F03A77D20A662C6E6D80BC66C9287"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F4F939A4EBD04B5A808F6787C5AA0588"
@@ -1472,6 +1465,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A37DE8349BD6CCB32E4D043277654DFD"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_A37DE8349BD6CCB32E4D043277654DFD"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_F4F939A4EBD04B5A808F6787C5AA0588"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B7F75A3AE885C3B75AF29C75F3CEE00B"
             {
             "AssemblyRegister" = "3:1"
@@ -1788,7 +1812,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{967BC4B0-707C-49EC-9769-E5A9065B2A56}"
-        "PackageCode" = "8:{1C2181B4-3F51-4657-8613-DA75AB592E5B}"
+        "PackageCode" = "8:{45690746-6DD3-4A60-AECE-090BDF181DF7}"
         "UpgradeCode" = "8:{4872B87D-5A65-4A97-A935-5A1E83F330A7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1910,7 +1934,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_05405BC7AFE94C968D8C698A5B3A5B58"
             {
-            "Name" = "8:Downhole Heating Program"
+            "Name" = "8:Обогрев скважины"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

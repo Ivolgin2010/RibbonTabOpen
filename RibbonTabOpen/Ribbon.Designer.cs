@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon));
-            this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem2 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem3 = new System.Windows.Forms.RibbonOrbMenuItem();
-            this.ribbonOrbMenuItem4 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem5 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbRecentItem1 = new System.Windows.Forms.RibbonOrbRecentItem();
             this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
@@ -41,6 +38,7 @@
             this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
@@ -55,63 +53,18 @@
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
+            this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.SuspendLayout();
-            // 
-            // ribbon1
-            // 
-            this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ribbon1.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.Minimized = false;
-            this.ribbon1.Name = "ribbon1";
-            // 
-            // 
-            // 
-            this.ribbon1.OrbDropDown.BorderRoundness = 8;
-            this.ribbon1.OrbDropDown.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem1);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem2);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem3);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem4);
-            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem5);
-            this.ribbon1.OrbDropDown.Name = "";
-            this.ribbon1.OrbDropDown.RecentItems.Add(this.ribbonOrbRecentItem1);
-            this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 292);
-            this.ribbon1.OrbDropDown.TabIndex = 0;
-            this.ribbon1.OrbImage = null;
-            this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2010;
-            this.ribbon1.OrbText = "Главная";
-            // 
-            // 
-            // 
-            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton9);
-            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton10);
-            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton11);
-            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton12);
-            this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton8);
-            this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(427, 176);
-            this.ribbon1.TabIndex = 0;
-            this.ribbon1.Tabs.Add(this.ribbonTab1);
-            this.ribbon1.Tabs.Add(this.ribbonTab2);
-            this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 26, 20, 0);
-            this.ribbon1.Text = "ribbon1";
-            this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Blue;
-            this.ribbon1.Click += new System.EventHandler(this.ribbon1_Click);
             // 
             // ribbonOrbMenuItem1
             // 
             this.ribbonOrbMenuItem1.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.Image")));
-            this.ribbonOrbMenuItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem1.SmallImage")));
+            this.ribbonOrbMenuItem1.Image = global::RibbonTabOpen.Properties.Resources.Open_32x32;
+            this.ribbonOrbMenuItem1.SmallImage = global::RibbonTabOpen.Properties.Resources.Open_32x32;
             this.ribbonOrbMenuItem1.Text = "Открыть";
             this.ribbonOrbMenuItem1.Click += new System.EventHandler(this.click_OpenRibbon);
-            // 
-            // ribbonOrbMenuItem2
-            // 
-            this.ribbonOrbMenuItem2.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.Image")));
-            this.ribbonOrbMenuItem2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem2.SmallImage")));
-            this.ribbonOrbMenuItem2.Text = "Сохранить";
             // 
             // ribbonOrbMenuItem3
             // 
@@ -119,13 +72,6 @@
             this.ribbonOrbMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.Image")));
             this.ribbonOrbMenuItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem3.SmallImage")));
             this.ribbonOrbMenuItem3.Text = "Сохранить как...";
-            // 
-            // ribbonOrbMenuItem4
-            // 
-            this.ribbonOrbMenuItem4.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonOrbMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.Image")));
-            this.ribbonOrbMenuItem4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbMenuItem4.SmallImage")));
-            this.ribbonOrbMenuItem4.Text = "Закрыть";
             // 
             // ribbonOrbMenuItem5
             // 
@@ -168,11 +114,18 @@
             // 
             // ribbonButton8
             // 
+            this.ribbonButton8.DropDownItems.Add(this.ribbonButton15);
             this.ribbonButton8.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.Image")));
             this.ribbonButton8.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
             this.ribbonButton8.MinSizeMode = System.Windows.Forms.RibbonElementSizeMode.DropDown;
             this.ribbonButton8.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.SmallImage")));
             this.ribbonButton8.Text = "";
+            // 
+            // ribbonButton15
+            // 
+            this.ribbonButton15.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.Image")));
+            this.ribbonButton15.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.SmallImage")));
+            this.ribbonButton15.Text = "ribbonButton15";
             // 
             // ribbonTab1
             // 
@@ -267,6 +220,59 @@
             // 
             this.ribbonPanel1.Text = null;
             // 
+            // ribbonButton13
+            // 
+            this.ribbonButton13.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.Image")));
+            this.ribbonButton13.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
+            this.ribbonButton13.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.SmallImage")));
+            this.ribbonButton13.Text = "ribbonButton13";
+            // 
+            // ribbonButton14
+            // 
+            this.ribbonButton14.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.Image")));
+            this.ribbonButton14.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
+            this.ribbonButton14.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.SmallImage")));
+            this.ribbonButton14.Text = "ribbonButton14";
+            // 
+            // ribbon1
+            // 
+            this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ribbon1.Location = new System.Drawing.Point(0, 0);
+            this.ribbon1.Minimized = false;
+            this.ribbon1.Name = "ribbon1";
+            // 
+            // 
+            // 
+            this.ribbon1.OrbDropDown.BorderRoundness = 8;
+            this.ribbon1.OrbDropDown.Location = new System.Drawing.Point(0, 0);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem1);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem3);
+            this.ribbon1.OrbDropDown.MenuItems.Add(this.ribbonOrbMenuItem5);
+            this.ribbon1.OrbDropDown.Name = "";
+            this.ribbon1.OrbDropDown.RecentItems.Add(this.ribbonOrbRecentItem1);
+            this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 248);
+            this.ribbon1.OrbDropDown.TabIndex = 0;
+            this.ribbon1.OrbImage = null;
+            this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2010;
+            this.ribbon1.OrbText = "Главная";
+            // 
+            // 
+            // 
+            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton9);
+            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton10);
+            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton11);
+            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton12);
+            this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton8);
+            this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
+            this.ribbon1.Size = new System.Drawing.Size(427, 176);
+            this.ribbon1.TabIndex = 0;
+            this.ribbon1.Tabs.Add(this.ribbonTab1);
+            this.ribbon1.Tabs.Add(this.ribbonTab2);
+            this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(12, 26, 20, 0);
+            this.ribbon1.Text = "ribbon1";
+            this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Blue;
+            this.ribbon1.Click += new System.EventHandler(this.ribbon1_Click);
+            // 
             // Ribbon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,8 +292,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Ribbon ribbon1;
         private System.Windows.Forms.RibbonTab ribbonTab1;
         private System.Windows.Forms.RibbonPanel ribbonPanel2;
         private System.Windows.Forms.RibbonButton ribbonButton1;
@@ -302,7 +306,6 @@
         private System.Windows.Forms.RibbonPanel ribbonPanel5;
         private System.Windows.Forms.RibbonPanel ribbonPanel1;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem1;
-        private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem2;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem3;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem4;
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem5;
@@ -313,5 +316,9 @@
         private System.Windows.Forms.RibbonButton ribbonButton10;
         private System.Windows.Forms.RibbonButton ribbonButton11;
         private System.Windows.Forms.RibbonButton ribbonButton12;
+        private System.Windows.Forms.RibbonButton ribbonButton13;
+        private System.Windows.Forms.RibbonButton ribbonButton14;
+        private System.Windows.Forms.RibbonButton ribbonButton15;
+        private System.Windows.Forms.Ribbon ribbon1;
     }
 }

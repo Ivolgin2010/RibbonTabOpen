@@ -17,24 +17,24 @@ namespace RibbonTabOpen
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Ribbon newForm = new Ribbon();
                 newForm.Show();
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             Ribbon newForm = new Ribbon();
             newForm.Show();
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox newFrame1 = new AboutBox();
             newFrame1.Show();
