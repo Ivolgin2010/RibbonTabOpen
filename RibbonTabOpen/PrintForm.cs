@@ -18,53 +18,61 @@ namespace RibbonTabOpen
             InitializeComponent();
         }
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog2 = new OpenFileDialog();
-
-            openFileDialog2.InitialDirectory = "c:\\";
-            openFileDialog2.Filter = "Файлы txt (*.txt)|*.txt";
-            openFileDialog2.FilterIndex = 2;
-            openFileDialog2.RestoreDirectory = true;
+            OpenFileDialog openFileDialog2 = new OpenFileDialog
+            {
+                InitialDirectory = "c:\\",
+                Filter = "Файлы txt (*.txt)|*.txt",
+                FilterIndex = 2,
+                RestoreDirectory = true
+            };
 
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
                 string filename = openFileDialog2.FileName;
-                string text = File.ReadAllText(filename);
+                //string text = File.ReadAllText(filename);
+                using (StreamReader streamReader = new StreamReader(filename))
+                {
+                    textBox1.Text = streamReader.ReadToEnd();
+                }
 
             }
+                       
         }
 
-        private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ПечатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             PrintDialog dlg = new PrintDialog();
                 dlg.ShowDialog();
         }
 
-        private void предварительныйПросмотрToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ПредварительныйПросмотрToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PrintPreviewDialog pgs = new PrintPreviewDialog();
             pgs.ShowDialog();
         }
 
-        private void настройкаСтраницыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void НастройкаСтраницыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //PageSetupDialog PageSetup = new PageSetupDialog();
             //PageSetup.ShowDialog();
-            PageSetupDialog pgSetup = new PageSetupDialog();
-            pgSetup.PageSettings = new System.Drawing.Printing.PageSettings();
-            pgSetup.PrinterSettings = new System.Drawing.Printing.PrinterSettings();
-            pgSetup.ShowNetwork = false;
+            PageSetupDialog pgSetup = new PageSetupDialog
+            {
+                PageSettings = new System.Drawing.Printing.PageSettings(),
+                PrinterSettings = new System.Drawing.Printing.PrinterSettings(),
+                ShowNetwork = false
+            };
 
             pgSetup.ShowDialog();
         }
 
-        private void настройкаПечатиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void НастройкаПечатиToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ВыходToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -66,7 +66,7 @@
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Открыть ";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
             // 
             // печатьToolStripMenuItem
             // 
@@ -84,35 +84,35 @@
             this.настройкаСтраницыToolStripMenuItem.Name = "настройкаСтраницыToolStripMenuItem";
             this.настройкаСтраницыToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.настройкаСтраницыToolStripMenuItem.Text = "Настройка страницы";
-            this.настройкаСтраницыToolStripMenuItem.Click += new System.EventHandler(this.настройкаСтраницыToolStripMenuItem_Click);
+            this.настройкаСтраницыToolStripMenuItem.Click += new System.EventHandler(this.НастройкаСтраницыToolStripMenuItem_Click);
             // 
             // настройкаПечатиToolStripMenuItem
             // 
             this.настройкаПечатиToolStripMenuItem.Name = "настройкаПечатиToolStripMenuItem";
             this.настройкаПечатиToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.настройкаПечатиToolStripMenuItem.Text = "Настройка печати";
-            this.настройкаПечатиToolStripMenuItem.Click += new System.EventHandler(this.настройкаПечатиToolStripMenuItem_Click);
+            this.настройкаПечатиToolStripMenuItem.Click += new System.EventHandler(this.НастройкаПечатиToolStripMenuItem_Click);
             // 
             // предварительныйПросмотрToolStripMenuItem
             // 
             this.предварительныйПросмотрToolStripMenuItem.Name = "предварительныйПросмотрToolStripMenuItem";
             this.предварительныйПросмотрToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.предварительныйПросмотрToolStripMenuItem.Text = "Предварительный просмотр";
-            this.предварительныйПросмотрToolStripMenuItem.Click += new System.EventHandler(this.предварительныйПросмотрToolStripMenuItem_Click);
+            this.предварительныйПросмотрToolStripMenuItem.Click += new System.EventHandler(this.ПредварительныйПросмотрToolStripMenuItem_Click);
             // 
             // печатьToolStripMenuItem1
             // 
             this.печатьToolStripMenuItem1.Name = "печатьToolStripMenuItem1";
             this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(233, 22);
             this.печатьToolStripMenuItem1.Text = "Печать";
-            this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.печатьToolStripMenuItem1_Click);
+            this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.ПечатьToolStripMenuItem1_Click);
             // 
             // выходToolStripMenuItem1
             // 
             this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
             this.выходToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem1.Text = "Выход";
-            this.выходToolStripMenuItem1.Click += new System.EventHandler(this.выходToolStripMenuItem1_Click);
+            this.выходToolStripMenuItem1.Click += new System.EventHandler(this.ВыходToolStripMenuItem1_Click);
             // 
             // textBox1
             // 

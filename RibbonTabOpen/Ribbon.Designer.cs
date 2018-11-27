@@ -31,10 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon));
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
             this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.ribbonOrbMenuItem1 = new System.Windows.Forms.RibbonOrbMenuItem();
@@ -47,17 +54,10 @@
             this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton16 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton17 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbonTab1
@@ -72,10 +72,25 @@
             this.ribbonPanel2.Items.Add(this.ribbonButton1);
             this.ribbonPanel2.Text = "Данные";
             // 
+            // ribbonButton1
+            // 
+            this.ribbonButton1.Image = global::RibbonTabOpen.Properties.Resources.data1;
+            this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
+            this.ribbonButton1.Text = "Ввод данных";
+            this.ribbonButton1.ToolTip = "ввод анкетных данных";
+            this.ribbonButton1.Click += new System.EventHandler(this.Click);
+            // 
             // ribbonPanel3
             // 
             this.ribbonPanel3.Items.Add(this.ribbonButton2);
             this.ribbonPanel3.Text = "Расчет";
+            // 
+            // ribbonButton2
+            // 
+            this.ribbonButton2.Image = global::RibbonTabOpen.Properties.Resources.run1;
+            this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
+            this.ribbonButton2.Text = "Пуск";
+            this.ribbonButton2.ToolTip = "запуск расчета";
             // 
             // ribbonPanel4
             // 
@@ -84,6 +99,37 @@
             this.ribbonPanel4.Items.Add(this.ribbonButton5);
             this.ribbonPanel4.Items.Add(this.ribbonButton6);
             this.ribbonPanel4.Text = "Обработка результатов";
+            // 
+            // ribbonButton3
+            // 
+            this.ribbonButton3.Image = global::RibbonTabOpen.Properties.Resources.report;
+            this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
+            this.ribbonButton3.Text = "Создать отчет";
+            this.ribbonButton3.ToolTip = "создать отчет";
+            // 
+            // ribbonButton4
+            // 
+            this.ribbonButton4.Image = global::RibbonTabOpen.Properties.Resources.open;
+            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
+            this.ribbonButton4.Text = "Просмотр отчета";
+            this.ribbonButton4.ToolTip = "просмотр отчета";
+            this.ribbonButton4.Click += new System.EventHandler(this.Click_Viewer);
+            // 
+            // ribbonButton5
+            // 
+            this.ribbonButton5.Image = global::RibbonTabOpen.Properties.Resources.plot;
+            this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
+            this.ribbonButton5.Text = "График";
+            this.ribbonButton5.ToolTip = "построить результирующий график";
+            this.ribbonButton5.Click += new System.EventHandler(this.Click_Plot);
+            // 
+            // ribbonButton6
+            // 
+            this.ribbonButton6.Image = global::RibbonTabOpen.Properties.Resources.print2;
+            this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
+            this.ribbonButton6.Text = "Печать отчета";
+            this.ribbonButton6.ToolTip = "напечатать отчет";
+            this.ribbonButton6.Click += new System.EventHandler(this.Click_Print);
             // 
             // ribbonTab2
             // 
@@ -94,6 +140,14 @@
             // 
             this.ribbonPanel5.Items.Add(this.ribbonButton7);
             this.ribbonPanel5.Text = "Информация";
+            // 
+            // ribbonButton7
+            // 
+            this.ribbonButton7.Image = global::RibbonTabOpen.Properties.Resources.help;
+            this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
+            this.ribbonButton7.Text = "Помощь";
+            this.ribbonButton7.ToolTip = "вызов справки по программе";
+            this.ribbonButton7.Click += new System.EventHandler(this.Click_Help);
             // 
             // ribbonPanel1
             // 
@@ -129,7 +183,7 @@
             this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.ribbonButton12);
             this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton8);
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(427, 176);
+            this.ribbon1.Size = new System.Drawing.Size(427, 171);
             this.ribbon1.TabIndex = 0;
             this.ribbon1.Tabs.Add(this.ribbonTab1);
             this.ribbon1.Tabs.Add(this.ribbonTab2);
@@ -209,59 +263,17 @@
             this.ribbonButton15.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.SmallImage")));
             this.ribbonButton15.Text = "ribbonButton15";
             // 
-            // ribbonButton1
+            // ribbonButton16
             // 
-            this.ribbonButton1.Image = global::RibbonTabOpen.Properties.Resources.data1;
-            this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
-            this.ribbonButton1.Text = "Ввод данных";
-            this.ribbonButton1.ToolTip = "ввод анкетных данных";
-            this.ribbonButton1.Click += new System.EventHandler(this.Click);
+            this.ribbonButton16.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.Image")));
+            this.ribbonButton16.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.SmallImage")));
+            this.ribbonButton16.Text = "ribbonButton16";
             // 
-            // ribbonButton2
+            // ribbonButton17
             // 
-            this.ribbonButton2.Image = global::RibbonTabOpen.Properties.Resources.run1;
-            this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
-            this.ribbonButton2.Text = "Пуск";
-            this.ribbonButton2.ToolTip = "запуск расчета";
-            // 
-            // ribbonButton3
-            // 
-            this.ribbonButton3.Image = global::RibbonTabOpen.Properties.Resources.report;
-            this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
-            this.ribbonButton3.Text = "Создать отчет";
-            this.ribbonButton3.ToolTip = "создать отчет";
-            // 
-            // ribbonButton4
-            // 
-            this.ribbonButton4.Image = global::RibbonTabOpen.Properties.Resources.open;
-            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
-            this.ribbonButton4.Text = "Просмотр отчета";
-            this.ribbonButton4.ToolTip = "просмотр отчета";
-            this.ribbonButton4.Click += new System.EventHandler(this.Click_Viewer);
-            // 
-            // ribbonButton5
-            // 
-            this.ribbonButton5.Image = global::RibbonTabOpen.Properties.Resources.plot;
-            this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
-            this.ribbonButton5.Text = "График";
-            this.ribbonButton5.ToolTip = "построить результирующий график";
-            this.ribbonButton5.Click += new System.EventHandler(this.Click_Plot);
-            // 
-            // ribbonButton6
-            // 
-            this.ribbonButton6.Image = global::RibbonTabOpen.Properties.Resources.print2;
-            this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
-            this.ribbonButton6.Text = "Печать отчета";
-            this.ribbonButton6.ToolTip = "напечатать отчет";
-            this.ribbonButton6.Click += new System.EventHandler(this.Click_Print);
-            // 
-            // ribbonButton7
-            // 
-            this.ribbonButton7.Image = global::RibbonTabOpen.Properties.Resources.help;
-            this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
-            this.ribbonButton7.Text = "Помощь";
-            this.ribbonButton7.ToolTip = "вызов справки по программе";
-            this.ribbonButton7.Click += new System.EventHandler(this.Click_Help);
+            this.ribbonButton17.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.Image")));
+            this.ribbonButton17.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.SmallImage")));
+            this.ribbonButton17.Text = "ribbonButton17";
             // 
             // ribbonButton13
             // 
@@ -277,23 +289,11 @@
             this.ribbonButton14.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton14.SmallImage")));
             this.ribbonButton14.Text = "ribbonButton14";
             // 
-            // ribbonButton16
-            // 
-            this.ribbonButton16.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.Image")));
-            this.ribbonButton16.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton16.SmallImage")));
-            this.ribbonButton16.Text = "ribbonButton16";
-            // 
-            // ribbonButton17
-            // 
-            this.ribbonButton17.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.Image")));
-            this.ribbonButton17.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton17.SmallImage")));
-            this.ribbonButton17.Text = "ribbonButton17";
-            // 
             // Ribbon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 189);
+            this.ClientSize = new System.Drawing.Size(427, 187);
             this.Controls.Add(this.ribbon1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
