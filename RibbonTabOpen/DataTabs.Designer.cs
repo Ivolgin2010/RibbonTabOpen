@@ -174,6 +174,9 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label101 = new System.Windows.Forms.Label();
+            this.textBox51 = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.label97 = new System.Windows.Forms.Label();
@@ -238,6 +241,29 @@
             this.errorProvider26 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider27 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider28 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider29 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider30 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider31 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider32 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider33 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider34 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider35 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider36 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider37 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider38 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider39 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider40 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider41 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider42 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider43 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider44 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider45 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider46 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider47 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider48 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider49 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider50 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider51 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -282,6 +308,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider51)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1182,6 +1231,7 @@
             this.textBox27.Size = new System.Drawing.Size(100, 21);
             this.textBox27.TabIndex = 20;
             this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox27.TextChanged += new System.EventHandler(this.TextBox27_TextChanged);
             // 
             // textBox26
             // 
@@ -1190,6 +1240,7 @@
             this.textBox26.Size = new System.Drawing.Size(100, 21);
             this.textBox26.TabIndex = 19;
             this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox26.TextChanged += new System.EventHandler(this.TextBox26_TextChanged);
             // 
             // textBox24
             // 
@@ -1198,6 +1249,7 @@
             this.textBox24.Size = new System.Drawing.Size(100, 21);
             this.textBox24.TabIndex = 18;
             this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox24.TextChanged += new System.EventHandler(this.TextBox24_TextChanged);
             // 
             // textBox23
             // 
@@ -1206,6 +1258,7 @@
             this.textBox23.Size = new System.Drawing.Size(100, 21);
             this.textBox23.TabIndex = 17;
             this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox23.TextChanged += new System.EventHandler(this.TextBox23_TextChanged);
             // 
             // textBox22
             // 
@@ -1214,6 +1267,7 @@
             this.textBox22.Size = new System.Drawing.Size(100, 21);
             this.textBox22.TabIndex = 16;
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox22.TextChanged += new System.EventHandler(this.TextBox22_TextChanged);
             // 
             // textBox21
             // 
@@ -1222,6 +1276,7 @@
             this.textBox21.Size = new System.Drawing.Size(100, 21);
             this.textBox21.TabIndex = 15;
             this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox21.TextChanged += new System.EventHandler(this.TextBox21_TextChanged);
             // 
             // textBox20
             // 
@@ -1230,6 +1285,7 @@
             this.textBox20.Size = new System.Drawing.Size(100, 21);
             this.textBox20.TabIndex = 14;
             this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox20.TextChanged += new System.EventHandler(this.TextBox20_TextChanged);
             // 
             // label46
             // 
@@ -1247,6 +1303,7 @@
             this.textBox28.Size = new System.Drawing.Size(100, 21);
             this.textBox28.TabIndex = 12;
             this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox28.TextChanged += new System.EventHandler(this.TextBox28_TextChanged);
             // 
             // textBox25
             // 
@@ -1255,6 +1312,7 @@
             this.textBox25.Size = new System.Drawing.Size(100, 21);
             this.textBox25.TabIndex = 11;
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox25.TextChanged += new System.EventHandler(this.TextBox25_TextChanged);
             // 
             // textBox19
             // 
@@ -1526,6 +1584,7 @@
             this.textBox38.Size = new System.Drawing.Size(100, 21);
             this.textBox38.TabIndex = 19;
             this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox38.TextChanged += new System.EventHandler(this.TextBox38_TextChanged);
             // 
             // textBox37
             // 
@@ -1534,6 +1593,7 @@
             this.textBox37.Size = new System.Drawing.Size(100, 21);
             this.textBox37.TabIndex = 18;
             this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox37.TextChanged += new System.EventHandler(this.TextBox37_TextChanged);
             // 
             // textBox36
             // 
@@ -1542,6 +1602,7 @@
             this.textBox36.Size = new System.Drawing.Size(100, 21);
             this.textBox36.TabIndex = 17;
             this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox36.TextChanged += new System.EventHandler(this.TextBox36_TextChanged);
             // 
             // textBox35
             // 
@@ -1550,6 +1611,7 @@
             this.textBox35.Size = new System.Drawing.Size(100, 21);
             this.textBox35.TabIndex = 16;
             this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox35.TextChanged += new System.EventHandler(this.TextBox35_TextChanged);
             // 
             // textBox34
             // 
@@ -1558,6 +1620,7 @@
             this.textBox34.Size = new System.Drawing.Size(100, 21);
             this.textBox34.TabIndex = 15;
             this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox34.TextChanged += new System.EventHandler(this.TextBox34_TextChanged);
             // 
             // textBox33
             // 
@@ -1566,6 +1629,7 @@
             this.textBox33.Size = new System.Drawing.Size(100, 21);
             this.textBox33.TabIndex = 14;
             this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox33.TextChanged += new System.EventHandler(this.TextBox33_TextChanged);
             // 
             // textBox32
             // 
@@ -1574,6 +1638,7 @@
             this.textBox32.Size = new System.Drawing.Size(100, 21);
             this.textBox32.TabIndex = 13;
             this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox32.TextChanged += new System.EventHandler(this.TextBox32_TextChanged);
             // 
             // textBox31
             // 
@@ -1582,6 +1647,7 @@
             this.textBox31.Size = new System.Drawing.Size(100, 21);
             this.textBox31.TabIndex = 12;
             this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox31.TextChanged += new System.EventHandler(this.TextBox31_TextChanged);
             // 
             // textBox30
             // 
@@ -1590,6 +1656,7 @@
             this.textBox30.Size = new System.Drawing.Size(100, 21);
             this.textBox30.TabIndex = 11;
             this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox30.TextChanged += new System.EventHandler(this.TextBox30_TextChanged);
             // 
             // textBox29
             // 
@@ -1598,6 +1665,7 @@
             this.textBox29.Size = new System.Drawing.Size(100, 21);
             this.textBox29.TabIndex = 10;
             this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox29.TextChanged += new System.EventHandler(this.TextBox29_TextChanged);
             // 
             // label65
             // 
@@ -1735,6 +1803,9 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.label101);
+            this.groupBox9.Controls.Add(this.textBox51);
+            this.groupBox9.Controls.Add(this.label100);
             this.groupBox9.Controls.Add(this.label99);
             this.groupBox9.Controls.Add(this.label98);
             this.groupBox9.Controls.Add(this.label97);
@@ -1772,17 +1843,43 @@
             this.groupBox9.Controls.Add(this.label76);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox9.Location = new System.Drawing.Point(140, 47);
+            this.groupBox9.Location = new System.Drawing.Point(136, 25);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(591, 390);
+            this.groupBox9.Size = new System.Drawing.Size(591, 434);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "6. ДОПОЛНИТЕЛЬНЫЕ ПАРАМЕТРЫ";
             // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(442, 308);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(53, 15);
+            this.label101.TabIndex = 38;
+            this.label101.Text = ", град. С";
+            // 
+            // textBox51
+            // 
+            this.textBox51.Location = new System.Drawing.Point(339, 305);
+            this.textBox51.Name = "textBox51";
+            this.textBox51.Size = new System.Drawing.Size(100, 21);
+            this.textBox51.TabIndex = 37;
+            this.textBox51.TextChanged += new System.EventHandler(this.TextBox51_TextChanged);
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(22, 307);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(314, 15);
+            this.label100.TabIndex = 36;
+            this.label100.Text = "Диапазон регулирования по температуре на выходе";
+            // 
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(390, 364);
+            this.label99.Location = new System.Drawing.Point(386, 400);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(21, 15);
             this.label99.TabIndex = 35;
@@ -1791,7 +1888,7 @@
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(319, 333);
+            this.label98.Location = new System.Drawing.Point(315, 369);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(22, 15);
             this.label98.TabIndex = 34;
@@ -1800,7 +1897,7 @@
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(236, 302);
+            this.label97.Location = new System.Drawing.Point(232, 338);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(22, 15);
             this.label97.TabIndex = 33;
@@ -1865,38 +1962,42 @@
             this.label89.AutoSize = true;
             this.label89.Location = new System.Drawing.Point(282, 59);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(22, 15);
+            this.label89.Size = new System.Drawing.Size(31, 15);
             this.label89.TabIndex = 25;
-            this.label89.Text = ", м";
+            this.label89.Text = ", мм";
+            this.label89.Click += new System.EventHandler(this.Label89_Click);
             // 
             // textBox50
             // 
-            this.textBox50.Location = new System.Drawing.Point(288, 360);
+            this.textBox50.Location = new System.Drawing.Point(284, 396);
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(100, 21);
             this.textBox50.TabIndex = 24;
             this.textBox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox50.TextChanged += new System.EventHandler(this.TextBox50_TextChanged);
             // 
             // textBox49
             // 
-            this.textBox49.Location = new System.Drawing.Point(216, 330);
+            this.textBox49.Location = new System.Drawing.Point(212, 366);
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(100, 21);
             this.textBox49.TabIndex = 23;
             this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox49.TextChanged += new System.EventHandler(this.TextBox49_TextChanged);
             // 
             // textBox48
             // 
-            this.textBox48.Location = new System.Drawing.Point(134, 299);
+            this.textBox48.Location = new System.Drawing.Point(130, 335);
             this.textBox48.Name = "textBox48";
             this.textBox48.Size = new System.Drawing.Size(100, 21);
             this.textBox48.TabIndex = 22;
             this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox48.TextChanged += new System.EventHandler(this.TextBox48_TextChanged);
             // 
             // label88
             // 
             this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(28, 363);
+            this.label88.Location = new System.Drawing.Point(24, 399);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(258, 15);
             this.label88.TabIndex = 21;
@@ -1905,7 +2006,7 @@
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(28, 332);
+            this.label87.Location = new System.Drawing.Point(24, 368);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(184, 15);
             this.label87.TabIndex = 20;
@@ -1914,7 +2015,7 @@
             // label86
             // 
             this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(28, 302);
+            this.label86.Location = new System.Drawing.Point(24, 338);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(104, 15);
             this.label86.TabIndex = 19;
@@ -1927,6 +2028,7 @@
             this.textBox47.Size = new System.Drawing.Size(100, 21);
             this.textBox47.TabIndex = 18;
             this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox47.TextChanged += new System.EventHandler(this.TextBox47_TextChanged);
             // 
             // label85
             // 
@@ -1944,6 +2046,7 @@
             this.textBox46.Size = new System.Drawing.Size(100, 21);
             this.textBox46.TabIndex = 16;
             this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox46.TextChanged += new System.EventHandler(this.TextBox46_TextChanged);
             // 
             // label84
             // 
@@ -1961,6 +2064,7 @@
             this.textBox45.Size = new System.Drawing.Size(100, 21);
             this.textBox45.TabIndex = 14;
             this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox45.TextChanged += new System.EventHandler(this.TextBox45_TextChanged);
             // 
             // label83
             // 
@@ -1978,6 +2082,7 @@
             this.textBox44.Size = new System.Drawing.Size(100, 21);
             this.textBox44.TabIndex = 12;
             this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox44.TextChanged += new System.EventHandler(this.TextBox44_TextChanged);
             // 
             // label82
             // 
@@ -1995,6 +2100,7 @@
             this.textBox43.Size = new System.Drawing.Size(100, 21);
             this.textBox43.TabIndex = 10;
             this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox43.TextChanged += new System.EventHandler(this.TextBox43_TextChanged);
             // 
             // label81
             // 
@@ -2012,6 +2118,7 @@
             this.textBox42.Size = new System.Drawing.Size(100, 21);
             this.textBox42.TabIndex = 8;
             this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox42.TextChanged += new System.EventHandler(this.TextBox42_TextChanged);
             // 
             // label80
             // 
@@ -2029,6 +2136,7 @@
             this.textBox41.Size = new System.Drawing.Size(100, 21);
             this.textBox41.TabIndex = 6;
             this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox41.TextChanged += new System.EventHandler(this.TextBox41_TextChanged);
             // 
             // label79
             // 
@@ -2046,6 +2154,7 @@
             this.textBox40.Size = new System.Drawing.Size(100, 21);
             this.textBox40.TabIndex = 4;
             this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox40.TextChanged += new System.EventHandler(this.TextBox40_TextChanged);
             // 
             // label78
             // 
@@ -2195,6 +2304,98 @@
             // 
             this.errorProvider28.ContainerControl = this;
             // 
+            // errorProvider29
+            // 
+            this.errorProvider29.ContainerControl = this;
+            // 
+            // errorProvider30
+            // 
+            this.errorProvider30.ContainerControl = this;
+            // 
+            // errorProvider31
+            // 
+            this.errorProvider31.ContainerControl = this;
+            // 
+            // errorProvider32
+            // 
+            this.errorProvider32.ContainerControl = this;
+            // 
+            // errorProvider33
+            // 
+            this.errorProvider33.ContainerControl = this;
+            // 
+            // errorProvider34
+            // 
+            this.errorProvider34.ContainerControl = this;
+            // 
+            // errorProvider35
+            // 
+            this.errorProvider35.ContainerControl = this;
+            // 
+            // errorProvider36
+            // 
+            this.errorProvider36.ContainerControl = this;
+            // 
+            // errorProvider37
+            // 
+            this.errorProvider37.ContainerControl = this;
+            // 
+            // errorProvider38
+            // 
+            this.errorProvider38.ContainerControl = this;
+            // 
+            // errorProvider39
+            // 
+            this.errorProvider39.ContainerControl = this;
+            // 
+            // errorProvider40
+            // 
+            this.errorProvider40.ContainerControl = this;
+            // 
+            // errorProvider41
+            // 
+            this.errorProvider41.ContainerControl = this;
+            // 
+            // errorProvider42
+            // 
+            this.errorProvider42.ContainerControl = this;
+            // 
+            // errorProvider43
+            // 
+            this.errorProvider43.ContainerControl = this;
+            // 
+            // errorProvider44
+            // 
+            this.errorProvider44.ContainerControl = this;
+            // 
+            // errorProvider45
+            // 
+            this.errorProvider45.ContainerControl = this;
+            // 
+            // errorProvider46
+            // 
+            this.errorProvider46.ContainerControl = this;
+            // 
+            // errorProvider47
+            // 
+            this.errorProvider47.ContainerControl = this;
+            // 
+            // errorProvider48
+            // 
+            this.errorProvider48.ContainerControl = this;
+            // 
+            // errorProvider49
+            // 
+            this.errorProvider49.ContainerControl = this;
+            // 
+            // errorProvider50
+            // 
+            this.errorProvider50.ContainerControl = this;
+            // 
+            // errorProvider51
+            // 
+            this.errorProvider51.ContainerControl = this;
+            // 
             // DataTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2262,6 +2463,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider51)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2476,5 +2700,31 @@
         private System.Windows.Forms.ErrorProvider errorProvider26;
         private System.Windows.Forms.ErrorProvider errorProvider27;
         private System.Windows.Forms.ErrorProvider errorProvider28;
+        private System.Windows.Forms.ErrorProvider errorProvider29;
+        private System.Windows.Forms.ErrorProvider errorProvider30;
+        private System.Windows.Forms.ErrorProvider errorProvider31;
+        private System.Windows.Forms.ErrorProvider errorProvider32;
+        private System.Windows.Forms.ErrorProvider errorProvider33;
+        private System.Windows.Forms.ErrorProvider errorProvider34;
+        private System.Windows.Forms.ErrorProvider errorProvider35;
+        private System.Windows.Forms.ErrorProvider errorProvider36;
+        private System.Windows.Forms.ErrorProvider errorProvider37;
+        private System.Windows.Forms.ErrorProvider errorProvider38;
+        private System.Windows.Forms.ErrorProvider errorProvider39;
+        private System.Windows.Forms.ErrorProvider errorProvider40;
+        private System.Windows.Forms.ErrorProvider errorProvider41;
+        private System.Windows.Forms.ErrorProvider errorProvider42;
+        private System.Windows.Forms.ErrorProvider errorProvider43;
+        private System.Windows.Forms.ErrorProvider errorProvider44;
+        private System.Windows.Forms.ErrorProvider errorProvider45;
+        private System.Windows.Forms.ErrorProvider errorProvider46;
+        private System.Windows.Forms.ErrorProvider errorProvider47;
+        private System.Windows.Forms.ErrorProvider errorProvider48;
+        private System.Windows.Forms.ErrorProvider errorProvider49;
+        private System.Windows.Forms.ErrorProvider errorProvider50;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.TextBox textBox51;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.ErrorProvider errorProvider51;
     }
 }

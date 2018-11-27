@@ -38,8 +38,8 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.результатыРасчетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаРасчетныхПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьШаблонОтчетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -89,7 +89,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -109,6 +109,12 @@
             this.таблицаРасчетныхПараметровToolStripMenuItem.Text = "Таблица расчетных параметров";
             this.таблицаРасчетныхПараметровToolStripMenuItem.Click += new System.EventHandler(this.таблицаРасчетныхПараметровToolStripMenuItem_Click);
             // 
+            // открытьШаблонОтчетаToolStripMenuItem
+            // 
+            this.открытьШаблонОтчетаToolStripMenuItem.Name = "открытьШаблонОтчетаToolStripMenuItem";
+            this.открытьШаблонОтчетаToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.открытьШаблонОтчетаToolStripMenuItem.Text = "Открыть шаблон отчета";
+            // 
             // помощьToolStripMenuItem
             // 
             this.помощьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -117,16 +123,10 @@
             this.помощьToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.помощьToolStripMenuItem.Text = "Помощь";
             // 
-            // открытьШаблонОтчетаToolStripMenuItem
-            // 
-            this.открытьШаблонОтчетаToolStripMenuItem.Name = "открытьШаблонОтчетаToolStripMenuItem";
-            this.открытьШаблонОтчетаToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
-            this.открытьШаблонОтчетаToolStripMenuItem.Text = "Открыть шаблон отчета";
-            // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // PlotData

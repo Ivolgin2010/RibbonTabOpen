@@ -14,9 +14,9 @@ namespace RibbonTabOpen
         public AboutBox()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
+            this.Text = String.Format("О программе {0}", AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
+            this.labelVersion.Text = String.Format("Версия {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
@@ -113,6 +113,16 @@ namespace RibbonTabOpen
         }
 
         private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelProductName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
         {
 
         }
