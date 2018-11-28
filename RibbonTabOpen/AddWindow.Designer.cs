@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddWindow));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox01 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox02 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox03 = new System.Windows.Forms.TextBox();
+            this.textBox04 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -50,13 +50,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Оператор:";
             // 
-            // textBox1
+            // textBox01
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox01.Location = new System.Drawing.Point(93, 27);
+            this.textBox01.Name = "textBox01";
+            this.textBox01.Size = new System.Drawing.Size(100, 20);
+            this.textBox01.TabIndex = 1;
+            this.textBox01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox01.TextChanged += new System.EventHandler(this.TextBox01_TextChanged);
             // 
             // label2
             // 
@@ -67,13 +68,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Название месторождения:";
             // 
-            // textBox2
+            // textBox02
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox02.Location = new System.Drawing.Point(179, 75);
+            this.textBox02.Name = "textBox02";
+            this.textBox02.Size = new System.Drawing.Size(100, 20);
+            this.textBox02.TabIndex = 3;
+            this.textBox02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -113,36 +114,36 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // textBox3
+            // textBox03
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox03.Location = new System.Drawing.Point(134, 123);
+            this.textBox03.Name = "textBox03";
+            this.textBox03.Size = new System.Drawing.Size(100, 20);
+            this.textBox03.TabIndex = 8;
+            this.textBox03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // textBox04
             // 
-            this.textBox4.Location = new System.Drawing.Point(105, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox04.Location = new System.Drawing.Point(105, 175);
+            this.textBox04.Name = "textBox04";
+            this.textBox04.Size = new System.Drawing.Size(100, 20);
+            this.textBox04.TabIndex = 9;
+            this.textBox04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 270);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox04);
+            this.Controls.Add(this.textBox03);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox02);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox01);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -158,14 +159,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox01;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox02;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox03;
+        private System.Windows.Forms.TextBox textBox04;
     }
 }

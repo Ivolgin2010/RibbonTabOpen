@@ -114,6 +114,7 @@ namespace RibbonTabOpen
             if (dialogResult == DialogResult.Yes)
             {
                 this.Close();
+                //ribbonButton2.Visual = false;
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -286,7 +287,7 @@ namespace RibbonTabOpen
         //***********************************************************************
         //Проверяем первое поле. 1.4 Глубина забоя. 
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
+        public void TextBox1_TextChanged(object sender, EventArgs e)
         {
             int.TryParse(textBox1.Text, out int TextBox1); // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
 
@@ -296,8 +297,7 @@ namespace RibbonTabOpen
                 errorProvider1.Clear(); // очищаем ErrorProvider
 
                 // показываем всплывающую подсказку
-                ToolTip tool = new ToolTip();
-                //string text = textBox1.Text;
+                ToolTip tool = new ToolTip();                
                 tool.SetToolTip(this.textBox1, "введите значение");
             }
             else

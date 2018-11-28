@@ -91,6 +91,7 @@
             this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
             this.ribbonButton2.Text = "Пуск";
             this.ribbonButton2.ToolTip = "запуск расчета";
+            this.ribbonButton2.Click += new System.EventHandler(this.Click_Start);
             // 
             // ribbonPanel4
             // 
@@ -106,6 +107,7 @@
             this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
             this.ribbonButton3.Text = "Создать отчет";
             this.ribbonButton3.ToolTip = "создать отчет";
+            this.ribbonButton3.Click += new System.EventHandler(this.Click_Report);
             // 
             // ribbonButton4
             // 
@@ -206,6 +208,7 @@
             this.ribbonOrbMenuItem3.Image = global::RibbonTabOpen.Properties.Resources.SaveAs_32x32;
             this.ribbonOrbMenuItem3.SmallImage = global::RibbonTabOpen.Properties.Resources.SaveAs_32x32;
             this.ribbonOrbMenuItem3.Text = "Сохранить как...";
+            this.ribbonOrbMenuItem3.Click += new System.EventHandler(this.Click_SaveAs);
             // 
             // ribbonOrbMenuItem5
             // 
