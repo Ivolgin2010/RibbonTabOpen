@@ -12,8 +12,7 @@ namespace RibbonTabOpen
 {
     public partial class DataTabs : Form
     {
-        //private int n;
-
+        
         public DataTabs()
 
         {
@@ -287,7 +286,7 @@ namespace RibbonTabOpen
         //***********************************************************************
         //Проверяем первое поле. 1.4 Глубина забоя. 
 
-        public void TextBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
             int.TryParse(textBox1.Text, out int TextBox1); // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
 
@@ -323,7 +322,7 @@ namespace RibbonTabOpen
                     // выводим сообщение об ошибке используя ErrorProvider
                     errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона");
                 }
-            }
+            }            
         }
 
         private void Label92_Click(object sender, EventArgs e)

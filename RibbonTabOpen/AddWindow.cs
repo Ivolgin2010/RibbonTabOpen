@@ -55,6 +55,7 @@ namespace RibbonTabOpen
                дозапись в существующий файл или "false" - переписать файл*/
 
             StreamWriter sw = new StreamWriter(path, false);
+
             //StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
 
             //--------------------------- Определяем переменные ---------------------------------------//
@@ -68,7 +69,9 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            string h_bhole = textBox1.Text;
+            //string value = DataTabs.TextBox1;
+
+            //string h_bhole = textBox1.Text;
             //string h_obs = textBox02.Text;
             //string d_vnesh_obs = textBox3.Text;
             //string h_nkt = textBox4.Text;
@@ -278,18 +281,17 @@ namespace RibbonTabOpen
 
             sw.WriteLine(div3.ToString());
 
-            // выводим сообщение об успешности сохранения данных
-
-            MessageBox.Show("Данные были успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             /* Перед выходом из приложения не забываем закрывать файл */
             sw.Close();
 
-        }
+            // делаем кнопку 'Сохранить' неактивной
+            button1.Enabled = false;
 
-        private void TextBox01_TextChanged(object sender, EventArgs e)
-        {
+            // выводим сообщение об успешности сохранения данных
+
+            MessageBox.Show("Данные были успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);         
 
         }
+        
     }
 }

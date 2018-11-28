@@ -56,8 +56,7 @@
             this.textBox01.Name = "textBox01";
             this.textBox01.Size = new System.Drawing.Size(100, 20);
             this.textBox01.TabIndex = 1;
-            this.textBox01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox01.TextChanged += new System.EventHandler(this.TextBox01_TextChanged);
+            this.textBox01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;            
             // 
             // label2
             // 
