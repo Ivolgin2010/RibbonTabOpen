@@ -71,11 +71,9 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            //using (DataTabs frm = new DataTabs())
-            //{
-            //    string value = textBox1.Text;
-            //}
-                
+            DataTabs frm = new DataTabs();            
+            string value = frm.textBox1.Text;
+                           
 
             //string h_bhole = textBox1.Text;
             //string h_obs = textBox02.Text;
@@ -164,7 +162,7 @@ namespace RibbonTabOpen
 
             //--------------------------- Данные первой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Глубина забоя, м: " );
+            sw.WriteLine("Глубина забоя, м: " + value.ToString());
             sw.WriteLine("\n");
             sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: ");          
             sw.WriteLine("\n");
