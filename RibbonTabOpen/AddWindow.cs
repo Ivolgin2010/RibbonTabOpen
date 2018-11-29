@@ -13,6 +13,8 @@ namespace RibbonTabOpen
 {
     public partial class AddWindow : Form
     {
+        //private readonly string TextBox1;
+
         public AddWindow()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace RibbonTabOpen
         //********************************************************************************
         // Сохраняем данные в файл
 
-        private void Button1_Click(object sender, EventArgs e)
+        public void Button1_Click(object sender, EventArgs e)
         {
             // Объявляем строковую переменную "path", которая описывает путь к файлу
             string path = @"C:\Users\i.geraskin\source\repos\Downhole.txt";
@@ -69,7 +71,11 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            //string value = DataTabs.TextBox1;
+            //using (DataTabs frm = new DataTabs())
+            //{
+            //    string value = textBox1.Text;
+            //}
+                
 
             //string h_bhole = textBox1.Text;
             //string h_obs = textBox02.Text;
@@ -158,7 +164,7 @@ namespace RibbonTabOpen
 
             //--------------------------- Данные первой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Глубина забоя, м: ");
+            sw.WriteLine("Глубина забоя, м: " );
             sw.WriteLine("\n");
             sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: ");          
             sw.WriteLine("\n");

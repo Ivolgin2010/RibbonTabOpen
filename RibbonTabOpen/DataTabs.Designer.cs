@@ -662,7 +662,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(198, 24);
+            this.label2.Location = new System.Drawing.Point(201, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 15);
             this.label2.TabIndex = 2;
@@ -674,12 +674,13 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.helpProvider1.SetHelpNavigator(this.textBox1, System.Windows.Forms.HelpNavigator.Index);
             this.helpProvider1.SetHelpString(this.textBox1, "введите значение");
-            this.textBox1.Location = new System.Drawing.Point(95, 23);
+            this.textBox1.Location = new System.Drawing.Point(98, 23);
             this.textBox1.Name = "textBox1";
             this.helpProvider1.SetShowHelp(this.textBox1, true);
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 1;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;            
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // label1
             // 
@@ -2723,7 +2724,7 @@
         private System.Windows.Forms.TextBox textBox51;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.ErrorProvider errorProvider51;
-        private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.TextBox textBox1;
     }
 }

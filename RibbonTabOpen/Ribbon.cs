@@ -114,7 +114,7 @@ namespace RibbonTabOpen
 
         private void Click_Start(object sender, EventArgs e)
         {
-
+            MessageBox.Show("В этом месте будет ProgressBar", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //********************************************************************************
@@ -122,7 +122,7 @@ namespace RibbonTabOpen
 
         private void Click_Report(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Здесь будем создавать отчет", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //********************************************************************************

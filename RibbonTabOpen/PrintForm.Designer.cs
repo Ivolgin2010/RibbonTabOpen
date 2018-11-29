@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкаСтраницыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкаПечатиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.предварительныйПросмотрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textPrint = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,15 +66,21 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.выходToolStripMenuItem.Text = "Открыть ";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
+            // 
+            // выходToolStripMenuItem1
+            // 
+            this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
+            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.выходToolStripMenuItem1.Text = "Выход";
+            this.выходToolStripMenuItem1.Click += new System.EventHandler(this.ВыходToolStripMenuItem1_Click);
             // 
             // печатьToolStripMenuItem
             // 
             this.печатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.настройкаСтраницыToolStripMenuItem,
-            this.настройкаПечатиToolStripMenuItem,
             this.предварительныйПросмотрToolStripMenuItem,
             this.печатьToolStripMenuItem1});
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
@@ -85,13 +93,6 @@
             this.настройкаСтраницыToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.настройкаСтраницыToolStripMenuItem.Text = "Настройка страницы";
             this.настройкаСтраницыToolStripMenuItem.Click += new System.EventHandler(this.НастройкаСтраницыToolStripMenuItem_Click);
-            // 
-            // настройкаПечатиToolStripMenuItem
-            // 
-            this.настройкаПечатиToolStripMenuItem.Name = "настройкаПечатиToolStripMenuItem";
-            this.настройкаПечатиToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.настройкаПечатиToolStripMenuItem.Text = "Настройка печати";
-            this.настройкаПечатиToolStripMenuItem.Click += new System.EventHandler(this.НастройкаПечатиToolStripMenuItem_Click);
             // 
             // предварительныйПросмотрToolStripMenuItem
             // 
@@ -107,28 +108,40 @@
             this.печатьToolStripMenuItem1.Text = "Печать";
             this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.ПечатьToolStripMenuItem1_Click);
             // 
-            // выходToolStripMenuItem1
+            // textPrint
             // 
-            this.выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
-            this.выходToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.выходToolStripMenuItem1.Text = "Выход";
-            this.выходToolStripMenuItem1.Click += new System.EventHandler(this.ВыходToolStripMenuItem1_Click);
+            this.textPrint.Location = new System.Drawing.Point(13, 28);
+            this.textPrint.Multiline = true;
+            this.textPrint.Name = "textPrint";
+            this.textPrint.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textPrint.Size = new System.Drawing.Size(429, 389);
+            this.textPrint.TabIndex = 1;
+            this.textPrint.TextChanged += new System.EventHandler(this.textPrint_TextChanged);
             // 
-            // textBox1
+            // printDocument1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(429, 389);
-            this.textBox1.TabIndex = 1;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Click += new System.EventHandler(this.ПредварительныйПросмотрToolStripMenuItem_Click);
             // 
             // PrintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 429);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textPrint);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PrintForm";
             this.Text = "Печать отчета";
@@ -146,10 +159,11 @@
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкаСтраницыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкаПечатиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem предварительныйПросмотрToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textPrint;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
