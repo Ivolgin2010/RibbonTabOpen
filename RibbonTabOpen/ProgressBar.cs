@@ -24,10 +24,25 @@ namespace RibbonTabOpen
 
         private void ProgressBar_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Increment(1);
+            label2.Text = progressBar1.Value.ToString() + "%";       
+            
+
+
+            //MessageBox.Show("Рысчет успешно выполнен!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ProgressBar1_Click(object sender, EventArgs e)
         {
 
         }
