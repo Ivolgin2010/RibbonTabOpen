@@ -54,5 +54,25 @@ namespace RibbonTabOpen
         {
 
         }
+
+        private void MouseHover_Exit(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "нажмите для выхода из программы";
+        }
+
+        private void MouseLeave_Exit(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Добро пожаловать";
+        }
+
+        private void MouseHover_About(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "сведения о программе";
+        }
+
+        private void MouseLeave_About(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Добро пожаловать";
+        }
     }
 }

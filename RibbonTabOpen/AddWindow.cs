@@ -30,15 +30,31 @@ namespace RibbonTabOpen
 
         public void Button1_Click(object sender, EventArgs e)
         {
-            // Объявляем строковую переменную "path", которая описывает путь к файлу
-            string path = @"C:\Users\i.geraskin\source\repos\Downhole.txt";
+            // Объявляем строковую переменную "path", которая описывает путь к файлу            
 
-            //SaveFileDialog saveFileDialog1 = new SaveFileDialog
-            //{
-            //    InitialDirectory = @"C:\Users\i.geraskin\source\repos\Downhole.txt",
-            //    Filter = "Файлы txt (*.txt)| *.txt",
-            //    RestoreDirectory = true
-            //};
+            Stream myStream;
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog
+            {
+                InitialDirectory = @"C:\Users\i.geraskin\source\repos",
+                Filter = "Файлы txt (*.txt)| *.txt",
+                RestoreDirectory = true
+            };
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {                
+                if ((myStream = saveFileDialog1.OpenFile()) != null)
+                {
+                    // Code to write the stream goes here.
+
+                    myStream.Close();
+                }
+            }
+
+            /* В аргументах инициализатора нового экземпляра класса, наряду с
+             * переменной "path", нужно указать свойство "true" - разрешена
+               дозапись в существующий файл или "false" - переписать файл*/            
+
+            StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);           
 
             // добавляем элементы заголовочного файла
 
@@ -50,15 +66,7 @@ namespace RibbonTabOpen
 
             // добавляем вставку конца файла
 
-            string div3 = "********************** Конец файла ***************************";
-
-            /* В аргументах инициализатора нового экземпляра класса, наряду с
-             * переменной "path", нужно указать свойство "true" - разрешена
-               дозапись в существующий файл или "false" - переписать файл*/
-
-            StreamWriter sw = new StreamWriter(path, false);
-
-            //StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
+            string div3 = "********************** Конец файла ***************************";            
 
             //--------------------------- Определяем переменные ---------------------------------------//
 
@@ -72,8 +80,8 @@ namespace RibbonTabOpen
             // Данные первой вкладки
 
             DataTabs frm = new DataTabs();            
-            string value = frm.textBox1.Text;
-                           
+            string h_bhole = frm.textBox1.Text;
+
 
             //string h_bhole = textBox1.Text;
             //string h_obs = textBox02.Text;
@@ -144,7 +152,11 @@ namespace RibbonTabOpen
 
             //-------------------------------- создаем заголовок файла -------------------------------------------//
 
-            sw.WriteLine("Сохраненные анкетные данные");
+            sw.WriteLine(div2.ToString());
+            //sw.WriteLine("\n");
+            sw.WriteLine("Название: Сохраненные анкетные данные");
+            //sw.WriteLine("\n");
+            //sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
             sw.WriteLine("Разработчик: ООО ОКБ 'Гамма' ");
             sw.WriteLine("\n");
@@ -162,7 +174,7 @@ namespace RibbonTabOpen
 
             //--------------------------- Данные первой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Глубина забоя, м: " + value.ToString());
+            sw.WriteLine("Глубина забоя, м: " + h_bhole.ToString());
             sw.WriteLine("\n");
             sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: ");          
             sw.WriteLine("\n");

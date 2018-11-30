@@ -13,7 +13,7 @@ namespace RibbonTabOpen
 {
     public partial class PrintForm : Form
     {
-        private string stringToPrint;
+        //private string stringToPrint;
 
         public PrintForm()
         {
