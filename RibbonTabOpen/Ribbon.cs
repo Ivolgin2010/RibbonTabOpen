@@ -135,5 +135,15 @@ namespace RibbonTabOpen
         {
 
         }
+
+        private void Click_shortcutOpen(object sender, EventArgs e)
+        {
+            MessageBox.Show("Здесь откроем диалоговое окно для открытия файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Click_shortcutSaveAs(object sender, EventArgs e)
+        {
+            MessageBox.Show("Здесь откроем диалоговое окно для сохранения файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

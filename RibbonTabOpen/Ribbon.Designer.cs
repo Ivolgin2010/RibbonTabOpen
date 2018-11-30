@@ -48,9 +48,6 @@
             this.ribbonOrbMenuItem3 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbMenuItem5 = new System.Windows.Forms.RibbonOrbMenuItem();
             this.ribbonOrbRecentItem1 = new System.Windows.Forms.RibbonOrbRecentItem();
-            this.SaveAsButton = new System.Windows.Forms.RibbonButton();
-            this.Undo = new System.Windows.Forms.RibbonButton();
-            this.Redo = new System.Windows.Forms.RibbonButton();
             this.ribbonItemGroup1 = new System.Windows.Forms.RibbonItemGroup();
             this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
@@ -185,9 +182,10 @@
             // 
             // 
             this.ribbon1.QuickAcessToolbar.Checked = true;
-            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.SaveAsButton);
-            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.Undo);
-            this.ribbon1.QuickAcessToolbar.DropDownButtonItems.Add(this.Redo);
+            this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton12);
+            this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton15);
+            this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton16);
+            this.ribbon1.QuickAcessToolbar.Items.Add(this.ribbonButton17);
             this.ribbon1.QuickAcessToolbar.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Large;
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
             this.ribbon1.Size = new System.Drawing.Size(426, 170);
@@ -229,27 +227,6 @@
             this.ribbonOrbRecentItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbRecentItem1.SmallImage")));
             this.ribbonOrbRecentItem1.Text = "История сохранения";
             this.ribbonOrbRecentItem1.Click += new System.EventHandler(this.Click_History);
-            // 
-            // SaveAsButton
-            // 
-            this.SaveAsButton.CheckOnClick = true;
-            this.SaveAsButton.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.SaveAsButton.Image = global::RibbonTabOpen.Properties.Resources.SaveAs_16x16;
-            this.SaveAsButton.SmallImage = global::RibbonTabOpen.Properties.Resources.SaveAs_16x16;
-            // 
-            // Undo
-            // 
-            this.Undo.CheckOnClick = true;
-            this.Undo.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.Undo.Image = global::RibbonTabOpen.Properties.Resources.Undo_16x16;
-            this.Undo.SmallImage = global::RibbonTabOpen.Properties.Resources.Undo_16x16;
-            // 
-            // Redo
-            // 
-            this.Redo.CheckOnClick = true;
-            this.Redo.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.Redo.Image = global::RibbonTabOpen.Properties.Resources.Redo_16x16;
-            this.Redo.SmallImage = global::RibbonTabOpen.Properties.Resources.Redo_16x16;
             // 
             // ribbonItemGroup1
             // 
@@ -308,6 +285,7 @@
             this.ribbonButton12.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
             this.ribbonButton12.SmallImage = global::RibbonTabOpen.Properties.Resources.Open_16x16;
             this.ribbonButton12.Text = "ribbonButton12";
+            this.ribbonButton12.Click += new System.EventHandler(this.Click_shortcutOpen);
             // 
             // ribbonButton15
             // 
@@ -315,6 +293,7 @@
             this.ribbonButton15.MaxSizeMode = System.Windows.Forms.RibbonElementSizeMode.Compact;
             this.ribbonButton15.SmallImage = global::RibbonTabOpen.Properties.Resources.SaveAs_16x16;
             this.ribbonButton15.Text = "ribbonButton15";
+            this.ribbonButton15.Click += new System.EventHandler(this.Click_shortcutSaveAs);
             // 
             // ribbonButton16
             // 
@@ -369,9 +348,6 @@
         private System.Windows.Forms.RibbonOrbMenuItem ribbonOrbMenuItem5;
         private System.Windows.Forms.RibbonOrbRecentItem ribbonOrbRecentItem1;
         private System.Windows.Forms.RibbonButton ribbonButton7;
-        private System.Windows.Forms.RibbonButton SaveAsButton;
-        private System.Windows.Forms.RibbonButton Undo;
-        private System.Windows.Forms.RibbonButton Redo;
         private System.Windows.Forms.RibbonButton ribbonButton13;
         private System.Windows.Forms.RibbonButton ribbonButton14;
         private System.Windows.Forms.Ribbon ribbon1;
