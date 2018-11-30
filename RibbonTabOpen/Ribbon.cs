@@ -138,12 +138,22 @@ namespace RibbonTabOpen
 
         private void Click_shortcutOpen(object sender, EventArgs e)
         {
-            MessageBox.Show("Здесь откроем диалоговое окно для открытия файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Помещаем здесь код диалогового окна открытия файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Click_shortcutSaveAs(object sender, EventArgs e)
         {
-            MessageBox.Show("Здесь откроем диалоговое окно для сохранения файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Помещаем здесь код диалогового окна сохранения файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void click_Undo(object sender, EventArgs e)
+        {
+            MessageBox.Show("Помещаем здесь код отмены действия", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void click_Redo(object sender, EventArgs e)
+        {
+            MessageBox.Show("Помещаем здесь код отмены предыдущего действие", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

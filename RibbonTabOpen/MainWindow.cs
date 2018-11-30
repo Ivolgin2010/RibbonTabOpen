@@ -67,7 +67,7 @@ namespace RibbonTabOpen
 
         private void MouseHover_About(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "сведения о программе";
+            toolStripStatusLabel1.Text = "вызов сведений о программе";
         }
 
         private void MouseLeave_About(object sender, EventArgs e)
