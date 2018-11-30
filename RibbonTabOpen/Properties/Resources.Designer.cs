@@ -193,6 +193,16 @@ namespace RibbonTabOpen.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Redo_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Redo_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap report {
             get {
                 object obj = ResourceManager.GetObject("report", resourceCulture);
@@ -213,9 +223,29 @@ namespace RibbonTabOpen.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SaveAs_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("SaveAs_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SaveAs_32x32 {
             get {
                 object obj = ResourceManager.GetObject("SaveAs_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Undo_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Undo_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

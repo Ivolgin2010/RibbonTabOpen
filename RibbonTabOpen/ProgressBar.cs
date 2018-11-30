@@ -34,6 +34,22 @@ namespace RibbonTabOpen
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            //var stcount = 100;
+            //progressBar1.Minimum = 0;
+            //progressBar1.Value = 0;
+            //progressBar1.Step = 1;
+            //progressBar1.Maximum = stcount;
+            //var th = new Thread(() => func(stcount));
+            //th.Start();
+
+            //int steps;
+            //for (var i = 0; i < steps; ++i)
+            //{
+            //    Invoke(new Action(() => progressBar1.PerformStep()));
+            //    Thread.Sleep(500);
+            //    //мой код
+            //}
+
             progressBar1.Increment(1);
             label2.Text = progressBar1.Value.ToString() + "%";       
             
@@ -42,9 +58,9 @@ namespace RibbonTabOpen
             //MessageBox.Show("Рысчет успешно выполнен!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void ProgressBar1_Click(object sender, EventArgs e)
-        {
+        //private void ProgressBar1_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

@@ -63,7 +63,6 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(329, 23);
             this.progressBar1.TabIndex = 2;
-            this.progressBar1.Click += new System.EventHandler(this.ProgressBar1_Click);
             // 
             // timer1
             // 
@@ -88,7 +87,7 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

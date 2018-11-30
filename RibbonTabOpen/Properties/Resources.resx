@@ -124,6 +124,9 @@
   <data name="data1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="oil pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oil pump.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SaveAs_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveAs_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,14 +148,20 @@
   <data name="print2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\print2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Open_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Open_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveAs_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveAs_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ESP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ESP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lift" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lift.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Close_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Undo_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Undo_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pump.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,10 +169,10 @@
   <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="oil pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oil pump.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lift" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lift.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Open_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Open_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Redo_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Redo_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

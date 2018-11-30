@@ -232,5 +232,14 @@
   <ItemGroup>
     <None Include="Resources\Open_16x16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAs_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo_16x16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
