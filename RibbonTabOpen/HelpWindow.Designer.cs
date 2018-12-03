@@ -40,8 +40,8 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Узел2";
             treeNode1.Text = "Содержание";
+            treeNode1.ToolTipText = "общее содержание справки";
             treeNode2.Name = "Узел1";
             treeNode2.Text = "Назначение программы";
             treeNode3.Name = "Узел2";
@@ -95,6 +96,14 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(99, 22);
+            this.toolStripLabel1.Text = "Содержание";
+            this.toolStripLabel1.Click += new System.EventHandler(this.ToolStripLabel1_Click);
+            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -105,14 +114,6 @@
             this.toolStripButton1.Text = "нажмите чтобы показать справку";
             this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(99, 22);
-            this.toolStripLabel1.Text = "Содержание";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
-            // 
             // HelpWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +122,8 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.webBrowser1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "HelpWindow";
             this.Text = " Помощь";
             this.Load += new System.EventHandler(this.HelpWindow_Load);

@@ -39,7 +39,7 @@ namespace RibbonTabOpen
 
         }
 
-        private void toolStripLabel1_Click(object sender, EventArgs e)
+        private void ToolStripLabel1_Click(object sender, EventArgs e)
         {
 
         }
