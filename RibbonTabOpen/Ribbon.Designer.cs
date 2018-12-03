@@ -256,7 +256,7 @@
             this.ribbonButton16.SmallImage = global::RibbonTabOpen.Properties.Resources.Undo_16x16;
             this.ribbonButton16.Text = "ribbonButton16";
             this.ribbonButton16.ToolTip = "Отменить";
-            this.ribbonButton16.Click += new System.EventHandler(this.click_Undo);
+            this.ribbonButton16.Click += new System.EventHandler(this.Click_Undo);
             // 
             // ribbonButton17
             // 
@@ -265,7 +265,7 @@
             this.ribbonButton17.SmallImage = global::RibbonTabOpen.Properties.Resources.Redo_16x16;
             this.ribbonButton17.Text = "ribbonButton17";
             this.ribbonButton17.ToolTip = "Вернуть";
-            this.ribbonButton17.Click += new System.EventHandler(this.click_Redo);
+            this.ribbonButton17.Click += new System.EventHandler(this.Click_Redo);
             // 
             // ribbonItemGroup1
             // 

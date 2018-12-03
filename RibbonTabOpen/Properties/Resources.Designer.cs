@@ -63,6 +63,16 @@ namespace RibbonTabOpen.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _18 {
+            get {
+                object obj = ResourceManager.GetObject("18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cancel_32x32 {
             get {
                 object obj = ResourceManager.GetObject("Cancel_32x32", resourceCulture);
@@ -126,6 +136,26 @@ namespace RibbonTabOpen.Properties {
         internal static System.Drawing.Bitmap oil_pump {
             get {
                 object obj = ResourceManager.GetObject("oil pump", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OilGas {
+            get {
+                object obj = ResourceManager.GetObject("OilGas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OilGas1 {
+            get {
+                object obj = ResourceManager.GetObject("OilGas1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

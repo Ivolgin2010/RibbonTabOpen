@@ -102,7 +102,7 @@ namespace RibbonTabOpen
         }
         #endregion
 
-        private void okButton_Click(object sender, EventArgs e)
+        private void OkButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -112,17 +112,22 @@ namespace RibbonTabOpen
 
         }
 
-        private void logoPictureBox_Click(object sender, EventArgs e)
+        private void LogoPictureBox_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void labelProductName_Click(object sender, EventArgs e)
+        private void LabelProductName_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        private void TextBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TableLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

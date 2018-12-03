@@ -146,12 +146,12 @@ namespace RibbonTabOpen
             MessageBox.Show("Помещаем здесь код диалогового окна сохранения файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void click_Undo(object sender, EventArgs e)
+        private void Click_Undo(object sender, EventArgs e)
         {
             MessageBox.Show("Помещаем здесь код отмены действия", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void click_Redo(object sender, EventArgs e)
+        private void Click_Redo(object sender, EventArgs e)
         {
             MessageBox.Show("Помещаем здесь код отмены предыдущего действие", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

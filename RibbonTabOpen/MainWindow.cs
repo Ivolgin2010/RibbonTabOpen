@@ -36,8 +36,8 @@ namespace RibbonTabOpen
 
         private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutBox newFrame1 = new AboutBox();
-            newFrame1.Show();
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.Show();
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
@@ -73,6 +73,11 @@ namespace RibbonTabOpen
         private void MouseLeave_About(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = "Добро пожаловать";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
