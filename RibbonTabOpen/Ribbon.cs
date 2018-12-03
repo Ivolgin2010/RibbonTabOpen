@@ -77,9 +77,15 @@ namespace RibbonTabOpen
 
         private void Click_Help(object sender, EventArgs e)
         {
-           // Help.ShowHelp(this, "C:\\My folder\\Downhole Heating Software Creation\\С#\\GUI C# code\\GUI help.chm", HelpNavigator.TopicId, "30");
+            // Help.ShowHelp(this, "C:\\My folder\\Downhole Heating Software Creation\\С#\\GUI C# code\\GUI help.chm", HelpNavigator.TopicId, "30");
 
-            Help.ShowHelp(this, "C:\\Users\\i.geraskin\\Documents\\GitHub\\RibbonTabOpen\\RibbonTabOpen\\html\\help.html", HelpNavigator.TopicId, "30");
+            //Help.ShowHelp(this, @"C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\html\help.html", HelpNavigator.TopicId, "30");
+
+            HelpWindow help = new HelpWindow();
+            help.Show();
+            //StreamReader sr = new StreamReader(@"C: \Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\html\help.html");
+            //webBrowser1.DocumentStream = sr.BaseStream;
+
         }
 
         //******************************************************************************

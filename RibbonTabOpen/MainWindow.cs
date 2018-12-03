@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +15,19 @@ namespace RibbonTabOpen
     {
         public MainWindow()
         {
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(2500);
             InitializeComponent();
+
+            t.Abort();
+        }
+
+        public void StartForm()
+        {
+
+           Application.Run(new FrmSplash());            
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -75,7 +88,7 @@ namespace RibbonTabOpen
             toolStripStatusLabel1.Text = "Добро пожаловать";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
 
         }

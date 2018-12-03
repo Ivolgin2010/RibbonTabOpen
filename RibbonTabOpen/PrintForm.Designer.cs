@@ -110,11 +110,12 @@
             // 
             // textPrint
             // 
-            this.textPrint.Location = new System.Drawing.Point(13, 28);
+            this.textPrint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textPrint.Location = new System.Drawing.Point(0, 24);
             this.textPrint.Multiline = true;
             this.textPrint.Name = "textPrint";
             this.textPrint.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textPrint.Size = new System.Drawing.Size(429, 389);
+            this.textPrint.Size = new System.Drawing.Size(454, 405);
             this.textPrint.TabIndex = 1;
             this.textPrint.TextChanged += new System.EventHandler(this.textPrint_TextChanged);
             // 
