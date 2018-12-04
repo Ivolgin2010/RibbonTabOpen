@@ -13,12 +13,12 @@ namespace RibbonTabOpen
 {
     public partial class AddWindow : Form
     {
-        //private readonly string TextBox1;
-
         public AddWindow()
         {
             InitializeComponent();
         }
+
+        
 
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -79,12 +79,16 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            DataTabs frm = new DataTabs();            
-            string h_bhole = frm.textBox1.Text;
-
+            //DataTabs TextBox1 = new DataTabs();
+            string value = DataTabs.textBox1.Text;
+            //textBox1.Text = DataTabs.textBox1.Text;
 
             //string h_bhole = textBox1.Text;
-            //string h_obs = textBox02.Text;
+
+            //DataTabs TextBox2 = new DataTabs();
+            //string h_obs = TextBox2.textBox2.Text;
+
+
             //string d_vnesh_obs = textBox3.Text;
             //string h_nkt = textBox4.Text;
             //string d_vnesh_nkt = textBox5.Text;
@@ -174,7 +178,7 @@ namespace RibbonTabOpen
 
             //--------------------------- Данные первой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Глубина забоя, м: " + h_bhole.ToString());
+            sw.WriteLine("Глубина забоя, м: " + value.ToString());
             sw.WriteLine("\n");
             sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: ");          
             sw.WriteLine("\n");
@@ -294,7 +298,6 @@ namespace RibbonTabOpen
             sw.WriteLine("\n");
             sw.WriteLine("Ручной выбор напряжения питания кабеля, В: ");
             sw.WriteLine("\n");
-
             sw.WriteLine(div3.ToString());
 
             /* Перед выходом из приложения не забываем закрывать файл */

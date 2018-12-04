@@ -173,6 +173,16 @@ namespace RibbonTabOpen.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Home_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Home_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lift {
             get {
                 object obj = ResourceManager.GetObject("lift", resourceCulture);

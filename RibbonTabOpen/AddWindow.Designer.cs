@@ -166,6 +166,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox03;
         private System.Windows.Forms.TextBox textBox04;
-        public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button1;
     }
 }
