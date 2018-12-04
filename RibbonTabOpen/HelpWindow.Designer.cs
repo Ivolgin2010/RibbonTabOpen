@@ -125,7 +125,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HelpWindow";
-            this.Text = " Помощь";
+            this.Text = " Расчет обогрева скважины Помощь";
             this.Load += new System.EventHandler(this.HelpWindow_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
