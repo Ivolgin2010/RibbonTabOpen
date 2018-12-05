@@ -13,12 +13,12 @@ namespace RibbonTabOpen
 {
     public partial class AddWindow : Form
     {
+        //private object dataTabs;
+
         public AddWindow()
         {
             InitializeComponent();
-        }
-
-        
+        }        
 
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -81,7 +81,7 @@ namespace RibbonTabOpen
 
             DataTabs TextBox1 = new DataTabs();
             string value = TextBox1.textBox1.Text;
-           
+            
             //string h_bhole = textBox1.Text;
 
             //DataTabs TextBox2 = new DataTabs();

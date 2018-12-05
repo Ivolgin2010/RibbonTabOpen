@@ -21,8 +21,8 @@ namespace RibbonTabOpen
         // вызываем окно ввода данных       
         private new void Click(object sender, EventArgs e)
         {
-            DataTabs newForm1 = new DataTabs();
-            newForm1.Show();
+            DataTabs dataTabs = new DataTabs();
+            dataTabs.Show();
         }
         
         // выходим из функционального окна
@@ -102,8 +102,8 @@ namespace RibbonTabOpen
 
         private void Click_Viewer(object sender, EventArgs e)
         {
-            Viewer view = new Viewer();
-            view.Show();
+            Viewer viewer = new Viewer();
+            viewer.Show();
         }
 
         //*********************************************************************************

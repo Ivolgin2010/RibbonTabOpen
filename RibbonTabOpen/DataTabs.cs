@@ -13,15 +13,15 @@ namespace RibbonTabOpen
 
     public partial class DataTabs : Form
     {
-        //public string TextBox {get; set;}
         
-
         public DataTabs()
 
         {
             InitializeComponent();
         }
-        
+
+       
+
         private void Button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -106,8 +106,8 @@ namespace RibbonTabOpen
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory =  @"C: \Users\i.geraskin\source\repos";
-                openFileDialog.Filter = "Файлы txt (*.txt)| *.txt";                
+                openFileDialog.InitialDirectory = @"C: \Users\i.geraskin\source\repos";
+                openFileDialog.Filter = "Файлы txt (*.txt)| *.txt";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
 
@@ -315,7 +315,7 @@ namespace RibbonTabOpen
         //Проверяем первое поле. 1.4 Глубина забоя. 
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
-        {           
+        {
             int.TryParse(textBox1.Text, out int TextBox1); // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
 
             // проверяем если поле пустое            
@@ -324,7 +324,7 @@ namespace RibbonTabOpen
                 errorProvider1.Clear(); // очищаем ErrorProvider
 
                 // показываем всплывающую подсказку
-                ToolTip tool = new ToolTip();                 
+                ToolTip tool = new ToolTip();
                 tool.SetToolTip(this.textBox1, "введите значение");
             }
             else
@@ -349,11 +349,12 @@ namespace RibbonTabOpen
 
                     // выводим сообщение об ошибке используя ErrorProvider
                     errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона");
-                }                
-            }                       
+                }
+            }
+
 
         }
-
+       
         private void Label92_Click(object sender, EventArgs e)
         {
 
