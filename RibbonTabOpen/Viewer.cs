@@ -22,7 +22,7 @@ namespace RibbonTabOpen
         {
             OpenFileDialog openFileDialog2 = new OpenFileDialog
             {
-                InitialDirectory = "c:\\",
+                InitialDirectory = @"C:\Users\i.geraskin\source\repos",
                 Filter = "Файлы txt (*.txt)| *.txt",
                 FilterIndex = 2,
                 RestoreDirectory = true
@@ -30,7 +30,7 @@ namespace RibbonTabOpen
 
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
-                ;
+                
             }
 
             {
@@ -49,6 +49,31 @@ namespace RibbonTabOpen
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TxtText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MouseHover_Viewer(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "нажмите для выхода из программы";
+        }
+
+        private void MouseLeave_Viewer(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Добро пожаловать";
+        }
+
+        private void MouseHover_Viewer_Open(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "открыть файл для просмотра";
+        }
+
+        private void MouseLeave_Viewer_open(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Добро пожаловать";
         }
     }
 }

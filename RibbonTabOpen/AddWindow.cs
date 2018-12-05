@@ -58,7 +58,7 @@ namespace RibbonTabOpen
 
             // добавляем элементы заголовочного файла
 
-            string div1 = "********************** Конец заголовка ***************************";
+            string div1 = "************************************* Конец заголовка ********************************************";
 
             // добавляем промежуточный разделитель
 
@@ -66,7 +66,7 @@ namespace RibbonTabOpen
 
             // добавляем вставку конца файла
 
-            string div3 = "********************** Конец файла ***************************";            
+            string div3 = "**************************************** Конец файла ***********************************************";            
 
             //--------------------------- Определяем переменные ---------------------------------------//
 
@@ -79,10 +79,9 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            //DataTabs TextBox1 = new DataTabs();
-            string value = DataTabs.textBox1.Text;
-            //textBox1.Text = DataTabs.textBox1.Text;
-
+            DataTabs TextBox1 = new DataTabs();
+            string value = TextBox1.textBox1.Text;
+           
             //string h_bhole = textBox1.Text;
 
             //DataTabs TextBox2 = new DataTabs();
@@ -164,7 +163,7 @@ namespace RibbonTabOpen
             sw.WriteLine("\n");
             sw.WriteLine("Разработчик: ООО ОКБ 'Гамма' ");
             sw.WriteLine("\n");
-            sw.WriteLine("Дата сохранения:  " + DateTime.Now.ToString());
+            sw.WriteLine("Дата сохранения: " + DateTime.Now.ToString());
             sw.WriteLine("\n");
             sw.WriteLine("Оператор : " + company.ToString());
             sw.WriteLine("\n");
@@ -175,6 +174,7 @@ namespace RibbonTabOpen
             sw.WriteLine("Марка ЭЦН: " + label.ToString());
             sw.WriteLine("\n");
             sw.WriteLine(div1.ToString());
+            sw.WriteLine("\n");
 
             //--------------------------- Данные первой вкладки ---------------------------------------------//
 
@@ -191,6 +191,7 @@ namespace RibbonTabOpen
             sw.WriteLine("Статический уровень флюида в скважине, м: ");
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
+            sw.WriteLine("\n");
 
             //--------------------------- Данные второй вкладки ---------------------------------------------//
 
@@ -203,6 +204,7 @@ namespace RibbonTabOpen
             sw.WriteLine("Максимальная температура наиболее теплого месяца, град С:");
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
+            sw.WriteLine("\n");
 
             //--------------------------- Данные третьей вкладки ---------------------------------------------//
 
@@ -217,6 +219,7 @@ namespace RibbonTabOpen
             sw.WriteLine("Газосодержание пластовой жидкости, м3/м3:");
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
+            sw.WriteLine("\n");
 
             //--------------------------- Данные четвертой вкладки ---------------------------------------------//
             sw.WriteLine("Дебит по жидкости (с чистой НКТ), м3/сут:");
@@ -240,6 +243,7 @@ namespace RibbonTabOpen
             sw.WriteLine("Максимальная глубина отложения АСПО (по данным КРС), м:");            
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
+            sw.WriteLine("\n");
 
             //--------------------------- Данные пятой вкладки ---------------------------------------------//
             sw.WriteLine("Плотность дегазированной нефти в норм. условиях,кг/м3:");
@@ -263,6 +267,7 @@ namespace RibbonTabOpen
             sw.WriteLine("Плотность сопутствующей воды, кг/м3:");
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
+            sw.WriteLine("\n");
 
             //--------------------------- Данные шестой вкладки ---------------------------------------------//
 
