@@ -79,8 +79,8 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            DataTabs TextBox1 = new DataTabs();
-            string value = TextBox1.textBox1.Text;
+            DataTabs f = new DataTabs();
+            string value = f.SendText;
             
             //string h_bhole = textBox1.Text;
 
