@@ -30,8 +30,7 @@ namespace RibbonTabOpen
 
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader(@"C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\html\help.html");
-            webBrowser1.DocumentStream = sr.BaseStream;
+            
         }
 
         private void HelpWindow_Load(object sender, EventArgs e)
@@ -42,6 +41,17 @@ namespace RibbonTabOpen
         private void ToolStripLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripButton2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ToolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(@"C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\html\help.html");
+            webBrowser1.DocumentStream = sr.BaseStream;
         }
     }
 }
