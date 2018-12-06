@@ -18,5 +18,5 @@ namespace RibbonTabOpen
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainWindow());
         }
-    }
+    }    
 }

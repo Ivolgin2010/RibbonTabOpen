@@ -14,15 +14,22 @@ namespace RibbonTabOpen
     public partial class MainWindow : Form
     {
         public MainWindow()
-        {
+        {   // инициализируем поток
             Thread t = new Thread(new ThreadStart(StartForm));
+
+            // запукскаем его
             t.Start();
+
+            // ждем 2500 мсек
             Thread.Sleep(2500);
+
             InitializeComponent();
 
+            // выходим из потока
             t.Abort();
         }
 
+        // запускаем стартовое окно
         public void StartForm()
         {
 
@@ -93,7 +100,7 @@ namespace RibbonTabOpen
 
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void ToolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

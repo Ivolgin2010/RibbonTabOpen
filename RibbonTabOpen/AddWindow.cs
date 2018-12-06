@@ -316,6 +316,10 @@ namespace RibbonTabOpen
             MessageBox.Show("Данные были успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);         
 
         }
-        
+
+        private void AddWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

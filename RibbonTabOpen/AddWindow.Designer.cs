@@ -150,6 +150,7 @@
             this.MinimizeBox = false;
             this.Name = "AddWindow";
             this.Text = "Данные по месторождению";
+            this.Load += new System.EventHandler(this.AddWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
