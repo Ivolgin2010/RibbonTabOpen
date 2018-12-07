@@ -109,6 +109,12 @@
     <Compile Include="FrmSplashScreen.Designer.cs">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpenViewFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenViewFile.Designer.cs">
+      <DependentUpon>OpenViewFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProgressBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HelpWindow.resx">
       <DependentUpon>HelpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenViewFile.resx">
+      <DependentUpon>OpenViewFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressBar.resx">
       <DependentUpon>ProgressBar.cs</DependentUpon>

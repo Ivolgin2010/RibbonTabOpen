@@ -312,9 +312,42 @@ namespace RibbonTabOpen
 
         }
 
-        private void Click_shortcutOpen(object sender, EventArgs e)
+        private async void Click_shortcutOpen(object sender, EventArgs e)
         {
-            MessageBox.Show("Помещаем здесь код диалогового окна открытия файла", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Text Documents| *.txt", Multiselect = false, ValidateNames = true })
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        using (StreamReader sr = new StreamReader(ofd.FileName))
+                        {
+                            OpenViewFile readText = new OpenViewFile();
+                            readText.Show();
+                            //open.Text = await sr.ReadToEndAsync();
+                        }
+                    }
+            }  
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            //OpenFileDialog openFileDialog1 = new OpenFileDialog
+            //{
+            //    InitialDirectory = @"C:\Users\i.geraskin\source\repos",
+            //    Filter = "Файлы txt (*.txt)|*.txt",
+            //    FilterIndex = 2,
+            //    RestoreDirectory = true
+            //};
+
+            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    string filename = openFileDialog1.FileName;
+            //    OpenViewFile open = new OpenViewFile();
+            //    open.Show();
+            //    string text = File.ReadAllText(filename);                               
+            //}
+            
         }
 
         private void Click_shortcutSaveAs(object sender, EventArgs e)
