@@ -18,13 +18,7 @@ namespace RibbonTabOpen
         {
             InitializeComponent();                        
         }
-
-        // создаем переменную значение первого поля
-        private int TextBox1;
-        
-        // передаем значение первого поля в другой класс
-        public TextBox SendText => textBox1;
-
+                
         //
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -310,10 +304,17 @@ namespace RibbonTabOpen
             }
         }
 
+        // ******************************************************************************
+        // создаем переменную значения первого поля
+        private int TextBox1;
+
+        // передаем значение первого поля в другой класс
+        public TextBox SendText => textBox1;
+
         //***********************************************************************
         //Проверяем первое поле. 1.4 Глубина забоя. 
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
+        public void TextBox1_TextChanged(object sender, EventArgs e)
         {
             // TryParse - метод передачи алфавитных символов вместо числовых
             // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
@@ -353,10 +354,7 @@ namespace RibbonTabOpen
                     errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона");
                 }
             }
-
-            //textBox1.Text = TextBox.;
-            //return textBox1.Text;
-            
+                                          
         }
        
         private void Label92_Click(object sender, EventArgs e)

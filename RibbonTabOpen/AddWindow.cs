@@ -81,7 +81,12 @@ namespace RibbonTabOpen
 
             DataTabs getValue = new DataTabs();
             //string value = getValue.SendText;
-            string value = getValue.SendText.Text;
+
+            //string value = getValue.SendText.Text;
+
+            string value = getValue.textBox1.Text;
+            //string value = getValue.TextBox1_TextChanged();
+
 
 
             //string h_bhole = textBox1.Text;
