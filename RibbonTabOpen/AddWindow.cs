@@ -79,12 +79,12 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            DataTabs readValue = new DataTabs();            
-            string value = readValue.textBox1.Text;
-            
-            //string h_bhole = textBox1.Text;
+            DataTabs getValue = new DataTabs();
+            //string value = getValue.SendText;
+            string value = getValue.SendText.Text;
 
-            //DataTabs TextBox2 = new DataTabs();
+
+            //string h_bhole = textBox1.Text;
             //string h_obs = TextBox2.textBox2.Text;
 
 
@@ -163,22 +163,22 @@ namespace RibbonTabOpen
             sw.WriteLine("\n");
             sw.WriteLine("Разработчик: ООО ОКБ 'Гамма' ");
             sw.WriteLine("\n");
-            sw.WriteLine("Дата сохранения: " + DateTime.Now.ToString());
+            sw.WriteLine("Дата сохранения: " + DateTime.Now);
             sw.WriteLine("\n");
-            sw.WriteLine("Оператор : " + company.ToString());
+            sw.WriteLine("Оператор : " + company);
             sw.WriteLine("\n");
-            sw.WriteLine("Наименование месторождения: " + name.ToString());
+            sw.WriteLine("Наименование месторождения: " + name);
             sw.WriteLine("\n");
-            sw.WriteLine("Номер скважины: " + number.ToString());
+            sw.WriteLine("Номер скважины: " + number);
             sw.WriteLine("\n");
-            sw.WriteLine("Марка ЭЦН: " + label.ToString());
+            sw.WriteLine("Марка ЭЦН: " + label);
             sw.WriteLine("\n");
             sw.WriteLine(div1.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные первой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Глубина забоя, м: " + value.ToString());
+            sw.WriteLine("Глубина забоя, м: " + value);
             sw.WriteLine("\n");
             sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: ");          
             sw.WriteLine("\n");

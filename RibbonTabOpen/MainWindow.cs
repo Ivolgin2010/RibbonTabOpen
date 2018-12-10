@@ -60,11 +60,6 @@ namespace RibbonTabOpen
             aboutBox.Show();
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void ToolStripButton2_Click(object sender, EventArgs e)
         {
 

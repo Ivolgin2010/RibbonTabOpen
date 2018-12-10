@@ -10,21 +10,22 @@ using System.Windows.Forms;
 
 namespace RibbonTabOpen
 {
-
+    
     public partial class DataTabs : Form
     {
-        //private 
-
-        public string SendText => textBox1.Text;
-
         public DataTabs()
 
         {
             InitializeComponent();                        
         }
 
+        // создаем переменную значение первого поля
+        private int TextBox1;
         
+        // передаем значение первого поля в другой класс
+        public TextBox SendText => textBox1;
 
+        //
         private void Button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -188,11 +189,6 @@ namespace RibbonTabOpen
             }
         }
 
-        private void DataTabs_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void NextButton2_Click(object sender, EventArgs e)
         {
             // задаем значения второй вкладки
@@ -318,10 +314,10 @@ namespace RibbonTabOpen
         //Проверяем первое поле. 1.4 Глубина забоя. 
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
-        {                      
+        {
             // TryParse - метод передачи алфавитных символов вместо числовых
             // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
-            int.TryParse(textBox1.Text, out int TextBox1); // проверяем поле
+            int.TryParse(textBox1.Text, out TextBox1); // проверяем поле
 
 
             // проверяем если поле пустое            
@@ -356,9 +352,12 @@ namespace RibbonTabOpen
                     // выводим сообщение об ошибке используя ErrorProvider
                     errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона");
                 }
-            }            
+            }
+
+            //textBox1.Text = TextBox.;
+            //return textBox1.Text;
             
-          }
+        }
        
         private void Label92_Click(object sender, EventArgs e)
         {
