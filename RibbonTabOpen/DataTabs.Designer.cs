@@ -386,7 +386,6 @@
             this.label92.Size = new System.Drawing.Size(270, 16);
             this.label92.TabIndex = 3;
             this.label92.Text = "Для скважин с установленным ЭЦН";
-            this.label92.Click += new System.EventHandler(this.Label92_Click);
             // 
             // groupBox4
             // 
@@ -1290,7 +1289,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(332, 33);
+            this.label46.Location = new System.Drawing.Point(331, 33);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(50, 15);
             this.label46.TabIndex = 13;
@@ -1316,7 +1315,7 @@
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(227, 30);
+            this.textBox19.Location = new System.Drawing.Point(228, 30);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(100, 21);
             this.textBox19.TabIndex = 10;
@@ -1389,7 +1388,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(18, 100);
+            this.label38.Location = new System.Drawing.Point(18, 103);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(105, 15);
             this.label38.TabIndex = 2;
@@ -1969,7 +1968,7 @@
             // 
             // textBox50
             // 
-            this.textBox50.Location = new System.Drawing.Point(284, 396);
+            this.textBox50.Location = new System.Drawing.Point(284, 397);
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(100, 21);
             this.textBox50.TabIndex = 24;
@@ -1997,7 +1996,7 @@
             // label88
             // 
             this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(24, 399);
+            this.label88.Location = new System.Drawing.Point(24, 400);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(258, 15);
             this.label88.TabIndex = 21;
@@ -2006,7 +2005,7 @@
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(24, 368);
+            this.label87.Location = new System.Drawing.Point(24, 369);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(184, 15);
             this.label87.TabIndex = 20;

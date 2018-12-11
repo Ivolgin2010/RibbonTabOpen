@@ -75,20 +75,17 @@ namespace RibbonTabOpen
             string company = textBox01.Text; // оператор
             string name = textBox02.Text;    // наименование месторождения
             string number = textBox03.Text;  // номер скважины
-            string label = textBox04.Text;   // 
+            string label = textBox04.Text;   // марка ЭЦН
 
             // Данные первой вкладки
 
-            DataTabs getValue = new DataTabs();
-            //string value = getValue.SendText;
+            DataTabs getValue = new DataTabs
+            {
+                GetValue = 3500
+            };
+            int value = getValue.GetValue;
 
-            //string value = getValue.SendText.Text;
-
-            string value = getValue.textBox1.Text;
-            //string value = getValue.TextBox1_TextChanged();
-
-
-
+            
             //string h_bhole = textBox1.Text;
             //string h_obs = TextBox2.textBox2.Text;
 
