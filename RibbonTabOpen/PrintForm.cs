@@ -24,7 +24,7 @@ namespace RibbonTabOpen
         {
             OpenFileDialog openFileDialog2 = new OpenFileDialog
             {
-                InitialDirectory = "c:\\",
+                InitialDirectory = @"C:\Users\i.geraskin\source\repos",
                 Filter = "Файлы txt (*.txt)|*.txt",
                 FilterIndex = 2,
                 RestoreDirectory = true

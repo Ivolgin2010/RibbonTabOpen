@@ -79,12 +79,11 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            DataTabs getValue = new DataTabs
-            {
-                GetValue = 3500
-            };
-            int value = getValue.GetValue;
+            DataTabs firstValue = new DataTabs();
 
+            firstValue.GetValue = 35;
+            int value = firstValue.GetValue;
+                       
             
             //string h_bhole = textBox1.Text;
             //string h_obs = TextBox2.textBox2.Text;

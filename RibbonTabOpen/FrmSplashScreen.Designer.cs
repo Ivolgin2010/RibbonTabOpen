@@ -60,11 +60,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(126, 454);
+            this.label2.Location = new System.Drawing.Point(77, 454);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(278, 16);
+            this.label2.Size = new System.Drawing.Size(445, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "ССТ Специальные Системы и Технологии";
+            this.label2.Text = "Группа компаний «Специальные системы и технологии» (ГК «ССТ»)";
             // 
             // FrmSplash
             // 

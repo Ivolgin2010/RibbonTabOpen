@@ -27,17 +27,15 @@ namespace RibbonTabOpen
                 FilterIndex = 2,
                 RestoreDirectory = true
             };
-
+            
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
-                
-            }
-
-            {
-                using (StreamReader sr = new StreamReader(openFileDialog2.FileName))
+                string filename = openFileDialog2.FileName;
+                using (StreamReader streamReader = new StreamReader(filename))
                 {
-                    txtText.Text = sr.ReadToEnd();
+                    txtText.Text = streamReader.ReadToEnd();
                 }
+
             }
         }
 
@@ -49,11 +47,6 @@ namespace RibbonTabOpen
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void TxtText_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void MouseHover_Viewer(object sender, EventArgs e)

@@ -62,7 +62,7 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.открытьToolStripMenuItem.Text = "Открыть...";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem_Click);
             this.открытьToolStripMenuItem.MouseLeave += new System.EventHandler(this.MouseLeave_Viewer_open);
@@ -71,7 +71,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.ВыходToolStripMenuItem_Click);
             this.выходToolStripMenuItem.MouseLeave += new System.EventHandler(this.MouseLeave_Viewer);
@@ -103,7 +103,6 @@
             this.txtText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtText.Size = new System.Drawing.Size(430, 404);
             this.txtText.TabIndex = 2;
-            this.txtText.TextChanged += new System.EventHandler(this.TxtText_TextChanged);
             // 
             // Viewer
             // 

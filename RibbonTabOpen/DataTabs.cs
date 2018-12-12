@@ -24,21 +24,23 @@ namespace RibbonTabOpen
         private int TextBox1;
 
         // accessers
-        public int GetValue
-        {
-            // только читаем
-            set
-            {
-                TextBox1 = value;
-            }
 
-            // только записываем
-            get
-            {
-                return TextBox1;
-            }
-        }
-               
+        public int GetValue { get; set; }
+        //{
+        //    // только читаем
+        //    set
+        //    {
+        //        TextBox1 = value;
+        //    }
+
+        //    // только записываем
+        //    get
+        //    {
+        //       return TextBox1;
+
+        //    }
+        //}
+
         //
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -327,7 +329,7 @@ namespace RibbonTabOpen
         //***********************************************************************
         //Проверяем первое поле. 1.4 Глубина забоя. 
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
+       public void TextBox1_TextChanged(object sender, EventArgs e)
         {
             // TryParse - метод передачи алфавитных символов вместо числовых
             // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
@@ -369,12 +371,7 @@ namespace RibbonTabOpen
             }
             
         }
-
-        //private void Label92_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
+               
         //***************************************************************************
         // Проверяем второе поле. 1.5 Длина эксплуатационной колонны.
 
