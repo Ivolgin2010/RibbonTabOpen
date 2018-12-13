@@ -79,11 +79,14 @@ namespace RibbonTabOpen
 
             // Данные первой вкладки
 
-            DataTabs firstValue = new DataTabs();
+            // создаем объект
+            DataTabs FirstTextField = new DataTabs
+            {
+                Get_textBox1 = "35"  // считываем значение
+            };
 
-            firstValue.GetValue = 35;
-            int value = firstValue.GetValue;
-                       
+            string h_bhole = FirstTextField.Get_textBox1; // возвращаем значение
+            
             
             //string h_bhole = textBox1.Text;
             //string h_obs = TextBox2.textBox2.Text;
@@ -179,7 +182,7 @@ namespace RibbonTabOpen
 
             //--------------------------- Данные первой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Глубина забоя, м: " + value);
+            sw.WriteLine("Глубина забоя, м: " + h_bhole);
             sw.WriteLine("\n");
             sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: ");          
             sw.WriteLine("\n");

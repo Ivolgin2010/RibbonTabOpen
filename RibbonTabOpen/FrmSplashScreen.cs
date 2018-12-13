@@ -16,15 +16,5 @@ namespace RibbonTabOpen
         {
             InitializeComponent();
         }
-
-        private void FrmSplash_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

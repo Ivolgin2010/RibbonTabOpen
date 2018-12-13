@@ -122,6 +122,7 @@ namespace RibbonTabOpen
         {
             ProgressBar pb = new ProgressBar();
             pb.Show();
+         
 
            // MessageBox.Show("В этом месте будет ProgressBar", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

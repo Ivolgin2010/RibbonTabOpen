@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace RibbonTabOpen
 {
@@ -19,48 +21,59 @@ namespace RibbonTabOpen
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            backgroundWorker1.CancelAsync();
         }
 
         private void ProgressBar_Load(object sender, EventArgs e)
         {
-            timer1.Start();
+            backgroundWorker1.RunWorkerAsync();
         }
-
-        private void Label1_Click(object sender, EventArgs e)
+        
+        private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            for (int i = 0; i <= 100; i++)
+            {
+                if (backgroundWorker1.CancellationPending)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    SimulateHeavyJob();
+                    backgroundWorker1.ReportProgress(i);
+                }
+            }
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        private void BackgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            //var stcount = 100;
-            //progressBar1.Minimum = 0;
-            //progressBar1.Value = 0;
-            //progressBar1.Step = 1;
-            //progressBar1.Maximum = stcount;
-            //var th = new Thread(() => func(stcount));
-            //th.Start();
-
-            //int steps;
-            //for (var i = 0; i < steps; ++i)
-            //{
-            //    Invoke(new Action(() => progressBar1.PerformStep()));
-            //    Thread.Sleep(500);
-            //    //мой код
-            //}
-
-            progressBar1.Increment(1);
-            label2.Text = progressBar1.Value.ToString() + "%";       
-            
-
-
-            //MessageBox.Show("Рысчет успешно выполнен!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            progressBar1.Value = e.ProgressPercentage;
+            label2.Text = progressBar1.Value.ToString() + "%";
         }
 
-        //private void ProgressBar1_Click(object sender, EventArgs e)
-        //{
+        private void BackgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                MessageBox.Show("Внимание! Расчет был прерван", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                this.Close();
+            }
+            else
+            {
+                Display();
+            }
+        }
+        
+        private void SimulateHeavyJob()
+        {
+            Thread.Sleep(100);
+        }           
 
-        //}
+        private void Display()
+        {
+            MessageBox.Show("Рысчет выполнен успешно!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
+        }
+        
     }
 }

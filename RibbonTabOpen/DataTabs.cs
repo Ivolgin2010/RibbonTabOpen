@@ -23,24 +23,9 @@ namespace RibbonTabOpen
         // создаем переменную значения первого поля
         private int TextBox1;
 
-        // accessers
-
-        public int GetValue { get; set; }
-        //{
-        //    // только читаем
-        //    set
-        //    {
-        //        TextBox1 = value;
-        //    }
-
-        //    // только записываем
-        //    get
-        //    {
-        //       return TextBox1;
-
-        //    }
-        //}
-
+        // аксессор для первого поля
+        public string Get_textBox1 { get; set; }
+        
         //
         private void Button3_Click(object sender, EventArgs e)
         {
@@ -333,8 +318,7 @@ namespace RibbonTabOpen
         {
             // TryParse - метод передачи алфавитных символов вместо числовых
             // преобразуем строковое представление числа в эквивалентное ему число двойной точности с плавающей запятой
-            int.TryParse(textBox1.Text, out TextBox1); // проверяем поле
-
+            int.TryParse(textBox1.Text, out TextBox1); 
 
             // проверяем если поле пустое            
             if (string.IsNullOrEmpty(textBox1.Text))
@@ -369,7 +353,8 @@ namespace RibbonTabOpen
                     errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона");
                 }
             }
-            
+                       
+
         }
                
         //***************************************************************************
