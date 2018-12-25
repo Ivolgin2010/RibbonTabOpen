@@ -2630,7 +2630,8 @@ namespace RibbonTabOpen
 
         private void Button2_Click(object sender, EventArgs e)
         {
-
+            DatabaseData onf = new DatabaseData();
+            onf.Show();
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -2707,7 +2708,7 @@ namespace RibbonTabOpen
             textBox54.BackColor = Color.LightYellow;
         }
 
-        private void textBox54_Leave(object sender, EventArgs e)
+        private void TextBox54_Leave(object sender, EventArgs e)
         {
             textBox54.BackColor = Color.White;
         }
@@ -2717,7 +2718,7 @@ namespace RibbonTabOpen
             textBox55.BackColor = Color.White;
         }
 
-        private void textBox55_MouseClick(object sender, MouseEventArgs e)
+        private void TextBox55_MouseClick(object sender, MouseEventArgs e)
         {
             textBox55.BackColor = Color.LightYellow;
         }
@@ -2807,7 +2808,7 @@ namespace RibbonTabOpen
             textBox9.BackColor = Color.White;
         }
 
-        private void textBox9_MouseClick(object sender, MouseEventArgs e)
+        private void TextBox9_MouseClick(object sender, MouseEventArgs e)
         {
             textBox9.BackColor = Color.LightYellow;
         }
@@ -3057,7 +3058,7 @@ namespace RibbonTabOpen
             textBox34.BackColor = Color.LightYellow;
         }
 
-        private void textBox34_Leave(object sender, EventArgs e)
+        private void TextBox34_Leave(object sender, EventArgs e)
         {
             textBox34.BackColor = Color.White;
         }
@@ -3067,7 +3068,7 @@ namespace RibbonTabOpen
             textBox35.BackColor = Color.LightYellow;
         }
 
-        private void textBox35_Leave(object sender, EventArgs e)
+        private void TextBox35_Leave(object sender, EventArgs e)
         {
             textBox35.BackColor = Color.White;
         }
@@ -3157,7 +3158,7 @@ namespace RibbonTabOpen
             textBox44.BackColor = Color.LightYellow;
         }
 
-        private void textBox44_Leave(object sender, EventArgs e)
+        private void TextBox44_Leave(object sender, EventArgs e)
         {
             textBox44.BackColor = Color.White;
         }
@@ -3230,6 +3231,11 @@ namespace RibbonTabOpen
         private void TextBox50_Leave(object sender, EventArgs e)
         {
             textBox50.BackColor = Color.White;
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Сохраняем изменения в БД", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 

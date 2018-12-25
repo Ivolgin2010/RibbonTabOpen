@@ -182,6 +182,7 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -364,6 +365,7 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage7.Controls.Add(this.btnNext);
             this.tabPage7.Controls.Add(this.button4);
             this.tabPage7.Controls.Add(this.btnLoad);
@@ -373,7 +375,6 @@
             this.tabPage7.Size = new System.Drawing.Size(837, 531);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Данные по месторождению";
-            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // btnNext
             // 
@@ -432,7 +433,7 @@
             this.textBox55.Size = new System.Drawing.Size(125, 21);
             this.textBox55.TabIndex = 7;
             this.textBox55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox55.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox55_MouseClick);
+            this.textBox55.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox55_MouseClick);
             this.textBox55.Leave += new System.EventHandler(this.TextBox55_Leave);
             // 
             // textBox54
@@ -445,7 +446,7 @@
             this.textBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox54.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox54_MouseClick);
             this.textBox54.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox54_KeyPress);
-            this.textBox54.Leave += new System.EventHandler(this.textBox54_Leave);
+            this.textBox54.Leave += new System.EventHandler(this.TextBox54_Leave);
             // 
             // textBox53
             // 
@@ -516,6 +517,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.NextButton1);
@@ -525,7 +527,6 @@
             this.tabPage1.Size = new System.Drawing.Size(837, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Лифтовое оборудование";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -591,7 +592,7 @@
             this.textBox9.Size = new System.Drawing.Size(100, 21);
             this.textBox9.TabIndex = 7;
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox9_MouseClick);
+            this.textBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox9_MouseClick);
             this.textBox9.TextChanged += new System.EventHandler(this.TextBox9_TextChanged);
             this.textBox9.Leave += new System.EventHandler(this.TextBox9_Leave);
             // 
@@ -929,6 +930,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.NextButton2);
@@ -938,7 +940,6 @@
             this.tabPage2.Size = new System.Drawing.Size(837, 531);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Окружающая среда";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -1121,6 +1122,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.NextButton3);
             this.tabPage3.Controls.Add(this.groupBox6);
@@ -1130,7 +1132,6 @@
             this.tabPage3.Size = new System.Drawing.Size(837, 531);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Пластовой флюид";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -1329,6 +1330,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage4.Controls.Add(this.button9);
             this.tabPage4.Controls.Add(this.NextButton4);
             this.tabPage4.Controls.Add(this.groupBox7);
@@ -1338,7 +1340,6 @@
             this.tabPage4.Size = new System.Drawing.Size(837, 531);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Скважина";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -1723,6 +1724,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage5.Controls.Add(this.button11);
             this.tabPage5.Controls.Add(this.NextButton5);
             this.tabPage5.Controls.Add(this.groupBox8);
@@ -1732,7 +1734,6 @@
             this.tabPage5.Size = new System.Drawing.Size(837, 531);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Нефть";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
@@ -1941,7 +1942,7 @@
             this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox35.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox35_MouseClick);
             this.textBox35.TextChanged += new System.EventHandler(this.TextBox35_TextChanged);
-            this.textBox35.Leave += new System.EventHandler(this.textBox35_Leave);
+            this.textBox35.Leave += new System.EventHandler(this.TextBox35_Leave);
             // 
             // textBox34
             // 
@@ -1953,7 +1954,7 @@
             this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox34.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox34_MouseClick);
             this.textBox34.TextChanged += new System.EventHandler(this.TextBox34_TextChanged);
-            this.textBox34.Leave += new System.EventHandler(this.textBox34_Leave);
+            this.textBox34.Leave += new System.EventHandler(this.TextBox34_Leave);
             // 
             // textBox33
             // 
@@ -2118,6 +2119,8 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage6.Controls.Add(this.btnUpdate);
             this.tabPage6.Controls.Add(this.button15);
             this.tabPage6.Controls.Add(this.NextButton);
             this.tabPage6.Controls.Add(this.button13);
@@ -2128,7 +2131,17 @@
             this.tabPage6.Size = new System.Drawing.Size(837, 531);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Дополнительные параметры";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.Location = new System.Drawing.Point(213, 488);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Обновить";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // button15
             // 
@@ -2142,7 +2155,7 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(620, 489);
+            this.NextButton.Location = new System.Drawing.Point(620, 488);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(77, 23);
             this.NextButton.TabIndex = 2;
@@ -2483,7 +2496,7 @@
             this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox44.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox44_MouseClick);
             this.textBox44.TextChanged += new System.EventHandler(this.TextBox44_TextChanged);
-            this.textBox44.Leave += new System.EventHandler(this.textBox44_Leave);
+            this.textBox44.Leave += new System.EventHandler(this.TextBox44_Leave);
             // 
             // label82
             // 
@@ -3163,5 +3176,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
