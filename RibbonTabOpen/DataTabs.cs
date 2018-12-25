@@ -263,7 +263,7 @@ namespace RibbonTabOpen
             sw.WriteLine("\n");
             sw.WriteLine("Наименование месторождения: " + name);
             sw.WriteLine("\n");
-            sw.WriteLine("Номер скважины: " + number);
+            sw.WriteLine("Номер скважины №: " + number);
             sw.WriteLine("\n");
             sw.WriteLine("Марка ЭЦН: " + label);
             sw.WriteLine("\n");
@@ -276,11 +276,11 @@ namespace RibbonTabOpen
             sw.WriteLine("\n");
             sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: " + h_obs);
             sw.WriteLine("\n");
-            sw.WriteLine("Диаметр эксплуатационной колонны,м: " + d_vnesh_obs);
+            sw.WriteLine("Диаметр эксплуатационной колонны, мм: " + d_vnesh_obs);
             sw.WriteLine("\n");
             sw.WriteLine("Длина колонны НКТ, м: " + h_nkt);
             sw.WriteLine("\n");
-            sw.WriteLine("Диаметр колонны НКТ, м: " + d_vnesh_nkt);
+            sw.WriteLine("Диаметр колонны НКТ, мм: " + d_vnesh_nkt);
             sw.WriteLine("\n");
             sw.WriteLine("Статический уровень флюида в скважине, м: " + h_stat);
             sw.WriteLine("\n");
@@ -289,73 +289,73 @@ namespace RibbonTabOpen
 
             //--------------------------- Данные второй вкладки ---------------------------------------------//
 
-            sw.WriteLine("Температура нефтяного пласта, град С:" + t_bhole);
+            sw.WriteLine("Температура нефтяного пласта, °С: " + t_bhole);
             sw.WriteLine("\n");
-            sw.WriteLine("Глубина вечномерзлых грунтов, м:" + h_ice);
+            sw.WriteLine("Глубина вечномерзлых грунтов, м: " + h_ice);
             sw.WriteLine("\n");
-            sw.WriteLine("Средняя температура наиболее холодного месяца, град С:" + t_month);
+            sw.WriteLine("Средняя температура наиболее холодного месяца, °С: " + t_month);
             sw.WriteLine("\n");
-            sw.WriteLine("Максимальная температура наиболее теплого месяца, град С:" + t_maxh);
+            sw.WriteLine("Максимальная температура наиболее теплого месяца, °С: " + t_maxh);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные третьей вкладки ---------------------------------------------//
 
-            sw.WriteLine("Плотность нефтяного флюида в условиях пласта, кг/м3:" + ro);
+            sw.WriteLine("Плотность нефтяного флюида в условиях пласта, кг/м3: " + ro);
             sw.WriteLine("\n");
-            sw.WriteLine("Вязкость нефтяного флюида в условиях пласта, мПа*с:" + visc_plast);
+            sw.WriteLine("Вязкость нефтяного флюида в условиях пласта, мПа*с: " + visc_plast);
             sw.WriteLine("\n");
-            sw.WriteLine("Давление насыщения в условиях пласта, МПа:" + pn_plast);
+            sw.WriteLine("Давление насыщения в условиях пласта, МПа: " + pn_plast);
             sw.WriteLine("\n");
-            sw.WriteLine("Температурный коэффициент давления насыщения:" + tkpn);
+            sw.WriteLine("Температурный коэффициент давления насыщения: " + tkpn);
             sw.WriteLine("\n");
-            sw.WriteLine("Газосодержание пластовой жидкости, м3/м3:" + g_plast);
+            sw.WriteLine("Газосодержание пластовой жидкости, м3/м3: " + g_plast);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные четвертой вкладки ---------------------------------------------//
-            sw.WriteLine("Дебит по жидкости (с чистой НКТ), м3/сут:" + nomdebit);
+            sw.WriteLine("Дебит по жидкости (с чистой НКТ), м3/сут: " + nomdebit);
             sw.WriteLine("\n");
-            sw.WriteLine("Дебит по нефти, т/сут:" + debit_oil);
+            sw.WriteLine("Дебит по нефти, т/сут: " + debit_oil);
             sw.WriteLine("\n");
-            sw.WriteLine("Газовый фактор, м3/м3:" + g);
+            sw.WriteLine("Газовый фактор, м3/м3: " + g);
             sw.WriteLine("\n");
             sw.WriteLine("Содержание воды, массовая доля, проц. по массе: " + water);
             sw.WriteLine("\n");
-            sw.WriteLine("Динамический уровень, м от устья:" + h_din);
+            sw.WriteLine("Динамический уровень, м от устья: " + h_din);
             sw.WriteLine("\n");
             sw.WriteLine("Давление на устье, МПа: " + p_wellhead);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура жидкости на выходе из скважины, град С: " + t_wellhead);
+            sw.WriteLine("Температура жидкости на выходе из скважины, °С: " + t_wellhead);
             sw.WriteLine("\n");
-            sw.WriteLine("Минимальный дебит по жидкости м3/сут:" + debit);
+            sw.WriteLine("Минимальный дебит по жидкости м3/сут: " + debit);
             sw.WriteLine("\n");
             sw.WriteLine("Глубина спуска скребка при механической очистке, м: " + scraper);
             sw.WriteLine("\n");
-            sw.WriteLine("Максимальная глубина отложения АСПО (по данным КРС), м:" + h_aspo);
+            sw.WriteLine("Максимальная глубина отложения АСПО (по данным КРС), м: " + h_aspo);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные пятой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Плотность дегазированной нефти в норм. условиях,кг/м3: " + ro_oil);
+            sw.WriteLine("Плотность дегазированной нефти в норм. условиях, кг/м3: " + ro_oil);
             sw.WriteLine("\n");
             sw.WriteLine("Вязкость дегазированной нефти, мПа*с: " + visc_oil);
             sw.WriteLine("\n");
-            sw.WriteLine("Содержание парафина, массовая доля, проц.: " + cp);
+            sw.WriteLine("Содержание парафина, массовая доля, %: " + cp);
             sw.WriteLine("\n");
-            sw.WriteLine("Содержание асфальтенов, массовая доля, проц.: " + asf);
+            sw.WriteLine("Содержание асфальтенов, массовая доля, %: " + asf);
             sw.WriteLine("\n");
-            sw.WriteLine("Содержание смол силикагелевых, массовая доля, проц.: " + silica_gel);
+            sw.WriteLine("Содержание смол силикагелевых, массовая доля, %: " + silica_gel);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура застывания нефти, град С: " + freezing_oil);
+            sw.WriteLine("Температура застывания нефти, °С: " + freezing_oil);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура насыщения нефти парафином, град С: " + t_0);
+            sw.WriteLine("Температура насыщения нефти парафином, °С: " + t_0);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура плавления парафинов, град С " + melting);
+            sw.WriteLine("Температура плавления парафинов, °С: " + melting);
             sw.WriteLine("\n");
             sw.WriteLine("Плотность сопутствующего газа, кг/м3: " + ro_gas);
             sw.WriteLine("\n");
@@ -366,7 +366,7 @@ namespace RibbonTabOpen
 
             //--------------------------- Данные шестой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Допустимое газосодержание при откачке нефтегазовой смеси по объему, проц.: " + ESP_gas);
+            sw.WriteLine("Допустимое газосодержание при откачке нефтегазовой смеси по объему, %: " + ESP_gas);
             sw.WriteLine("\n");
             sw.WriteLine("Напряжение питания ПЭД, В: " + u_ESP);
             sw.WriteLine("\n");

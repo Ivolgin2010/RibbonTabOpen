@@ -2239,6 +2239,7 @@
             this.textBox51.Name = "textBox51";
             this.textBox51.Size = new System.Drawing.Size(100, 21);
             this.textBox51.TabIndex = 37;
+            this.textBox51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox51.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox51_MouseClick);
             this.textBox51.TextChanged += new System.EventHandler(this.TextBox51_TextChanged);
             this.textBox51.Leave += new System.EventHandler(this.TextBox51_Leave);
@@ -2339,9 +2340,9 @@
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label90.Location = new System.Drawing.Point(391, 89);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(23, 16);
+            this.label90.Size = new System.Drawing.Size(32, 16);
             this.label90.TabIndex = 26;
-            this.label90.Text = ", м";
+            this.label90.Text = ", мм";
             // 
             // label89
             // 
