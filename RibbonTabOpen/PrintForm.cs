@@ -88,9 +88,9 @@ namespace RibbonTabOpen
 
         }
 
-        private void textPrint_TextChanged(object sender, EventArgs e)
-        {
+        //private void textPrint_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

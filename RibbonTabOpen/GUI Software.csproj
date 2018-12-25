@@ -85,12 +85,6 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="AddWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddWindow.Designer.cs">
-      <DependentUpon>AddWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddWindow.resx">
-      <DependentUpon>AddWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataTable.resx">
       <DependentUpon>DataTable.cs</DependentUpon>
