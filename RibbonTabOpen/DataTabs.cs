@@ -115,12 +115,23 @@ namespace RibbonTabOpen
 
         //}
 
+        
+        /// <summary>
+        /// Сохраняем текстовый файл
+        /// </summary>
+        
         private void Button13_Click(object sender, EventArgs e)
         {
 
-            //********************************************************************************
-            // Сохраняем данные в файл
+            SaveDataToFile();           
 
+        }    
+
+        /// <summary>
+        /// Сохраняем данные вкладок в текстовый файл
+        /// </summary>
+        public void SaveDataToFile()
+        {
             // Объявляем строковую переменную "path", которая описывает путь к файлу            
 
             Stream myStream;
@@ -136,7 +147,6 @@ namespace RibbonTabOpen
                 if ((myStream = saveFileDialog1.OpenFile()) != null)
                 {
                     // Code to write the stream goes here.
-
                     myStream.Close();
                 }
             }
@@ -163,90 +173,79 @@ namespace RibbonTabOpen
 
             // Данные заголовка
 
-            string company = textBox52.Text; // оператор
-            string name = textBox53.Text;    // наименование месторождения
-            string number = textBox54.Text;  // номер скважины
-            string label = textBox55.Text;   // марка ЭЦН
+            string company = textBox52.Text;      // оператор
+            string name = textBox53.Text;         // наименование месторождения
+            string number = textBox54.Text;       // номер скважины
+            string label = textBox55.Text;        // марка ЭЦН
 
-            //    // Данные первой вкладки
+            // Данные первой вкладки            
 
-            //    // создаем объект
-            //    DataTabs FirstTextField = new DataTabs();
-            //    //{
-            //    //    GetValue = "35" // считываем значение
-            //    //};
+            string h_bhole = textBox1.Text;       // Глубина забоя, м
+            string h_obs = textBox2.Text;         // Длина эксплуатационной колонны (с хвостовиком), м
+            string d_vnesh_obs = textBox3.Text;   // Диаметр эксплуатационной колонны, мм
+            string h_nkt = textBox4.Text;         // Длина колонны НКТ, м
+            string d_vnesh_nkt = textBox5.Text;   // Диаметр колонны НКТ, мм
+            string h_stat = textBox6.Text;        // Статический уровень флюида в скважине, м
 
-            //    string h_bhole = FirstTextField.GetValue; // возвращаем значение
+            // Данные второй вкладки
 
+            string t_bhole = textBox10.Text;      // Температура нефтяного пласта, °С
+            string h_ice = textBox11.Text;        // Глубина вечномерзлых грунтов, м
+            string t_month = textBox12.Text;      // Средняя температура наиболее холодного месяца, °С
+            string t_maxh = textBox13.Text;       // Максимальная температура наиболее теплого месяца, °С 
 
-            string h_bhole = textBox1.Text;
-            //    //string h_obs = TextBox2.textBox2.Text;
+            //// Данные третьей вкладки
 
+            string ro = textBox14.Text;           // Плотность нефтяного флюида в условиях пласта, кг/м3
+            string visc_plast = textBox15.Text;   // Вязкость нефтяного флюида в условиях пласта, мПа*с
+            string pn_plast = textBox16.Text;     // Давление насыщения в условиях пласта, МПа
+            string tkpn = textBox17.Text;         // Температурный коэффициент давления насыщения
+            string g_plast = textBox18.Text;      // Газосодержание пластовой жидкости, м3/м3 
 
-            //    //string d_vnesh_obs = textBox3.Text;
-            //    //string h_nkt = textBox4.Text;
-            //    //string d_vnesh_nkt = textBox5.Text;
-            //    //string h_stat = textBox6.Text;
+            //// Данные четвертой вкладки
 
-            //    //// Данные второй вкладки
+            string nomdebit = textBox19.Text;     // Дебит по жидкости (с чистой НКТ), м3/сут
+            string debit_oil = textBox20.Text;    // Дебит по нефти, т/сут
+            string g = textBox21.Text;            // Газовый фактор, м3/м3 
+            string water = textBox22.Text;        // Содержание воды, массовая доля, проц. по массе
+            string h_din = textBox23.Text;        // Динамический уровень, м от устья
+            string p_wellhead = textBox24.Text;   // Давление на устье, МПа
+            string t_wellhead = textBox25.Text;   // Температура жидкости на выходе из скважины, °С
+            string debit = textBox26.Text;        // Минимальный дебит по жидкости м3/сут
+            string scraper = textBox27.Text;      // Глубина спуска скребка при механической очистке, м
+            string h_aspo = textBox28.Text;       // Максимальная глубина отложения АСПО (по данным КРС), м
 
-            //    //string t_bhole = textBox10.Text;
-            //    //string h_ice = textBox11.Text;
-            //    //string t_month = textBox12.Text;
-            //    //string t_maxh = textBox13.Text;
+            //// Данные пятой вкладки
 
-            //    //// Данные третьей вкладки
+            string ro_oil = textBox29.Text;        // Плотность дегазированной нефти в норм. условиях,кг/м3
+            string visc_oil = textBox30.Text;      // Вязкость дегазированной нефти, мПа*с
+            string cp = textBox31.Text;            // Содержание парафина, массовая доля, проц.
+            string asf = textBox32.Text;           // Содержание асфальтенов, массовая доля, проц.
+            string silica_gel = textBox33.Text;    // Содержание смол силикагелевых, массовая доля, проц.
+            string freezing_oil = textBox34.Text;  // Температура застывания нефти, °С
+            string t_0 = textBox35.Text;           // Температура насыщения нефти парафином, °С
+            string melting = textBox36.Text;       // Температура плавления парафинов, град С
+            string ro_gas = textBox37.Text;        // Плотность сопутствующего газа, кг/м3
+            string ro_water = textBox38.Text;      // Плотность сопутствующей воды, кг/м3 
 
-            //    //string ro = textBox.Text;
-            //    //string visc_plast = textBox.Text;
-            //    //string pn_plast = textBox.Text;
-            //    //string tkpn = textBox.Text;
-            //    //string g_plast = textBox.Text;
+            //// Данные шестой вкладки
 
-            //    //// Данные четвертой вкладки
-
-            //    //string nomdebit = textBox.Text;
-            //    //string debit_oil = textBox.Text;
-            //    //string g = textBox.Text;
-            //    //string water = textBox.Text;
-            //    //string h_din = textBox.Text;
-            //    //string p_wellhead = textBox.Text;
-            //    //string t_wellhead = textBox.Text;
-            //    //string debit = textBox.Text;
-            //    //string scraper = textBox.Text;
-            //    //string h_aspo = textBox.Text;
-
-            //    //// Данные пятой вкладки
-
-            //    //string ro_oil = textBox.Text;
-            //    //string visc_oil = textBox.Text;
-            //    //string cp = textBox.Text;
-            //    //string asf = textBox.Text;
-            //    //string silica_gel = textBox.Text;
-            //    //string freezing_oil = textBox.Text;
-            //    //string t_0 = textBox.Text;
-            //    //string melting = textBox.Text;
-            //    //string ro_gas = textBox.Text;
-            //    //string ro_water = textBox.Text;
-
-            //    //// Данные шестой вкладки
-
-            //    //string ESP_gas = textBox.Text;
-            //    //string u_ESP = textBox.Text;
-            //    //string f_ESP = textBox.Text;
-            //    //string i_ESP = textBox.Text;
-            //    //string d_vnut_nkt = textBox.Text;
-            //    //string d_vnut_obs = textBox.Text;
-            //    //string c_neft = textBox.Text;
-            //    //string kll = textBox.Text;
-            //    //string holkon = textBox.Text;
-            //    //string sh_gr = textBox.Text;
-            //    //string glub_zap = textBox.Text;
-            //    //string min_T_zap = textBox.Text;
-            //    //string stavka = textBox.Text;
-            //    //string d_kab = textBox.Text;
-            //    //string long_ = textBox.Text;
-            //    //string u_u = textBox.Text;
+            string ESP_gas = textBox39.Text;       // Допустимое газосодержание при откачке нефтегазовой смеси по объему, проц.
+            string u_ESP = textBox7.Text;          // Напряжение питания ПЭД, В
+            string f_ESP = textBox8.Text;          // Частота питающего напряжения, Гц
+            string i_ESP = textBox9.Text;          // Ток потребления ПЭД, А
+            string d_vnut_nkt = textBox40.Text;    // Толщина стенки НКТ, мм
+            string d_vnut_obs = textBox41.Text;    // Толщина стенки ОК, мм
+            string c_neft = textBox42.Text;        // Теплоемкость нефти, Дж/кг·К
+            string kll = textBox43.Text;           // Отношение длины верхней части к полной. 1 = одна ступень
+            string holkon = textBox44.Text;        // Длина холодного конца, м
+            string sh_gr = textBox45.Text;         // Толщина термического сопротивления грунта, м
+            string glub_zap = textBox46.Text;      // Запас по длине обогрева, м
+            string min_T_zap = textBox47.Text;     // Запас по минимальной температуре на выходе, °С
+            string ustavka = textBox51.Text;       // Диапазон регулирования по температуре на выходе, °С
+            string d_kab = textBox48.Text;         // Диаметр кабеля, мм
+            string long_ = textBox49.Text;         // Ручной выбор длины обогрева, м
+            string u_u = textBox50.Text;           // Ручной выбор напряжения питания кабеля, В
 
             //-------------------------------- создаем заголовок файла -------------------------------------------//
 
@@ -275,139 +274,138 @@ namespace RibbonTabOpen
 
             sw.WriteLine("Глубина забоя, м: " + h_bhole);
             sw.WriteLine("\n");
-            sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: ");
+            sw.WriteLine("Длина эксплуатационной колонны (с хвостовиком), м: " + h_obs);
             sw.WriteLine("\n");
-            sw.WriteLine("Диаметр эксплуатационной колонны,м: ");
+            sw.WriteLine("Диаметр эксплуатационной колонны,м: " + d_vnesh_obs);
             sw.WriteLine("\n");
-            sw.WriteLine("Длина колонны НКТ, м: ");
+            sw.WriteLine("Длина колонны НКТ, м: " + h_nkt);
             sw.WriteLine("\n");
-            sw.WriteLine("Диаметр колонны НКТ, м: ");
+            sw.WriteLine("Диаметр колонны НКТ, м: " + d_vnesh_nkt);
             sw.WriteLine("\n");
-            sw.WriteLine("Статический уровень флюида в скважине, м: ");
+            sw.WriteLine("Статический уровень флюида в скважине, м: " + h_stat);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные второй вкладки ---------------------------------------------//
 
-            sw.WriteLine("Температура нефтяного пласта, град С:");
+            sw.WriteLine("Температура нефтяного пласта, град С:" + t_bhole);
             sw.WriteLine("\n");
-            sw.WriteLine("Глубина вечномерзлых грунтов, м:");
+            sw.WriteLine("Глубина вечномерзлых грунтов, м:" + h_ice);
             sw.WriteLine("\n");
-            sw.WriteLine("Средняя температура наиболее холодного месяца, град С:");
+            sw.WriteLine("Средняя температура наиболее холодного месяца, град С:" + t_month);
             sw.WriteLine("\n");
-            sw.WriteLine("Максимальная температура наиболее теплого месяца, град С:");
+            sw.WriteLine("Максимальная температура наиболее теплого месяца, град С:" + t_maxh);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные третьей вкладки ---------------------------------------------//
 
-            sw.WriteLine("Плотность нефтяного флюида в условиях пласта, кг/м3:");
+            sw.WriteLine("Плотность нефтяного флюида в условиях пласта, кг/м3:" + ro);
             sw.WriteLine("\n");
-            sw.WriteLine("Вязкость нефтяного флюида в условиях пласта, мПа*с:");
+            sw.WriteLine("Вязкость нефтяного флюида в условиях пласта, мПа*с:" + visc_plast);
             sw.WriteLine("\n");
-            sw.WriteLine("Давление насыщения в условиях пласта, МПа:");
+            sw.WriteLine("Давление насыщения в условиях пласта, МПа:" + pn_plast);
             sw.WriteLine("\n");
-            sw.WriteLine("Температурный коэффициент давления насыщения:");
+            sw.WriteLine("Температурный коэффициент давления насыщения:" + tkpn);
             sw.WriteLine("\n");
-            sw.WriteLine("Газосодержание пластовой жидкости, м3/м3:");
+            sw.WriteLine("Газосодержание пластовой жидкости, м3/м3:" + g_plast);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные четвертой вкладки ---------------------------------------------//
-            sw.WriteLine("Дебит по жидкости (с чистой НКТ), м3/сут:");
+            sw.WriteLine("Дебит по жидкости (с чистой НКТ), м3/сут:" + nomdebit);
             sw.WriteLine("\n");
-            sw.WriteLine("Дебит по нефти, т/сут:");
+            sw.WriteLine("Дебит по нефти, т/сут:" + debit_oil);
             sw.WriteLine("\n");
-            sw.WriteLine("Газовый фактор, м3/м3:");
+            sw.WriteLine("Газовый фактор, м3/м3:" + g);
             sw.WriteLine("\n");
-            sw.WriteLine("Содержание воды, массовая доля, проц. по массе: ");
+            sw.WriteLine("Содержание воды, массовая доля, проц. по массе: " + water);
             sw.WriteLine("\n");
-            sw.WriteLine("Динамический уровень, м от устья:");
+            sw.WriteLine("Динамический уровень, м от устья:" + h_din);
             sw.WriteLine("\n");
-            sw.WriteLine("Давление на устье, МПа: ");
+            sw.WriteLine("Давление на устье, МПа: " + p_wellhead);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура жидкости на выходе из скважины, град С: ");
+            sw.WriteLine("Температура жидкости на выходе из скважины, град С: " + t_wellhead);
             sw.WriteLine("\n");
-            sw.WriteLine("Минимальный дебит по жидкости м3/сут:");
+            sw.WriteLine("Минимальный дебит по жидкости м3/сут:" + debit);
             sw.WriteLine("\n");
-            sw.WriteLine("Глубина спуска скребка при механической очистке, м: ");
+            sw.WriteLine("Глубина спуска скребка при механической очистке, м: " + scraper);
             sw.WriteLine("\n");
-            sw.WriteLine("Максимальная глубина отложения АСПО (по данным КРС), м:");
+            sw.WriteLine("Максимальная глубина отложения АСПО (по данным КРС), м:" + h_aspo);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные пятой вкладки ---------------------------------------------//
-            sw.WriteLine("Плотность дегазированной нефти в норм. условиях,кг/м3:");
+
+            sw.WriteLine("Плотность дегазированной нефти в норм. условиях,кг/м3: " + ro_oil);
             sw.WriteLine("\n");
-            sw.WriteLine("Вязкость дегазированной нефти, мПа*с:");
+            sw.WriteLine("Вязкость дегазированной нефти, мПа*с: " + visc_oil);
             sw.WriteLine("\n");
-            sw.WriteLine("Содержание парафина, массовая доля, проц.:");
+            sw.WriteLine("Содержание парафина, массовая доля, проц.: " + cp);
             sw.WriteLine("\n");
-            sw.WriteLine("Содержание асфальтенов, массовая доля, проц.:");
+            sw.WriteLine("Содержание асфальтенов, массовая доля, проц.: " + asf);
             sw.WriteLine("\n");
-            sw.WriteLine("Содержание смол силикагелевых, массовая доля, проц.:");
+            sw.WriteLine("Содержание смол силикагелевых, массовая доля, проц.: " + silica_gel);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура застывания нефти, град С:");
+            sw.WriteLine("Температура застывания нефти, град С: " + freezing_oil);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура насыщения нефти парафином, град С:");
+            sw.WriteLine("Температура насыщения нефти парафином, град С: " + t_0);
             sw.WriteLine("\n");
-            sw.WriteLine("Температура плавления парафинов, град С:");
+            sw.WriteLine("Температура плавления парафинов, град С " + melting);
             sw.WriteLine("\n");
-            sw.WriteLine("Плотность сопутствующего газа, кг/м3:");
+            sw.WriteLine("Плотность сопутствующего газа, кг/м3: " + ro_gas);
             sw.WriteLine("\n");
-            sw.WriteLine("Плотность сопутствующей воды, кг/м3:");
+            sw.WriteLine("Плотность сопутствующей воды, кг/м3: " + ro_water);
             sw.WriteLine("\n");
             sw.WriteLine(div2.ToString());
             sw.WriteLine("\n");
 
             //--------------------------- Данные шестой вкладки ---------------------------------------------//
 
-            sw.WriteLine("Допустимое газосодержание при откачке нефтегазовой смеси по объему, проц.: ");
+            sw.WriteLine("Допустимое газосодержание при откачке нефтегазовой смеси по объему, проц.: " + ESP_gas);
             sw.WriteLine("\n");
-            sw.WriteLine("Напряжение питания ПЭД, В: ");
+            sw.WriteLine("Напряжение питания ПЭД, В: " + u_ESP);
             sw.WriteLine("\n");
-            sw.WriteLine("Частота питающего напряжения, Гц: ");
+            sw.WriteLine("Частота питающего напряжения, Гц: " + f_ESP);
             sw.WriteLine("\n");
-            sw.WriteLine("Ток потребления ПЭД, А: ");
+            sw.WriteLine("Ток потребления ПЭД, А: " + i_ESP);
             sw.WriteLine("\n");
-            sw.WriteLine("Толщина стенки НКТ, мм: ");
+            sw.WriteLine("Толщина стенки НКТ, мм: " + d_vnut_nkt);
             sw.WriteLine("\n");
-            sw.WriteLine("Толщина стенки ОК, мм: ");
+            sw.WriteLine("Толщина стенки ОК, мм: " + d_vnut_obs);
             sw.WriteLine("\n");
-            sw.WriteLine("Теплоемкость нефти, Дж/кг·К: ");
+            sw.WriteLine("Теплоемкость нефти, Дж/кг·К: " + c_neft);
             sw.WriteLine("\n");
-            sw.WriteLine("Отношение длины верхней части к полной. 1 = одна ступень: ");
+            sw.WriteLine("Отношение длины верхней части к полной. 1 = одна ступень: " + kll);
             sw.WriteLine("\n");
-            sw.WriteLine("Длина холодного конца, м: ");
+            sw.WriteLine("Длина холодного конца, м: " + holkon);
             sw.WriteLine("\n");
-            sw.WriteLine("Толщина термического сопротивления грунта, м: ");
+            sw.WriteLine("Толщина термического сопротивления грунта, м: " + sh_gr);
             sw.WriteLine("\n");
-            sw.WriteLine("Запас по длине обогрева, м: ");
+            sw.WriteLine("Запас по длине обогрева, м: " + glub_zap);
             sw.WriteLine("\n");
-            sw.WriteLine("Запас по минимальной температуре на выходе, °С: ");
+            sw.WriteLine("Запас по минимальной температуре на выходе, °С: " + min_T_zap);
             sw.WriteLine("\n");
-            sw.WriteLine("Диапазон регулирования по температуре на выходе, °С: ");
+            sw.WriteLine("Диапазон регулирования по температуре на выходе, °С: " + ustavka);
             sw.WriteLine("\n");
-            sw.WriteLine("Диаметр кабеля, мм: ");
+            sw.WriteLine("Диаметр кабеля, мм: " + d_kab);
             sw.WriteLine("\n");
-            sw.WriteLine("Ручной выбор длины обогрева, м: ");
+            sw.WriteLine("Ручной выбор длины обогрева, м: " + long_);
             sw.WriteLine("\n");
-            sw.WriteLine("Ручной выбор напряжения питания кабеля, В: ");
+            sw.WriteLine("Ручной выбор напряжения питания кабеля, В: " + u_u);
             sw.WriteLine("\n");
             sw.WriteLine(div3.ToString());
 
             /* Перед выходом из приложения не забываем закрывать файл */
             sw.Close();
-            
+
             // выводим сообщение об успешности сохранения данных
-
-            MessageBox.Show("Данные были успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        }    
+            MessageBox.Show("Данные успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private void Button14_Click(object sender, EventArgs e)
         {
@@ -423,7 +421,7 @@ namespace RibbonTabOpen
             }
         }
 
-        // Проверяем заполнение полей на Первой вкладки
+        // Проверяем заполнение полей на Первой вкладке
 
         private void NextButton1_Click(object sender, EventArgs e)
         {
@@ -455,7 +453,7 @@ namespace RibbonTabOpen
             else
             {
                 // переключаемся на вторую вкладку
-                tabControl1.SelectedIndex = 1;
+                tabControl1.SelectedIndex = 2;
             }
         }
 
@@ -479,7 +477,7 @@ namespace RibbonTabOpen
             else
             {
                 // переключаемся на вторую вкладку
-                tabControl1.SelectedIndex = 2;
+                tabControl1.SelectedIndex = 3;
             }
         }
 
@@ -505,7 +503,7 @@ namespace RibbonTabOpen
             else
             {
                 // переключаемся на вторую вкладку
-                tabControl1.SelectedIndex = 3;
+                tabControl1.SelectedIndex = 4;
             }
         }
 
@@ -541,7 +539,7 @@ namespace RibbonTabOpen
             else
             {
                 // переключаемся на вторую вкладку
-                tabControl1.SelectedIndex = 4;
+                tabControl1.SelectedIndex = 5;
             }
         }
 
@@ -576,7 +574,7 @@ namespace RibbonTabOpen
             }
             else
             {
-                tabControl1.SelectedIndex = 5;
+                tabControl1.SelectedIndex = 6;
             }
         }
 
@@ -2658,11 +2656,580 @@ namespace RibbonTabOpen
 
                 e.Handled = e.KeyChar != (char)Keys.Back;
             }
+        }        
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            // задаем значения первой вкладки
+            int.TryParse(textBox52.Text, out int TextBox52);
+            int.TryParse(textBox53.Text, out int TextBox53);
+            int.TryParse(textBox54.Text, out int TextBox54);
+            int.TryParse(textBox55.Text, out int TextBox55);
+
+            // проверяем
+            if (string.IsNullOrEmpty(textBox52.Text)
+                || string.IsNullOrEmpty(textBox53.Text)
+                || string.IsNullOrEmpty(textBox54.Text)
+                || string.IsNullOrEmpty(textBox55.Text)
+                )
+            {
+                MessageBox.Show("Для перехода к следующей вкладке необходимо заполнить все пустые поля", "Ошибка заполнения", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // переключаемся на вторую вкладку
+                tabControl1.SelectedIndex = 1;
+            }
         }
 
-        private void Button2_Click_1(object sender, EventArgs e)
+        private void TextBox52_MouseClick(object sender, MouseEventArgs e)
         {
+            textBox52.BackColor = Color.LightYellow;
+        }
 
+        private void TextBox52_Leave(object sender, EventArgs e)
+        {
+            textBox52.BackColor = Color.White;
+        }
+
+        private void TextBox53_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox53.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox53_Leave(object sender, EventArgs e)
+        {
+            textBox53.BackColor = Color.White;
+        }
+
+        private void TextBox54_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox54.BackColor = Color.LightYellow;
+        }
+
+        private void textBox54_Leave(object sender, EventArgs e)
+        {
+            textBox54.BackColor = Color.White;
+        }
+
+        private void TextBox55_Leave(object sender, EventArgs e)
+        {
+            textBox55.BackColor = Color.White;
+        }
+
+        private void textBox55_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox55.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox1_Leave(object sender, EventArgs e)
+        {
+            textBox1.BackColor = Color.White;
+        }
+
+        private void TextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox1.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox2_Leave(object sender, EventArgs e)
+        {
+            textBox2.BackColor = Color.White;
+        }
+
+        private void TextBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox2.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox3_Leave(object sender, EventArgs e)
+        {
+            textBox3.BackColor = Color.White;
+        }
+
+        private void TextBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox3.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox4_Leave(object sender, EventArgs e)
+        {
+            textBox4.BackColor = Color.White;
+        }
+
+        private void TextBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox4.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox5_Leave(object sender, EventArgs e)
+        {
+            textBox5.BackColor = Color.White;
+        }
+
+        private void TextBox5_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox5.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox6_Leave(object sender, EventArgs e)
+        {
+            textBox6.BackColor = Color.White;
+        }
+
+        private void TextBox6_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox6.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox7_Leave(object sender, EventArgs e)
+        {
+            textBox7.BackColor = Color.White;
+        }
+
+        private void TextBox7_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox7.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox8_Leave(object sender, EventArgs e)
+        {
+            textBox8.BackColor = Color.White;
+        }
+
+        private void TextBox8_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox8.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox9_Leave(object sender, EventArgs e)
+        {
+            textBox9.BackColor = Color.White;
+        }
+
+        private void textBox9_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox9.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox10_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox10.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox10_Leave(object sender, EventArgs e)
+        {
+            textBox10.BackColor = Color.White;
+        }
+
+        private void TextBox11_Leave(object sender, EventArgs e)
+        {
+            textBox11.BackColor = Color.White;
+        }
+
+        private void TextBox11_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox11.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox12_Leave(object sender, EventArgs e)
+        {
+            textBox12.BackColor = Color.White;
+        }
+
+        private void TextBox12_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox12.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox13_Leave(object sender, EventArgs e)
+        {
+            textBox13.BackColor = Color.White;
+        }
+
+        private void TextBox13_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox13.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox14_Leave(object sender, EventArgs e)
+        {
+            textBox14.BackColor = Color.White;
+        }
+
+        private void TextBox14_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox14.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox15_Leave(object sender, EventArgs e)
+        {
+            textBox15.BackColor = Color.White;
+        }
+
+        private void TextBox15_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox15.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox16_Leave(object sender, EventArgs e)
+        {
+            textBox16.BackColor = Color.White;
+        }
+
+        private void TextBox16_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox16.BackColor = Color.LightYellow;            
+        }
+
+        private void TextBox17_Leave(object sender, EventArgs e)
+        {
+            textBox17.BackColor = Color.White;
+        }
+
+        private void TextBox18_Leave(object sender, EventArgs e)
+        {
+            textBox18.BackColor = Color.White;
+        }
+
+        private void TextBox18_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox18.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox17_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox17.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox19_Leave(object sender, EventArgs e)
+        {
+            textBox19.BackColor = Color.White;
+        }
+
+        private void TextBox19_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox19.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox20_Leave(object sender, EventArgs e)
+        {
+            textBox20.BackColor = Color.White;
+        }
+
+        private void TextBox20_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox20.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox21_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox21.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox21_Leave(object sender, EventArgs e)
+        {
+            textBox21.BackColor = Color.White;
+        }
+
+        private void TextBox22_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox22.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox22_Leave(object sender, EventArgs e)
+        {
+            textBox22.BackColor = Color.White;
+        }
+
+        private void TextBox23_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox23.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox23_Leave(object sender, EventArgs e)
+        {
+            textBox23.BackColor = Color.White;
+        }
+
+        private void TextBox24_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox24.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox24_Leave(object sender, EventArgs e)
+        {
+            textBox24.BackColor = Color.White;
+        }
+
+        private void TextBox25_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox25.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox25_Leave(object sender, EventArgs e)
+        {
+            textBox25.BackColor = Color.White;
+        }
+
+        private void TextBox26_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox26.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox26_Leave(object sender, EventArgs e)
+        {
+            textBox26.BackColor = Color.White;
+        }
+
+        private void TextBox27_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox27.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox27_Leave(object sender, EventArgs e)
+        {
+            textBox27.BackColor = Color.White;
+        }
+
+        private void TextBox28_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox28.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox28_Leave(object sender, EventArgs e)
+        {
+            textBox28.BackColor = Color.White;
+        }
+
+        private void TextBox29_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox29.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox29_Leave(object sender, EventArgs e)
+        {
+            textBox29.BackColor = Color.White;
+        }
+
+        private void TextBox30_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox30.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox30_Leave(object sender, EventArgs e)
+        {
+            textBox30.BackColor = Color.White;
+        }
+
+        private void TextBox31_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox31.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox31_Leave(object sender, EventArgs e)
+        {
+            textBox31.BackColor = Color.White;
+        }
+
+        private void TextBox32_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox32.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox32_Leave(object sender, EventArgs e)
+        {
+            textBox32.BackColor = Color.White;
+        }
+
+        private void TextBox33_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox33.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox33_Leave(object sender, EventArgs e)
+        {
+            textBox33.BackColor = Color.White;
+        }
+
+        private void TextBox34_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox34.BackColor = Color.LightYellow;
+        }
+
+        private void textBox34_Leave(object sender, EventArgs e)
+        {
+            textBox34.BackColor = Color.White;
+        }
+
+        private void TextBox35_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox35.BackColor = Color.LightYellow;
+        }
+
+        private void textBox35_Leave(object sender, EventArgs e)
+        {
+            textBox35.BackColor = Color.White;
+        }
+
+        private void TextBox36_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox36.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox36_Leave(object sender, EventArgs e)
+        {
+            textBox36.BackColor = Color.White;
+        }
+
+        private void TextBox37_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox37.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox37_Leave(object sender, EventArgs e)
+        {
+            textBox37.BackColor = Color.White;
+        }
+
+        private void TextBox38_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox38.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox38_Leave(object sender, EventArgs e)
+        {
+            textBox38.BackColor = Color.White;
+        }
+
+        private void TextBox39_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox39.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox39_Leave(object sender, EventArgs e)
+        {
+            textBox39.BackColor = Color.White;
+        }
+
+        private void TextBox40_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox40.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox40_Leave(object sender, EventArgs e)
+        {
+            textBox40.BackColor = Color.White;
+        }
+
+        private void TextBox41_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox41.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox41_Leave(object sender, EventArgs e)
+        {
+            textBox41.BackColor = Color.White;
+        }
+
+        private void TextBox42_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox42.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox42_Leave(object sender, EventArgs e)
+        {
+            textBox42.BackColor = Color.White;
+        }
+
+        private void TextBox43_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox43.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox43_Leave(object sender, EventArgs e)
+        {
+            textBox43.BackColor = Color.White;
+        }
+
+        private void TextBox44_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox44.BackColor = Color.LightYellow;
+        }
+
+        private void textBox44_Leave(object sender, EventArgs e)
+        {
+            textBox44.BackColor = Color.White;
+        }
+
+        private void TextBox45_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox45.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox45_Leave(object sender, EventArgs e)
+        {
+            textBox45.BackColor = Color.White;
+        }
+
+        private void TextBox46_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox46.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox46_Leave(object sender, EventArgs e)
+        {
+            textBox46.BackColor = Color.White;
+        }
+
+        private void TextBox47_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox47.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox47_Leave(object sender, EventArgs e)
+        {
+            textBox47.BackColor = Color.White;
+        }
+
+        private void TextBox51_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox51.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox51_Leave(object sender, EventArgs e)
+        {
+            textBox51.BackColor = Color.White;
+        }
+
+        private void TextBox48_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox48.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox48_Leave(object sender, EventArgs e)
+        {
+            textBox48.BackColor = Color.White;
+        }
+
+        private void TextBox49_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox49.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox49_Leave(object sender, EventArgs e)
+        {
+            textBox49.BackColor = Color.White;
+        }
+
+        private void TextBox50_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox50.BackColor = Color.LightYellow;
+        }
+
+        private void TextBox50_Leave(object sender, EventArgs e)
+        {
+            textBox50.BackColor = Color.White;
         }
     }
 
