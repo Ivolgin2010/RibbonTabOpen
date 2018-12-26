@@ -85,6 +85,9 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Database.cs">
+      <DependentUpon>Database.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Database.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

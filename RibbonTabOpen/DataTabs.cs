@@ -127,8 +127,10 @@ namespace RibbonTabOpen
         
         private void Button13_Click(object sender, EventArgs e)
         {
-
+            // сохраняем данные в файл
             SaveDataToFile();
+
+            // сохраняем данные в БД
             SaveDataInDatabase();
         }    
 
@@ -148,10 +150,10 @@ namespace RibbonTabOpen
 
             cmd = new SqlCommand(sql, con);
 
-            cmd.Parameters.AddWithValue("@textBox52", value: textBox52.Text);
-            cmd.Parameters.AddWithValue("@textBox2", value: textBox53.Text);
-            cmd.Parameters.AddWithValue("@textBox3", value: textBox54.Text);
-            cmd.Parameters.AddWithValue("@Value1", value: textBox55.Text);
+            cmd.Parameters.AddWithValue("@Company", value: textBox52.Text);
+            cmd.Parameters.AddWithValue("@Name", value: textBox53.Text);
+            cmd.Parameters.AddWithValue("@Number", value: textBox54.Text);
+            cmd.Parameters.AddWithValue("@Label", value: textBox55.Text);
             cmd.ExecuteNonQuery();
             con.Close();
 
