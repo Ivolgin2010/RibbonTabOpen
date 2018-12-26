@@ -127,7 +127,7 @@ namespace RibbonTabOpen
         
         private void Button13_Click(object sender, EventArgs e)
         {
-            // сохраняем данные в файл
+              // сохраняем данные в файл
             SaveDataToFile();
 
             // сохраняем данные в БД
