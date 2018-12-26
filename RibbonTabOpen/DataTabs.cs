@@ -150,6 +150,8 @@ namespace RibbonTabOpen
 
             cmd = new SqlCommand(sql, con);
 
+            // добавляем данные первой вкладки
+
             cmd.Parameters.AddWithValue("@Company", value: textBox52.Text);
             cmd.Parameters.AddWithValue("@Name", value: textBox53.Text);
             cmd.Parameters.AddWithValue("@Number", value: textBox54.Text);
@@ -2663,19 +2665,22 @@ namespace RibbonTabOpen
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            DatabaseData onf = new DatabaseData();
-            onf.Show();
+            
+            // делаем активными поля
+
+            textBoxID.Enabled = true;
+            //groupBoxID.Enabled = true;            
         }
+
+        //private void LoadDataToForm()
+        //{
+            
+        //}
 
         private void Button4_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        //private void button2_Click_1(object sender, EventArgs e)
-        //{
-
-        //}
+        }       
 
         private void TextBox54_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -3269,6 +3274,76 @@ namespace RibbonTabOpen
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Сохраняем изменения в БД", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void TextBoxID_Leave(object sender, EventArgs e)
+        {
+            textBoxID.BackColor = Color.White;
+        }
+
+        private void TextBoxID_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxID.BackColor = Color.LightYellow;
+        }
+
+        private void BtnLoad_MouseClick(object sender, MouseEventArgs e)
+        {
+            // включаем поле ID
+        }
+
+        private void TextBoxID_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void BtnLoad_Click(object sender, EventArgs e)
+        {
+            if (textBoxID.Text != "")
+            {
+                // устанавливаем подключение
+                con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\Database.mdf;Integrated Security=True");
+
+                // открываем для записи
+                con.Open();
+
+                // отправка запроса записи полей формы
+                string sql = "SELECT * FROM [Database] WHERE ID =" + int.Parse(textBoxID.Text); ;
+
+                cmd = new SqlCommand(sql, con);
+
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    // добавляем данные первой вкладки
+                    textBox52.Text = dr["Company"].ToString();
+                    textBox53.Text = dr["Name"].ToString();
+                    textBox54.Text = dr["Number"].ToString();
+                    textBox55.Text = dr["Label"].ToString();
+
+                    // ввыводим сообщение
+                    MessageBox.Show("Данные загружены успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    textBox52.Text = "";
+                    textBox53.Text = "";
+                    textBox54.Text = "";
+                    textBox55.Text = "";
+
+                    // ввыводим сообщение
+                    MessageBox.Show("Записи не обнаружено! Введите корректный ID", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
+                }                
+
+            }
+            else
+            {
+                textBoxID.Text = "";
+            }
+
+            //закрываем базу            
+            con.Close();            
         }
     }
 

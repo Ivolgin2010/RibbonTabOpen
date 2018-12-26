@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -21,26 +15,26 @@ namespace RibbonTabOpen
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            backgroundWorker1.CancelAsync();
+            backgroundWorker.CancelAsync();
         }
 
         private void ProgressBar_Load(object sender, EventArgs e)
         {
-            backgroundWorker1.RunWorkerAsync();
+            backgroundWorker.RunWorkerAsync();
         }
         
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i < 100; i++)
             {
-                if (backgroundWorker1.CancellationPending)
+                if (backgroundWorker.CancellationPending)
                 {
                     e.Cancel = true;
                 }
                 else
                 {
                     SimulateHeavyJob();
-                    backgroundWorker1.ReportProgress(i);
+                    backgroundWorker.ReportProgress(i);
                 }
             }
         }

@@ -32,9 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataTabs));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.groupBoxID = new System.Windows.Forms.GroupBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnChoose = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.textBox55 = new System.Windows.Forms.TextBox();
             this.textBox54 = new System.Windows.Forms.TextBox();
@@ -277,8 +280,10 @@
             this.errorProvider49 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider50 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider51 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label106 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.groupBoxID.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -366,15 +371,54 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage7.Controls.Add(this.groupBoxID);
             this.tabPage7.Controls.Add(this.btnNext);
             this.tabPage7.Controls.Add(this.button4);
-            this.tabPage7.Controls.Add(this.btnLoad);
             this.tabPage7.Controls.Add(this.groupBox10);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(837, 531);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Данные по месторождению";
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnLoad.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnLoad.Location = new System.Drawing.Point(142, 63);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.TabIndex = 5;
+            this.btnLoad.Text = "Загрузить";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
+            // 
+            // groupBoxID
+            // 
+            this.groupBoxID.Controls.Add(this.label106);
+            this.groupBoxID.Controls.Add(this.btnLoad);
+            this.groupBoxID.Controls.Add(this.textBoxID);
+            this.groupBoxID.Controls.Add(this.btnChoose);
+            this.groupBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBoxID.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.groupBoxID.Location = new System.Drawing.Point(87, 412);
+            this.groupBoxID.Name = "groupBoxID";
+            this.groupBoxID.Size = new System.Drawing.Size(235, 97);
+            this.groupBoxID.TabIndex = 4;
+            this.groupBoxID.TabStop = false;
+            this.groupBoxID.Text = "Загрузка данных";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Enabled = false;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxID.Location = new System.Drawing.Point(44, 24);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(62, 21);
+            this.textBoxID.TabIndex = 0;
+            this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBoxID_MouseClick);
+            this.textBoxID.Leave += new System.EventHandler(this.TextBoxID_Leave);
             // 
             // btnNext
             // 
@@ -396,16 +440,18 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
-            // btnLoad
+            // btnChoose
             // 
-            this.btnLoad.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLoad.Location = new System.Drawing.Point(106, 486);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(111, 23);
-            this.btnLoad.TabIndex = 1;
-            this.btnLoad.Text = "Загрузить данные";
-            this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.Button2_Click);
+            this.btnChoose.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnChoose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnChoose.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnChoose.Location = new System.Drawing.Point(36, 63);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.Size = new System.Drawing.Size(91, 23);
+            this.btnChoose.TabIndex = 1;
+            this.btnChoose.Text = "Выбрать данные";
+            this.btnChoose.UseVisualStyleBackColor = false;
+            this.btnChoose.Click += new System.EventHandler(this.Button2_Click);
             // 
             // groupBox10
             // 
@@ -2834,6 +2880,16 @@
             // 
             this.errorProvider51.ContainerControl = this;
             // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label106.Location = new System.Drawing.Point(22, 27);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(20, 15);
+            this.label106.TabIndex = 6;
+            this.label106.Text = "id:";
+            // 
             // DataTabs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2849,6 +2905,8 @@
             this.Text = "Ввод данных для расчета";
             this.tabControl1.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
+            this.groupBoxID.ResumeLayout(false);
+            this.groupBoxID.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.tabPage1.ResumeLayout(false);
@@ -3166,7 +3224,7 @@
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnChoose;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Label label105;
@@ -3179,5 +3237,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.GroupBox groupBoxID;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Label label106;
     }
 }
