@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace RibbonTabOpen
 
     public partial class DataTabs : Form
     {
+        SqlCommand cmd;
+        SqlConnection con;
+        SqlDataReader dr;
+
         public DataTabs()
 
         {
@@ -123,9 +128,35 @@ namespace RibbonTabOpen
         private void Button13_Click(object sender, EventArgs e)
         {
 
-            SaveDataToFile();           
-
+            SaveDataToFile();
+            SaveDataInDatabase();
         }    
+
+        /// <summary>
+        /// Сохраняем данные в базе данных
+        /// </summary>
+        public void SaveDataInDatabase()
+        {
+            // устанавливаем подключение
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\Database.mdf;Integrated Security=True");
+
+            // открываем для записи
+            con.Open();
+
+            // отправка запроса записи полей формы
+            string sql = "INSERT INTO [Database] (Company, Name, Number, Label) VALUES (@Company, @Name, @Number, @Label)";
+
+            cmd = new SqlCommand(sql, con);
+
+            cmd.Parameters.AddWithValue("@textBox52", value: textBox52.Text);
+            cmd.Parameters.AddWithValue("@textBox2", value: textBox53.Text);
+            cmd.Parameters.AddWithValue("@textBox3", value: textBox54.Text);
+            cmd.Parameters.AddWithValue("@Value1", value: textBox55.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Данные успешно сохранены в БД", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         /// <summary>
         /// Сохраняем данные вкладок в текстовый файл

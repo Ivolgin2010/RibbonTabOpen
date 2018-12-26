@@ -365,7 +365,7 @@
             // 
             // tabPage7
             // 
-            this.tabPage7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage7.Controls.Add(this.btnNext);
             this.tabPage7.Controls.Add(this.button4);
             this.tabPage7.Controls.Add(this.btnLoad);
@@ -398,12 +398,13 @@
             // 
             // btnLoad
             // 
+            this.btnLoad.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnLoad.Location = new System.Drawing.Point(106, 486);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(111, 23);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Загрузить данные";
-            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.Button2_Click);
             // 
             // groupBox10
@@ -517,7 +518,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.NextButton1);
@@ -536,7 +537,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox1.Location = new System.Drawing.Point(7, 7);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(813, 473);
             this.groupBox1.TabIndex = 3;
@@ -930,7 +931,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.NextButton2);
@@ -1122,7 +1123,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.NextButton3);
             this.tabPage3.Controls.Add(this.groupBox6);
@@ -1330,7 +1331,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage4.Controls.Add(this.button9);
             this.tabPage4.Controls.Add(this.NextButton4);
             this.tabPage4.Controls.Add(this.groupBox7);
@@ -1724,7 +1725,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage5.Controls.Add(this.button11);
             this.tabPage5.Controls.Add(this.NextButton5);
             this.tabPage5.Controls.Add(this.groupBox8);
@@ -2119,7 +2120,7 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage6.Controls.Add(this.btnUpdate);
             this.tabPage6.Controls.Add(this.button15);
             this.tabPage6.Controls.Add(this.NextButton);
