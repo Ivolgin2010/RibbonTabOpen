@@ -502,6 +502,7 @@
             this.textBox54.TabIndex = 6;
             this.textBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox54.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox54_MouseClick);
+            this.textBox54.TextChanged += new System.EventHandler(this.TextBox54_TextChanged);
             this.textBox54.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox54_KeyPress);
             this.textBox54.Leave += new System.EventHandler(this.TextBox54_Leave);
             // 

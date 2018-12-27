@@ -26,7 +26,7 @@ namespace RibbonTabOpen
         }
 
         // ******************************************************************************
-        // создаем переменную значения первого поля
+        //// создаем переменную значения первого поля
         private int TextBox1;
         private string getvalue;
 
@@ -36,6 +36,17 @@ namespace RibbonTabOpen
             get => getvalue;
             set => getvalue = value;
         }
+        //********************************************************************************
+        // создаем переменную для номера скважины
+
+        public static string getNumber;
+
+        public string GetNumber
+        {
+            get => getNumber;
+            set => getNumber = value;
+        }
+        //*********************************************************************************
 
         //
         private void Button3_Click(object sender, EventArgs e)
@@ -3344,6 +3355,11 @@ namespace RibbonTabOpen
 
             //закрываем базу            
             con.Close();            
+        }
+
+        private void TextBox54_TextChanged(object sender, EventArgs e)
+        {
+            GetNumber = textBox54.Text;
         }
     }
 

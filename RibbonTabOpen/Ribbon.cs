@@ -134,7 +134,7 @@ namespace RibbonTabOpen
         {
             // Объявляем строковую переменную "path", которая описывает путь к файлу            
 
-            Stream myStream;
+            //Stream myStream;
 
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
@@ -145,164 +145,166 @@ namespace RibbonTabOpen
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if ((myStream = saveFileDialog.OpenFile()) != null)
-                {
-                    // Code to write the stream goes here.
+                //if ((myStream = saveFileDialog.OpenFile()) != null)
+                //{
+                //    // Code to write the stream goes here.
 
-                    myStream.Close();
-                }
-            }
-
-            /* В аргументах инициализатора нового экземпляра класса, наряду с
+                //    myStream.Close();
+                //}
+                /* В аргументах инициализатора нового экземпляра класса, наряду с
              * переменной "path", нужно указать свойство "true" - разрешена
                дозапись в существующий файл или "false" - переписать файл*/
 
-            StreamWriter cr = new StreamWriter(saveFileDialog.FileName);            
+                using (StreamWriter cr = new StreamWriter(saveFileDialog.FileName))
+                {
+                    // добавляем промежуточный разделитель
 
-            // добавляем промежуточный разделитель
+                    string div = "**************************************************************************************************";
 
-            string div = "**************************************************************************************************";
+                    //--------------------------- Определяем переменные ---------------------------------------//
+
+
+
+                    //-------------------------------- создаем заголовок файла -------------------------------------------//
+
+                    cr.WriteLine("Наименование: Отчет" );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Разработчик: ООО ОКБ 'Гамма' " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Дата сохранения:  " + DateTime.Now.ToString());
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Описание: Расчет электрического обогрева нефтяной скважин с ЭЦН.");
+                    cr.WriteLine("\n");
+
+                    DataTabs number = new DataTabs();
+                    cr.WriteLine("Cкважина №: " + number.GetNumber);
+
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                    cr.WriteLine("\n");
+
+                    //---------------------------------------------------------------------------------------------------//
+
+                    cr.WriteLine("Температура парафинизации в устье скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Интервал регулирования температуры системой управления: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                    cr.WriteLine("\n");
+
+                    //---------------------------------------------------------------------------------------------------//
+                    cr.WriteLine("Номинальный дебит скважины по жидкости: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Минимальная глубина обогрева для номинального дебита: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Длина нагревателя Stream Tracer 1.0/50 с запасом: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("В том числе: надземная часть " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Зона повышенной мощности (верхняя часть): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Зона пониженной мощности (нижняя часть): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                    cr.WriteLine("\n");
+
+                    //---------------------------------------------------------------------------------------------------//
+                    cr.WriteLine("Напряжение питания для нагревателя длиной: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Рабочий ток: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Мощность нагревателя при номинальном дебите: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Линейная мощность верхней зоны обогрева скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Линейная мощность нижней зоны обогрева скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Максимальная температура жилы при номинальном дебите: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Максимальная температура жилы (по алгоритму): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                    cr.WriteLine("\n");
+
+                    //-------------------------------------------------------------------------------------------------------//
+
+                    cr.WriteLine("Минимальный дебит скважины по жидкости: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Минимальная глубина обогрева для минимального дебита: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Длина нагревателя Stream Tracer 1.0/50 с запасом: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("В том числе: надземная часть: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Зона повышенной мощнсти (верхняя часть): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Зона пониженной мощности (нижняя часть): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                    cr.WriteLine("\n");
+
+                    //---------------------------------------------------------------------------------------------------------//
+
+                    cr.WriteLine("Напряжение питания для нагреывателя длиной: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Рабочий ток: ");
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Мощность нагревателя при минимальном дебите: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Линейная мощность верхней зоны обогрева скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Линейная мощность нижней зоны обогрева скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Максимальная температура жилы при минимальном дебите: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Максимальная температура жилы (по алгоритму): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                    cr.WriteLine("\n");
+
+                    //---------------------------------------------------------------------------------------------------//
+
+                    cr.WriteLine("Расчет для заданных: глубины обогрева " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(" и напряжения питания:" );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Требуется нагреватель Stream Tracer 1.0/35 длиной: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("В том числе: надземная часть " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("зона повышенной мощности (верхняя часть): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("зона пониженной мощности (нижняя часть): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                    cr.WriteLine("\n");
+
+                    //--------------------------------------------------------------------------------------------------//
+
+                    cr.WriteLine("При номинальном дебите: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("ожидаемое значение рабочего тока: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Мощность нагревателя составит: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Линейная мощность верхней зоны обогрева скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Линейная мощность нижней зоны обогрева скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Расчетная температура флюида в устье скважины: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Максимальная температура жилы при номинальном дебете: " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine("Максимальная температура жилы (по алгоритму): " );
+                    cr.WriteLine("\n");
+                    cr.WriteLine(div.ToString());
+                }                                 
+
+                // Выводим сообщение что все Ок
+
+                MessageBox.Show("Отчет успешно создан!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             
-            //--------------------------- Определяем переменные ---------------------------------------//
-
-           //string company = textBox01.Text; // оператор
-
-            //-------------------------------- создаем заголовок файла -------------------------------------------//
-
-            cr.WriteLine("Наименование: Отчет");            
-            cr.WriteLine("\n");
-            cr.WriteLine("Разработчик: ООО ОКБ 'Гамма' ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Дата сохранения:  " + DateTime.Now.ToString());
-            cr.WriteLine("\n");
-            cr.WriteLine("Описание: Расчет электрического обогрева нефтяной скважин с ЭЦН.");
-            cr.WriteLine("\n");
-            cr.WriteLine("Cкважина №: ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-            cr.WriteLine("\n");
-
-            //---------------------------------------------------------------------------------------------------//
-
-            cr.WriteLine("Температура парафинизации в устье скважины: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Интервал регулирования температуры системой управления: ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-            cr.WriteLine("\n");
-
-            //---------------------------------------------------------------------------------------------------//
-            cr.WriteLine("Номинальный дебит скважины по жидкости: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Минимальная глубина обогрева для номинального дебита: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Длина нагревателя Stream Tracer 1.0/50 с запасом: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("В том числе: надземная часть ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Зона повышенной мощности (верхняя часть): ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Зона пониженной мощности (нижняя часть): ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-            cr.WriteLine("\n");
-
-            //---------------------------------------------------------------------------------------------------//
-            cr.WriteLine("Напряжение питания для нагревателя длиной: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Рабочий ток: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Мощность нагревателя при номинальном дебите: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Линейная мощность верхней зоны обогрева скважины: ");
-            cr.WriteLine("\n");            
-            cr.WriteLine("Линейная мощность нижней зоны обогрева скважины: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Максимальная температура жилы при номинальном дебите: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Максимальная температура жилы (по алгоритму): ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-            cr.WriteLine("\n");
-
-            //-------------------------------------------------------------------------------------------------------//
-
-            cr.WriteLine("Минимальный дебит скважины по жидкости: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Минимальная глубина обогрева для минимального дебита: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Длина нагревателя Stream Tracer 1.0/50 с запасом: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("В том числе: надземная часть: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Зона повышенной мощнсти (верхняя часть): ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Зона пониженной мощности (нижняя часть): ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-            cr.WriteLine("\n");
-
-            //---------------------------------------------------------------------------------------------------------//
-
-            cr.WriteLine("Напряжение питания для нагреывателя длиной: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Рабочий ток: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Мощность нагревателя при минимальном дебите: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Линейная мощность верхней зоны обогрева скважины: ");
-            cr.WriteLine("\n");            
-            cr.WriteLine("Линейная мощность нижней зоны обогрева скважины: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Максимальная температура жилы при минимальном дебите: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Максимальная температура жилы (по алгоритму): ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-            cr.WriteLine("\n");
-
-            //---------------------------------------------------------------------------------------------------//
-
-            cr.WriteLine("Расчет для заданных: глубины обогрева ");
-            cr.WriteLine("\n");
-            cr.WriteLine(" и напряжения питания:");
-            cr.WriteLine("\n");
-            cr.WriteLine("Требуется нагреватель Stream Tracer 1.0/35 длиной: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("В том числе: надземная часть ");
-            cr.WriteLine("\n");
-            cr.WriteLine("зона повышенной мощности (верхняя часть): ");
-            cr.WriteLine("\n");
-            cr.WriteLine("зона пониженной мощности (нижняя часть): ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-            cr.WriteLine("\n");
-
-            //--------------------------------------------------------------------------------------------------//
-
-            cr.WriteLine("При номинальном дебите: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("ожидаемое значение рабочего тока: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Мощность нагревателя составит: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Линейная мощность верхней зоны обогрева скважины: ");
-            cr.WriteLine("\n");            
-            cr.WriteLine("Линейная мощность нижней зоны обогрева скважины: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Расчетная температура флюида в устье скважины: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Максимальная температура жилы при номинальном дебете: ");
-            cr.WriteLine("\n");
-            cr.WriteLine("Максимальная температура жилы (по алгоритму): ");
-            cr.WriteLine("\n");
-            cr.WriteLine(div.ToString());
-
-            //------------------------------------------------------------------------------------------------------//
-
-            // Выводим сообщение что все Ок
-
-            MessageBox.Show("Отчет успешно создан!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //********************************************************************************
