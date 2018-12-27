@@ -28,16 +28,9 @@ namespace RibbonTabOpen
         // ******************************************************************************
         //// создаем переменную значения первого поля
         private int TextBox1;
-        private string getvalue;
-
-        // аксессор для первого поля
-        public string GetValue
-        {
-            get => getvalue;
-            set => getvalue = value;
-        }
+        
         //********************************************************************************
-        // создаем переменную для номера скважины
+        // создаем переменную для получения номера скважины
 
         public static string getNumber;
 
@@ -46,6 +39,52 @@ namespace RibbonTabOpen
             get => getNumber;
             set => getNumber = value;
         }
+        //*********************************************************************************
+        // Первое поле вкладки Данные месторождения
+
+        public static string getTextBox52;
+
+        public string GetTextBox52
+        {
+            get => getTextBox52;
+            set => getTextBox52 = value;
+        }
+        //*********************************************************************************
+        // Второе поле вкладки Данные месторождения
+
+        public static string getTextBox53;
+
+        public string GetTextBox53
+        {
+            get => getTextBox53;
+            set => getTextBox53 = value;
+        }
+        //*********************************************************************************
+        // Третье поле вкладки Данные месторождения
+
+        public static string getTextBox54;
+
+        public string GetTextBox54
+        {
+            get => getTextBox54;
+            set => getTextBox54 = value;
+        }
+        //*********************************************************************************
+        // Четвертое поле вкладки Данные месторождения
+
+        public static string getTextBox55;
+
+        public string GetTextBox55
+        {
+            get => getTextBox55;
+            set => getTextBox55 = value;
+        }
+        //*********************************************************************************
+
+
+
+
+
         //*********************************************************************************
 
         //
@@ -666,9 +705,6 @@ namespace RibbonTabOpen
                     errorProvider1.SetError(textBox1, "Внимание ошибка! Значение глубины находится вне допустимого диапазона");
                 }
             }
-
-            getvalue = textBox1.Text;
-
         }
 
         //***************************************************************************
@@ -3319,7 +3355,7 @@ namespace RibbonTabOpen
                 con.Open();
 
                 // отправка запроса записи полей формы
-                string sql = "SELECT * FROM [Database] WHERE ID =" + int.Parse(textBoxID.Text); ;
+                string sql = "SELECT * FROM [Database] WHERE ID =" + int.Parse(textBoxID.Text);
 
                 cmd = new SqlCommand(sql, con);
 
@@ -3344,8 +3380,8 @@ namespace RibbonTabOpen
                     textBox55.Text = "";
 
                     // ввыводим сообщение
-                    MessageBox.Show("Записи не обнаружено! Введите корректный ID", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
-                }                
+                    MessageBox.Show("Записи не обнаружено! Введите корректный ID", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
             else
@@ -3354,12 +3390,33 @@ namespace RibbonTabOpen
             }
 
             //закрываем базу            
-            con.Close();            
+            con.Close();
         }
 
         private void TextBox54_TextChanged(object sender, EventArgs e)
         {
             GetNumber = textBox54.Text;
+        }
+
+        private void BtnLoadData_Click(object sender, EventArgs e)
+        {
+            DatabaseData frm = new DatabaseData();
+            frm.Show();
+        }
+
+        private void TextBox52_TextChanged(object sender, EventArgs e)
+        {
+            GetTextBox52 = textBox52.Text;
+        }
+
+        private void TextBox53_TextChanged(object sender, EventArgs e)
+        {
+            GetTextBox53 = textBox53.Text;
+        }
+
+        private void TextBox55_TextChanged(object sender, EventArgs e)
+        {
+            GetTextBox55 = textBox55.Text;
         }
     }
 

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataTabs));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.btnLoadData = new System.Windows.Forms.Button();
             this.groupBoxID = new System.Windows.Forms.GroupBox();
             this.label106 = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -371,6 +372,7 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage7.Controls.Add(this.btnLoadData);
             this.tabPage7.Controls.Add(this.groupBoxID);
             this.tabPage7.Controls.Add(this.btnNext);
             this.tabPage7.Controls.Add(this.button4);
@@ -380,6 +382,16 @@
             this.tabPage7.Size = new System.Drawing.Size(837, 531);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Данные по месторождению";
+            // 
+            // btnLoadData
+            // 
+            this.btnLoadData.Location = new System.Drawing.Point(340, 476);
+            this.btnLoadData.Name = "btnLoadData";
+            this.btnLoadData.Size = new System.Drawing.Size(111, 23);
+            this.btnLoadData.TabIndex = 5;
+            this.btnLoadData.Text = "Загрузить данные";
+            this.btnLoadData.UseVisualStyleBackColor = true;
+            this.btnLoadData.Click += new System.EventHandler(this.BtnLoadData_Click);
             // 
             // groupBoxID
             // 
@@ -491,6 +503,7 @@
             this.textBox55.TabIndex = 7;
             this.textBox55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox55.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox55_MouseClick);
+            this.textBox55.TextChanged += new System.EventHandler(this.TextBox55_TextChanged);
             this.textBox55.Leave += new System.EventHandler(this.TextBox55_Leave);
             // 
             // textBox54
@@ -515,6 +528,7 @@
             this.textBox53.TabIndex = 5;
             this.textBox53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox53.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox53_MouseClick);
+            this.textBox53.TextChanged += new System.EventHandler(this.TextBox53_TextChanged);
             this.textBox53.Leave += new System.EventHandler(this.TextBox53_Leave);
             // 
             // textBox52
@@ -527,6 +541,7 @@
             this.textBox52.TabIndex = 4;
             this.textBox52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox52.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBox52_MouseClick);
+            this.textBox52.TextChanged += new System.EventHandler(this.TextBox52_TextChanged);
             this.textBox52.Leave += new System.EventHandler(this.TextBox52_Leave);
             // 
             // label105
@@ -3242,5 +3257,6 @@
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Button btnLoadData;
     }
 }

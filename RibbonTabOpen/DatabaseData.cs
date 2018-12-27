@@ -29,9 +29,46 @@ namespace RibbonTabOpen
         /// 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            Close();
+            // устанавливаем подключение
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\Database.mdf;Integrated Security=True");
 
+            // открываем для записи
+            con.Open();
 
+            // отправка запроса записи полей формы
+            string sql = "SELECT * FROM [Database] WHERE ID =";
+
+            cmd = new SqlCommand(sql, con);
+
+            dr = cmd.ExecuteReader();
+            DataTabs f = new DataTabs();
+
+            if (dr.Read())
+            {                
+                // добавляем данные первой вкладки
+                f.GetTextBox52 = dr["Company"].ToString();
+                f.GetTextBox53 = dr["Name"].ToString();
+                f.GetNumber = dr["Number"].ToString();
+                f.GetTextBox55 = dr["Label"].ToString();
+
+                // ввыводим сообщение
+                MessageBox.Show("Данные загружены успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // закрываем окно с БД
+                Close();
+            }
+            else
+            {
+                f.GetTextBox52 = "";
+                f.GetTextBox53 = "";
+                f.GetTextBox54 = "";
+                f.GetTextBox55 = "";
+
+                // ввыводим сообщение
+                MessageBox.Show("Записи не обнаружено! Введите корректный ID", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //закрываем базу            
+            con.Close();
         }
 
         /// <summary>
@@ -47,14 +84,15 @@ namespace RibbonTabOpen
             con.Open();
 
             // отправка запроса записи полей формы
-            string sql = "INSERT INTO [Database] (value) VALUES (@value)";
+            string sql = "INSERT INTO [Database] (Company, Name, Number, Label) VALUES (@Company, @Name, @Number, @Label)";
 
             cmd = new SqlCommand(sql, con);
+            DataTabs f = new DataTabs();
 
-            //cmd.Parameters.AddWithValue("@textBox52", value: textBox52.Text);
-            //cmd.Parameters.AddWithValue("@textBox2", value: textBox2.Text);
-            //cmd.Parameters.AddWithValue("@textBox3", value: textBox3.Text);
-            //cmd.Parameters.AddWithValue("@Value1", value: textBox4.Text);
+            cmd.Parameters.AddWithValue("@textBox52", value: f.GetTextBox52);
+            cmd.Parameters.AddWithValue("@textBox53", value: f.GetTextBox53);
+            cmd.Parameters.AddWithValue("@textBox54", value: f.GetNumber);
+            cmd.Parameters.AddWithValue("@textBox55", value: f.GetTextBox55);
             cmd.ExecuteNonQuery();
             con.Close();
 
