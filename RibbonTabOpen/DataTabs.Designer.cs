@@ -385,7 +385,7 @@
             // 
             // btnLoadData
             // 
-            this.btnLoadData.Location = new System.Drawing.Point(340, 476);
+            this.btnLoadData.Location = new System.Drawing.Point(143, 486);
             this.btnLoadData.Name = "btnLoadData";
             this.btnLoadData.Size = new System.Drawing.Size(111, 23);
             this.btnLoadData.TabIndex = 5;
@@ -401,7 +401,7 @@
             this.groupBoxID.Controls.Add(this.btnChoose);
             this.groupBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBoxID.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBoxID.Location = new System.Drawing.Point(87, 412);
+            this.groupBoxID.Location = new System.Drawing.Point(303, 391);
             this.groupBoxID.Name = "groupBoxID";
             this.groupBoxID.Size = new System.Drawing.Size(235, 97);
             this.groupBoxID.TabIndex = 4;
