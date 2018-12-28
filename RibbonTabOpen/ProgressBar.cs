@@ -27,7 +27,7 @@ namespace RibbonTabOpen
         
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 if (backgroundWorker.CancellationPending)
                 {
@@ -35,12 +35,13 @@ namespace RibbonTabOpen
                 }
                 else
                 {
-                    SimulateHeavyJob();
+                    Thread.Sleep(100);
+
+                    Calculation();
+
                     backgroundWorker.ReportProgress(i);
                 }
-            }
-
-            
+            }            
         }
 
         private void BackgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -54,70 +55,37 @@ namespace RibbonTabOpen
             if (e.Cancelled)
             {
                 MessageBox.Show("Внимание! Расчет был прерван", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
-                this.Close();
+                Close();
             }
             else
             {
-                Display();
+                MessageBox.Show("Рысчет выполнен успешно!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
-        }
-        
-        private void SimulateHeavyJob()
+        }                    
+
+        private void Calculation()
         {
-            Thread.Sleep(100);
+            // сохраняем заголовки в файл 
+            string FileName = @"C:\Users\i.geraskin\source\repos\CalcData.csv";
+            
+            using (StreamWriter streamWriter = new StreamWriter(FileName))
+            {
+                using (var csvWriter = new CsvWriter(streamWriter))
+                {
+                    // указываем разделитель (каждый заголовок запишется в свою ячейку)
+                    csvWriter.Configuration.Delimiter = ";";
 
-            //// сохраняем заголовки в файл 
+                    // записываем заголовки
+                    csvWriter.WriteField("Depth");
+                    csvWriter.WriteField("Paraffins");
+                    csvWriter.WriteField("Nom. debit");
+                    csvWriter.WriteField("Temp_oil");
+                    csvWriter.WriteField("Temp_wire");
+                    csvWriter.NextRecord();
+                }
+            }           
 
-            //SaveFileDialog savefile = new SaveFileDialog
-            //{
-            //    // задаем имя файла по умолчанию
-            //    FileName = "CalcData.csv",
-
-            //    // фильтруем по типу
-            //    Filter = "Excel файл CSV|*.csv|All files (*.*)|*.*"
-            //};
-
-            //// открываем диалоговое окно
-            //if (savefile.ShowDialog() == DialogResult.OK)
-            //{
-            //    using (StreamWriter streamWriter = new StreamWriter(savefile.FileName))
-            //    {
-
-            //        using (var csvWriter = new CsvWriter(streamWriter))
-            //        {
-            //            // указываем разделитель (каждый заголовок запишется в свою ячейку)
-            //            csvWriter.Configuration.Delimiter = ";";
-
-            //            // записываем заголовки
-            //            csvWriter.WriteField("Depth");
-            //            csvWriter.WriteField("Paraffins");
-            //            csvWriter.WriteField("Nom. debit");
-            //            csvWriter.WriteField("Temp_oil");
-            //            csvWriter.WriteField("Temp_wire");
-            //            csvWriter.NextRecord();
-
-            //        }
-            //    }
-
-
-
-            //    //    int.TryParse(textBox1.Text, out int TextBox1);
-            //    //    for (int i = 0; i < TextBox1; i++)
-            //    //    {
-            //    //        // записываем данные в файл
-            //    //        sw.WriteLine(i);                
-
-            //    MessageBox.Show("Данные успешно сохранены", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-
-
-        }           
-
-        private void Display()
-        {
-            MessageBox.Show("Рысчет выполнен успешно!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Close();
         }
-        
     }
 }

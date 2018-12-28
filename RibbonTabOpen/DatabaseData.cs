@@ -85,6 +85,8 @@ namespace RibbonTabOpen
             DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить данные?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
+                //string selected_id = dataGridView.CurrentRow.Cells[""].Value.ToString;
+
                 MessageBox.Show("Данные успешно удалены", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //Close();                
             }
