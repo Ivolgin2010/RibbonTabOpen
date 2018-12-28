@@ -14,6 +14,8 @@ namespace RibbonTabOpen
         {
             InitializeComponent();
         }
+
+       
         /// <summary>
         /// Закрываем форму
         /// </summary>       
@@ -36,7 +38,7 @@ namespace RibbonTabOpen
             con.Open();
 
             // отправка запроса записи полей формы
-            string sql = "SELECT * FROM [Database] WHERE ID =";
+            string sql = "SELECT * FROM [Database] WHERE ID =" + 1;
 
             cmd = new SqlCommand(sql, con);
 
@@ -44,7 +46,7 @@ namespace RibbonTabOpen
             DataTabs f = new DataTabs();
 
             if (dr.Read())
-            {                
+            {
                 // добавляем данные первой вкладки
                 f.GetTextBox52 = dr["Company"].ToString();
                 f.GetTextBox53 = dr["Name"].ToString();
@@ -105,7 +107,16 @@ namespace RibbonTabOpen
        
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить данные?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show("Данные успешно удалены", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();                
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing
+            }
         }
 
         private void DatabaseData_Load(object sender, EventArgs e)

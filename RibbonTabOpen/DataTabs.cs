@@ -39,6 +39,9 @@ namespace RibbonTabOpen
             get => getNumber;
             set => getNumber = value;
         }
+
+        //*********************************************************************************
+
         //*********************************************************************************
         // Первое поле вкладки Данные месторождения
 
@@ -79,12 +82,6 @@ namespace RibbonTabOpen
             get => getTextBox55;
             set => getTextBox55 = value;
         }
-        //*********************************************************************************
-
-
-
-
-
         //*********************************************************************************
 
         //
@@ -2711,18 +2708,10 @@ namespace RibbonTabOpen
         }
 
         private void Button2_Click(object sender, EventArgs e)
-        {
-            
+        {            
             // делаем активными поля
-
-            textBoxID.Enabled = true;
-            //groupBoxID.Enabled = true;            
-        }
-
-        //private void LoadDataToForm()
-        //{
-            
-        //}
+            textBoxID.Enabled = true;                       
+        }        
 
         private void Button4_Click(object sender, EventArgs e)
         {
@@ -3406,17 +3395,17 @@ namespace RibbonTabOpen
 
         private void TextBox52_TextChanged(object sender, EventArgs e)
         {
-            GetTextBox52 = textBox52.Text;
+            GetTextBox52 = textBox52.Text;            
         }
 
         private void TextBox53_TextChanged(object sender, EventArgs e)
         {
-            GetTextBox53 = textBox53.Text;
+            GetTextBox53 = textBox53.Text;          
         }
 
         private void TextBox55_TextChanged(object sender, EventArgs e)
         {
-            GetTextBox55 = textBox55.Text;
+            GetTextBox55 = textBox55.Text;            
         }
     }
 
