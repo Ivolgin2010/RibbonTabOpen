@@ -38,39 +38,14 @@ namespace RibbonTabOpen
             con.Open();
 
             // отправка запроса записи полей формы
-            string sql = "SELECT * FROM [Database] WHERE ID =" + 1;
+            string sql = "SELECT * FROM [Database]";
 
             cmd = new SqlCommand(sql, con);
 
             dr = cmd.ExecuteReader();
             DataTabs f = new DataTabs();
 
-            if (dr.Read())
-            {
-                // добавляем данные первой вкладки
-                f.GetTextBox52 = dr["Company"].ToString();
-                f.GetTextBox53 = dr["Name"].ToString();
-                f.GetNumber = dr["Number"].ToString();
-                f.GetTextBox55 = dr["Label"].ToString();
-
-                // ввыводим сообщение
-                MessageBox.Show("Данные загружены успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // закрываем окно с БД
-                Close();
-            }
-            else
-            {
-                f.GetTextBox52 = "";
-                f.GetTextBox53 = "";
-                f.GetTextBox54 = "";
-                f.GetTextBox55 = "";
-
-                // ввыводим сообщение
-                MessageBox.Show("Записи не обнаружено! Введите корректный ID", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            //закрываем базу            
-            con.Close();
+            
         }
 
         /// <summary>
@@ -111,7 +86,7 @@ namespace RibbonTabOpen
             if (dialogResult == DialogResult.Yes)
             {
                 MessageBox.Show("Данные успешно удалены", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();                
+                //Close();                
             }
             else if (dialogResult == DialogResult.No)
             {

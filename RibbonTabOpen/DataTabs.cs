@@ -155,18 +155,7 @@ namespace RibbonTabOpen
                     errorProvider39.SetError(textBox39, "Внимание ошибка! Значение находится вне допустимого диапазона");
                 }
             }
-        }
-
-        //private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
-        //{
-
-        //}
-
-        //private void Button1_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
+        }        
         
         /// <summary>
         /// Сохраняем текстовый файл
@@ -179,6 +168,9 @@ namespace RibbonTabOpen
 
             // сохраняем данные в БД
             SaveDataInDatabase();
+
+            // выводим сообщение об успешности сохранения данных
+            MessageBox.Show("Данные успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }    
 
         /// <summary>
@@ -206,7 +198,7 @@ namespace RibbonTabOpen
             cmd.ExecuteNonQuery();
             con.Close();
 
-            MessageBox.Show("Данные успешно сохранены в БД", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Данные успешно сохранены в БД", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>
@@ -486,7 +478,7 @@ namespace RibbonTabOpen
             sw.Close();
 
             // выводим сообщение об успешности сохранения данных
-            MessageBox.Show("Данные успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           // MessageBox.Show("Данные успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Button14_Click(object sender, EventArgs e)
@@ -3384,7 +3376,7 @@ namespace RibbonTabOpen
 
         private void TextBox54_TextChanged(object sender, EventArgs e)
         {
-            GetNumber = textBox54.Text;
+            //GetNumber = textBox54.Text;
         }
 
         private void BtnLoadData_Click(object sender, EventArgs e)
@@ -3395,17 +3387,17 @@ namespace RibbonTabOpen
 
         private void TextBox52_TextChanged(object sender, EventArgs e)
         {
-            GetTextBox52 = textBox52.Text;            
+            //GetTextBox52 = textBox52.Text;            
         }
 
         private void TextBox53_TextChanged(object sender, EventArgs e)
         {
-            GetTextBox53 = textBox53.Text;          
+            //GetTextBox53 = textBox53.Text;          
         }
 
         private void TextBox55_TextChanged(object sender, EventArgs e)
         {
-            GetTextBox55 = textBox55.Text;            
+            //GetTextBox55 = textBox55.Text;            
         }
     }
 

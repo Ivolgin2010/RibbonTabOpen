@@ -403,7 +403,7 @@
             this.groupBoxID.Controls.Add(this.btnChoose);
             this.groupBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBoxID.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBoxID.Location = new System.Drawing.Point(57, 389);
+            this.groupBoxID.Location = new System.Drawing.Point(378, 329);
             this.groupBoxID.Name = "groupBoxID";
             this.groupBoxID.Size = new System.Drawing.Size(377, 96);
             this.groupBoxID.TabIndex = 4;
@@ -491,7 +491,7 @@
             this.groupBox10.Controls.Add(this.label102);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox10.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox10.Location = new System.Drawing.Point(210, 116);
+            this.groupBox10.Location = new System.Drawing.Point(52, 46);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(436, 228);
             this.groupBox10.TabIndex = 0;
