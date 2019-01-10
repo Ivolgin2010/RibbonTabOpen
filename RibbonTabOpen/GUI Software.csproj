@@ -91,6 +91,7 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="Database.cs">
       <DependentUpon>Database.xsd</DependentUpon>
     </Compile>
@@ -236,6 +237,7 @@
       <DependentUpon>Database.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Data.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

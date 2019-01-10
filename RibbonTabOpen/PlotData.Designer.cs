@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -42,17 +44,25 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnPlot = new System.Windows.Forms.Button();
+            this.depthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.termogrammaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paraffinsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomdebitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tempoilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tempwireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -115,7 +125,7 @@
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.справкаToolStripMenuItem.Text = "Справка";
             this.справкаToolStripMenuItem.Click += new System.EventHandler(this.СправкаToolStripMenuItem_Click);
             // 
@@ -131,7 +141,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dataGridViewData);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -140,17 +150,34 @@
             this.tabPage1.Text = "Данные";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(740, 398);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewData.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.depthDataGridViewTextBoxColumn,
+            this.termogrammaDataGridViewTextBoxColumn,
+            this.paraffinsDataGridViewTextBoxColumn,
+            this.nomdebitDataGridViewTextBoxColumn,
+            this.tempoilDataGridViewTextBoxColumn,
+            this.tempwireDataGridViewTextBoxColumn});
+            this.dataGridViewData.DataSource = this.dataBindingSource;
+            this.dataGridViewData.Location = new System.Drawing.Point(0, 6);
+            this.dataGridViewData.Name = "dataGridViewData";
+            this.dataGridViewData.Size = new System.Drawing.Size(740, 398);
+            this.dataGridViewData.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.chart2);
+            this.tabPage2.Controls.Add(this.chart1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -159,29 +186,29 @@
             this.tabPage2.Text = "График";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // chart2
+            // chart1
             // 
             chartArea1.AxisX.Title = "Температура, град. С";
             chartArea1.AxisY.IsReversed = true;
             chartArea1.AxisY.Title = "Глубина скважины, м";
             chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
+            this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(-2, 0);
-            this.chart2.Name = "chart2";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(-2, 0);
+            this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(745, 414);
-            this.chart2.TabIndex = 3;
-            this.chart2.Text = "chart2";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(745, 414);
+            this.chart1.TabIndex = 3;
+            this.chart1.Text = "chart2";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             title1.Name = "Title";
             title1.Text = "Распределение температуры по глубине скважины";
-            this.chart2.Titles.Add(title1);
+            this.chart1.Titles.Add(title1);
             // 
             // btnLoad
             // 
@@ -203,6 +230,46 @@
             this.btnPlot.UseVisualStyleBackColor = true;
             this.btnPlot.Click += new System.EventHandler(this.BtnPlot_Click);
             // 
+            // depthDataGridViewTextBoxColumn
+            // 
+            this.depthDataGridViewTextBoxColumn.DataPropertyName = "Depth";
+            this.depthDataGridViewTextBoxColumn.HeaderText = "Depth";
+            this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
+            // 
+            // termogrammaDataGridViewTextBoxColumn
+            // 
+            this.termogrammaDataGridViewTextBoxColumn.DataPropertyName = "Termogramma";
+            this.termogrammaDataGridViewTextBoxColumn.HeaderText = "Termogramma";
+            this.termogrammaDataGridViewTextBoxColumn.Name = "termogrammaDataGridViewTextBoxColumn";
+            // 
+            // paraffinsDataGridViewTextBoxColumn
+            // 
+            this.paraffinsDataGridViewTextBoxColumn.DataPropertyName = "Paraffins";
+            this.paraffinsDataGridViewTextBoxColumn.HeaderText = "Paraffins";
+            this.paraffinsDataGridViewTextBoxColumn.Name = "paraffinsDataGridViewTextBoxColumn";
+            // 
+            // nomdebitDataGridViewTextBoxColumn
+            // 
+            this.nomdebitDataGridViewTextBoxColumn.DataPropertyName = "Nom_debit";
+            this.nomdebitDataGridViewTextBoxColumn.HeaderText = "Nom_debit";
+            this.nomdebitDataGridViewTextBoxColumn.Name = "nomdebitDataGridViewTextBoxColumn";
+            // 
+            // tempoilDataGridViewTextBoxColumn
+            // 
+            this.tempoilDataGridViewTextBoxColumn.DataPropertyName = "Temp_oil";
+            this.tempoilDataGridViewTextBoxColumn.HeaderText = "Temp_oil";
+            this.tempoilDataGridViewTextBoxColumn.Name = "tempoilDataGridViewTextBoxColumn";
+            // 
+            // tempwireDataGridViewTextBoxColumn
+            // 
+            this.tempwireDataGridViewTextBoxColumn.DataPropertyName = "Temp_wire";
+            this.tempwireDataGridViewTextBoxColumn.HeaderText = "Temp_wire";
+            this.tempwireDataGridViewTextBoxColumn.Name = "tempwireDataGridViewTextBoxColumn";
+            // 
+            // dataBindingSource
+            // 
+            this.dataBindingSource.DataSource = typeof(RibbonTabOpen.Data);
+            // 
             // PlotData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,9 +289,10 @@
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,9 +310,16 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataGridView dataGridViewData;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnPlot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn termogrammaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paraffinsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomdebitDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tempoilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tempwireDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dataBindingSource;
     }
 }
