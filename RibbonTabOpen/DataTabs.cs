@@ -42,8 +42,8 @@ namespace RibbonTabOpen
 
         //*********************************************************************************
 
-        //*********************************************************************************
-        // Первое поле вкладки Данные месторождения
+
+        //// Первое поле вкладки Данные месторождения
 
         public static string getTextBox52;
 
@@ -62,16 +62,16 @@ namespace RibbonTabOpen
             get => getTextBox53;
             set => getTextBox53 = value;
         }
-        //*********************************************************************************
-        // Третье поле вкладки Данные месторождения
+        ////*********************************************************************************
+        //// Третье поле вкладки Данные месторождения
 
-        public static string getTextBox54;
+        //public static string getTextBox54;
 
-        public string GetTextBox54
-        {
-            get => getTextBox54;
-            set => getTextBox54 = value;
-        }
+        //public string GetTextBox54
+        //{
+        //    get => getTextBox54;
+        //    set => getTextBox54 = value;
+        //}
         //*********************************************************************************
         // Четвертое поле вкладки Данные месторождения
 
@@ -3376,7 +3376,7 @@ namespace RibbonTabOpen
 
         private void TextBox54_TextChanged(object sender, EventArgs e)
         {
-            //GetNumber = textBox54.Text;
+            GetNumber = textBox54.Text;
         }
 
         private void BtnLoadData_Click(object sender, EventArgs e)
@@ -3387,17 +3387,17 @@ namespace RibbonTabOpen
 
         private void TextBox52_TextChanged(object sender, EventArgs e)
         {
-            //GetTextBox52 = textBox52.Text;            
+            GetTextBox52 = textBox52.Text;            
         }
 
         private void TextBox53_TextChanged(object sender, EventArgs e)
         {
-            //GetTextBox53 = textBox53.Text;          
+            GetTextBox53 = textBox53.Text;          
         }
 
         private void TextBox55_TextChanged(object sender, EventArgs e)
         {
-            //GetTextBox55 = textBox55.Text;            
+            GetTextBox55 = textBox55.Text;            
         }
     }
 

@@ -119,7 +119,7 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(112, 17);
             this.toolStripStatusLabel1.Text = "Добро пожаловать";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.ToolStripStatusLabel1_Click);
+            //this.toolStripStatusLabel1.Click += new System.EventHandler(this.ToolStripStatusLabel1_Click);
             // 
             // toolStrip1
             // 
@@ -135,7 +135,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(326, 43);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ToolStrip1_ItemClicked);
+            //this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ToolStrip1_ItemClicked);
             // 
             // toolStripButton1
             // 
@@ -165,6 +165,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(40, 40);
             this.toolStripButton3.Text = "расчет обогрева скважины газлифт";
+            this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -174,6 +175,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(40, 40);
             this.toolStripButton4.Text = "расчет обогрева скважины винтовой насос";
+            this.toolStripButton4.Click += new System.EventHandler(this.ToolStripButton4_Click);
             // 
             // ribbonUpDown1
             // 
@@ -200,7 +202,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(311, 215);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            //this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // MainWindow
             // 

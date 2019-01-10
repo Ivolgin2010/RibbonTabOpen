@@ -43,9 +43,7 @@ namespace RibbonTabOpen
             cmd = new SqlCommand(sql, con);
 
             dr = cmd.ExecuteReader();
-            DataTabs f = new DataTabs();
-
-            
+            DataTabs f = new DataTabs();            
         }
 
         /// <summary>

@@ -14,11 +14,12 @@ namespace RibbonTabOpen
     public partial class MainWindow : Form
     {
         public MainWindow()
+
         {   // инициализируем поток
-            Thread t = new Thread(new ThreadStart(StartForm));
+            Thread splashScreen = new Thread(new ThreadStart(StartForm));
 
             // запукскаем его
-            t.Start();
+            splashScreen.Start();
 
             // ждем 2500 мсек
             Thread.Sleep(2500);
@@ -26,7 +27,7 @@ namespace RibbonTabOpen
             InitializeComponent();
 
             // выходим из потока
-            t.Abort();
+            splashScreen.Abort();
         }
 
         // запускаем стартовое окно
@@ -62,13 +63,8 @@ namespace RibbonTabOpen
 
         private void ToolStripButton2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ToolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
+            MessageBox.Show("Перспективный значок. Здесь будет расчет электрообогрева нефтяной скважины, оборудованной станком-качалкой.", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }        
 
         private void MouseHover_Exit(object sender, EventArgs e)
         {
@@ -88,16 +84,16 @@ namespace RibbonTabOpen
         private void MouseLeave_About(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = "Добро пожаловать";
+        }        
+
+        private void ToolStripButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Перспективный значок. Здесь будет расчет электрообогрева газлифтной нефтяной скважины.", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private void ToolStripButton4_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ToolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
+            MessageBox.Show("Перспективный значок. Здесь будет расчет электрообогрева нефтяной скважины, оборудованной винтовым насосом.", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

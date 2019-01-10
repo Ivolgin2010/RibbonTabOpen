@@ -17,20 +17,20 @@ namespace RibbonTabOpen
             InitializeComponent();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
+        //private void chart1_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void таблицаРасчетныхПараметровToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ТаблицаРасчетныхПараметровToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataTable data = new DataTable();
             data.Show();
-        }
+        }       
     }
 }
