@@ -31,6 +31,27 @@ namespace RibbonTabOpen
         {
             DataTable data = new DataTable();
             data.Show();
-        }       
+        }
+
+        /// <summary>
+        /// строим график
+        /// </summary>        
+        private void BtnPlot_Click(object sender, EventArgs e)
+        {
+            // вставляем сюда код
+        }
+
+        /// <summary>
+        /// загружаем данные
+        /// </summary>        
+        private void BtnLoad_Click(object sender, EventArgs e)
+        {
+            // вставляем сюда код
+        }
+
+        private void СправкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // вставляем сюда код
+        }
     }
 }
