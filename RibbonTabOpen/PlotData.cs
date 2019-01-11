@@ -39,16 +39,20 @@ namespace RibbonTabOpen
             chart1.DataSource = dataGridViewData.DataSource;
 
             // Set series members names for the X and Y values
-            // строим термограмму скважины
-            chart1.Series["graph"].XValueMember = "Depth";
-            chart1.Series["graph"].YValueMembers = "Termogramma";
+            
+            chart1.Series["геотерма"].XValueMember = "Depth";                 // строим глубина скважины с шагом 1 м;
+            chart1.Series["геотерма"].YValueMembers = "Termogramma";          // строим термограмму скважины;
+            chart1.Series["парафины"].YValueMembers = "Paraffins";            // строим распределение парафинов;
+            chart1.Series["ном. дебит"].YValueMembers = "Nom_debit";          // скважина без обогрева;
+            chart1.Series["температура нефти"].YValueMembers = "Temp_oil";    // скважина с обогревом;
+            chart1.Series["температура жилы"].YValueMembers = "Temp_wire";    // строим распределение температуры центральной жилы нагревателя;
 
             // Data bind to the selected data source
             chart1.DataBind();
         }
 
         /// <summary>
-        /// загружаем данные
+        /// загружаем данные в таблицу
         /// </summary>        
         private void BtnLoad_Click(object sender, EventArgs e)
         {            
@@ -58,7 +62,7 @@ namespace RibbonTabOpen
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     StreamReader sr = new StreamReader(new FileStream(ofd.FileName, FileMode.Open));
-                    CsvReader csv = new CsvReader(sr);
+                    CsvReader csv = new CsvReader(sr);                    
 
                     // считываем данные
                     dataBindingSource.DataSource = csv.GetRecords<Data>();

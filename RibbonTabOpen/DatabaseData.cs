@@ -76,17 +76,35 @@ namespace RibbonTabOpen
 
         /// <summary>
         /// Удаляем строчку из БД
-        /// </summary>
-       
+        /// </summary>       
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить данные?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
-            {
-                //string selected_id = dataGridView.CurrentRow.Cells[""].Value.ToString;
+            {                
+                // удаляем данные из таблицы dataGridView
+                int rowIndex = dataGridView.CurrentCell.RowIndex;
+                dataGridView.Rows.RemoveAt(rowIndex);
 
-                MessageBox.Show("Данные успешно удалены", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Close();                
+                // ... и удаляем данные из БД
+                // устанавливаем подключение
+                con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\Database.mdf;Integrated Security=True");
+
+                // открываем 
+                con.Open();
+
+                // отправка запроса записи полей формы
+                string sql = "DELETE FROM [Database] WHERE ID=" + 6;
+
+                cmd = new SqlCommand(sql, con);
+
+                cmd.ExecuteNonQuery();
+
+                // закрываем
+                con.Close();
+
+                // выыодим сообщение, что все хорошо
+                MessageBox.Show("Данные успешно удалены", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);                                
             }
             else if (dialogResult == DialogResult.No)
             {

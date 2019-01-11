@@ -33,6 +33,10 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -170,9 +174,9 @@
             this.tempoilDataGridViewTextBoxColumn,
             this.tempwireDataGridViewTextBoxColumn});
             this.dataGridViewData.DataSource = this.dataBindingSource;
-            this.dataGridViewData.Location = new System.Drawing.Point(0, 6);
+            this.dataGridViewData.Location = new System.Drawing.Point(36, 22);
             this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.Size = new System.Drawing.Size(740, 398);
+            this.dataGridViewData.Size = new System.Drawing.Size(645, 398);
             this.dataGridViewData.TabIndex = 0;
             // 
             // tabPage2
@@ -189,20 +193,44 @@
             // chart1
             // 
             chartArea1.AxisX.Title = "Температура, град. С";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea1.AxisY.IsReversed = true;
             chartArea1.AxisY.Title = "Глубина скважины, м";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(-2, 0);
+            this.chart1.Location = new System.Drawing.Point(3, 3);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "геотерма";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "парафины";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "ном. дебит";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "температура нефти";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "температура жилы";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(745, 414);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(737, 433);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart2";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -235,36 +263,42 @@
             this.depthDataGridViewTextBoxColumn.DataPropertyName = "Depth";
             this.depthDataGridViewTextBoxColumn.HeaderText = "Depth";
             this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
+            this.depthDataGridViewTextBoxColumn.ToolTipText = "глубина скважины";
             // 
             // termogrammaDataGridViewTextBoxColumn
             // 
             this.termogrammaDataGridViewTextBoxColumn.DataPropertyName = "Termogramma";
             this.termogrammaDataGridViewTextBoxColumn.HeaderText = "Termogramma";
             this.termogrammaDataGridViewTextBoxColumn.Name = "termogrammaDataGridViewTextBoxColumn";
+            this.termogrammaDataGridViewTextBoxColumn.ToolTipText = "температура грунта";
             // 
             // paraffinsDataGridViewTextBoxColumn
             // 
             this.paraffinsDataGridViewTextBoxColumn.DataPropertyName = "Paraffins";
             this.paraffinsDataGridViewTextBoxColumn.HeaderText = "Paraffins";
             this.paraffinsDataGridViewTextBoxColumn.Name = "paraffinsDataGridViewTextBoxColumn";
+            this.paraffinsDataGridViewTextBoxColumn.ToolTipText = "содежание парафинов";
             // 
             // nomdebitDataGridViewTextBoxColumn
             // 
             this.nomdebitDataGridViewTextBoxColumn.DataPropertyName = "Nom_debit";
             this.nomdebitDataGridViewTextBoxColumn.HeaderText = "Nom_debit";
             this.nomdebitDataGridViewTextBoxColumn.Name = "nomdebitDataGridViewTextBoxColumn";
+            this.nomdebitDataGridViewTextBoxColumn.ToolTipText = "температура скважины без обогрева";
             // 
             // tempoilDataGridViewTextBoxColumn
             // 
             this.tempoilDataGridViewTextBoxColumn.DataPropertyName = "Temp_oil";
             this.tempoilDataGridViewTextBoxColumn.HeaderText = "Temp_oil";
             this.tempoilDataGridViewTextBoxColumn.Name = "tempoilDataGridViewTextBoxColumn";
+            this.tempoilDataGridViewTextBoxColumn.ToolTipText = "температура скважины с обогревом";
             // 
             // tempwireDataGridViewTextBoxColumn
             // 
             this.tempwireDataGridViewTextBoxColumn.DataPropertyName = "Temp_wire";
             this.tempwireDataGridViewTextBoxColumn.HeaderText = "Temp_wire";
             this.tempwireDataGridViewTextBoxColumn.Name = "tempwireDataGridViewTextBoxColumn";
+            this.tempwireDataGridViewTextBoxColumn.ToolTipText = "температура жилы нагревателя";
             // 
             // dataBindingSource
             // 
@@ -314,12 +348,12 @@
         private System.Windows.Forms.DataGridView dataGridViewData;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnPlot;
+        private System.Windows.Forms.BindingSource dataBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn depthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn termogrammaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paraffinsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomdebitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempoilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempwireDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dataBindingSource;
     }
 }

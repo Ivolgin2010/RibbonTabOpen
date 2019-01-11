@@ -35,11 +35,11 @@ namespace RibbonTabOpen
                 }
                 else
                 {
-                    Thread.Sleep(100);
+                    //Thread.Sleep(100);
 
-                    Calculation();
+                    WriteCsvFile();
 
-                    backgroundWorker.ReportProgress(i);
+                    //backgroundWorker.ReportProgress(i);
                 }
             }            
         }
@@ -59,33 +59,49 @@ namespace RibbonTabOpen
             }
             else
             {
-                MessageBox.Show("Рысчет выполнен успешно!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Расчет выполнен успешно!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
         }                    
 
-        private void Calculation()
+        private void WriteCsvFile()
         {
             // сохраняем заголовки в файл 
             string FileName = @"C:\Users\i.geraskin\source\repos\CalcData.csv";
             
             using (StreamWriter streamWriter = new StreamWriter(FileName))
             {
+                
+
+
                 using (var csvWriter = new CsvWriter(streamWriter))
                 {
                     // указываем разделитель (каждый заголовок запишется в свою ячейку)
                     csvWriter.Configuration.Delimiter = ";";
 
+                    //csvWriter.WriteField(string.Empty);
+                    //csvWriter.WriteField(string.Empty);
+                    
+
                     // записываем заголовки
                     csvWriter.WriteField("Depth");
+                    csvWriter.WriteField("Termogramma");
                     csvWriter.WriteField("Paraffins");
-                    csvWriter.WriteField("Nom. debit");
+                    csvWriter.WriteField("Nom_debit");
                     csvWriter.WriteField("Temp_oil");
                     csvWriter.WriteField("Temp_wire");
+                    csvWriter.WriteField("");                    
                     csvWriter.NextRecord();
                 }
-            }           
 
+                //for (int i = 1; i <= 10; i++)
+                //{
+                //    streamWriter.WriteLine(i);
+                //}
+            }            
         }
+
+
+
     }
 }
