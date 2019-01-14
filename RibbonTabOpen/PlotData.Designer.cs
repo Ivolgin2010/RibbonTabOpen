@@ -46,8 +46,9 @@
             this.открытьШаблонОтчетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlPlot = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnNext = new System.Windows.Forms.Button();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -61,7 +62,7 @@
             this.tempwireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControlPlot.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -116,7 +117,7 @@
             // 
             this.открытьШаблонОтчетаToolStripMenuItem.Name = "открытьШаблонОтчетаToolStripMenuItem";
             this.открытьШаблонОтчетаToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
-            this.открытьШаблонОтчетаToolStripMenuItem.Text = "Открыть шаблон отчета";
+            this.открытьШаблонОтчетаToolStripMenuItem.Text = "Шаблон отчета";
             // 
             // помощьToolStripMenuItem
             // 
@@ -133,18 +134,19 @@
             this.справкаToolStripMenuItem.Text = "Справка";
             this.справкаToolStripMenuItem.Click += new System.EventHandler(this.СправкаToolStripMenuItem_Click);
             // 
-            // tabControl1
+            // tabControlPlot
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 27);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(751, 465);
-            this.tabControl1.TabIndex = 3;
+            this.tabControlPlot.Controls.Add(this.tabPage1);
+            this.tabControlPlot.Controls.Add(this.tabPage2);
+            this.tabControlPlot.Location = new System.Drawing.Point(12, 27);
+            this.tabControlPlot.Name = "tabControlPlot";
+            this.tabControlPlot.SelectedIndex = 0;
+            this.tabControlPlot.Size = new System.Drawing.Size(751, 465);
+            this.tabControlPlot.TabIndex = 3;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnNext);
             this.tabPage1.Controls.Add(this.dataGridViewData);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -153,6 +155,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Данные";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Enabled = false;
+            this.btnNext.Location = new System.Drawing.Point(558, 375);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(85, 23);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = "Следующая >";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // dataGridViewData
             // 
@@ -176,7 +189,7 @@
             this.dataGridViewData.DataSource = this.dataBindingSource;
             this.dataGridViewData.Location = new System.Drawing.Point(36, 22);
             this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.Size = new System.Drawing.Size(645, 398);
+            this.dataGridViewData.Size = new System.Drawing.Size(645, 312);
             this.dataGridViewData.TabIndex = 0;
             // 
             // tabPage2
@@ -233,7 +246,7 @@
             this.chart1.Size = new System.Drawing.Size(737, 433);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart2";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             title1.Name = "Title";
             title1.Text = "Распределение температуры по глубине скважины";
             this.chart1.Titles.Add(title1);
@@ -250,6 +263,7 @@
             // 
             // btnPlot
             // 
+            this.btnPlot.Enabled = false;
             this.btnPlot.Location = new System.Drawing.Point(174, 505);
             this.btnPlot.Name = "btnPlot";
             this.btnPlot.Size = new System.Drawing.Size(110, 23);
@@ -311,7 +325,7 @@
             this.ClientSize = new System.Drawing.Size(775, 539);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnPlot);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlPlot);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
@@ -321,7 +335,7 @@
             this.Text = "Результирующий график";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlPlot.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -341,7 +355,7 @@
         private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьШаблонОтчетаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlPlot;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
@@ -355,5 +369,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomdebitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempoilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempwireDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnNext;
     }
 }

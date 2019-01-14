@@ -31,7 +31,7 @@ namespace RibbonTabOpen
         }
 
         /// <summary>
-        /// строим график
+        /// Строим графики
         /// </summary>        
         private void BtnPlot_Click(object sender, EventArgs e)
         {            
@@ -52,7 +52,7 @@ namespace RibbonTabOpen
         }
 
         /// <summary>
-        /// загружаем данные в таблицу
+        /// Загружаем данные в таблицу
         /// </summary>        
         private void BtnLoad_Click(object sender, EventArgs e)
         {            
@@ -68,11 +68,22 @@ namespace RibbonTabOpen
                     dataBindingSource.DataSource = csv.GetRecords<Data>();
                 }
             }
+            btnNext.Enabled = true;
         }
 
         private void СправкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // вставляем сюда код
+            MessageBox.Show("Здесь будет окно со справкой", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            // переключаемся на вкладку 'График'
+            tabControlPlot.SelectedIndex = 1;
+
+            // делаем кнопку 'Построить график' доступной
+            btnPlot.Enabled = true;
         }
     }
 }
