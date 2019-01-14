@@ -54,6 +54,7 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnPlot = new System.Windows.Forms.Button();
+            this.btnClosePlot = new System.Windows.Forms.Button();
             this.depthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.termogrammaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paraffinsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +62,7 @@
             this.tempoilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tempwireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.сохранитьГрафикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControlPlot.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -101,7 +103,8 @@
             // 
             this.результатыРасчетаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.таблицаРасчетныхПараметровToolStripMenuItem,
-            this.открытьШаблонОтчетаToolStripMenuItem});
+            this.открытьШаблонОтчетаToolStripMenuItem,
+            this.сохранитьГрафикToolStripMenuItem});
             this.результатыРасчетаToolStripMenuItem.Name = "результатыРасчетаToolStripMenuItem";
             this.результатыРасчетаToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
             this.результатыРасчетаToolStripMenuItem.Text = "Результаты расчета";
@@ -272,6 +275,16 @@
             this.btnPlot.UseVisualStyleBackColor = true;
             this.btnPlot.Click += new System.EventHandler(this.BtnPlot_Click);
             // 
+            // btnClosePlot
+            // 
+            this.btnClosePlot.Location = new System.Drawing.Point(645, 505);
+            this.btnClosePlot.Name = "btnClosePlot";
+            this.btnClosePlot.Size = new System.Drawing.Size(75, 23);
+            this.btnClosePlot.TabIndex = 5;
+            this.btnClosePlot.Text = "Закрыть";
+            this.btnClosePlot.UseVisualStyleBackColor = true;
+            this.btnClosePlot.Click += new System.EventHandler(this.BtnClosePlot_Click);
+            // 
             // depthDataGridViewTextBoxColumn
             // 
             this.depthDataGridViewTextBoxColumn.DataPropertyName = "Depth";
@@ -318,11 +331,19 @@
             // 
             this.dataBindingSource.DataSource = typeof(RibbonTabOpen.Data);
             // 
+            // сохранитьГрафикToolStripMenuItem
+            // 
+            this.сохранитьГрафикToolStripMenuItem.Name = "сохранитьГрафикToolStripMenuItem";
+            this.сохранитьГрафикToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.сохранитьГрафикToolStripMenuItem.Text = "Сохранить график";
+            this.сохранитьГрафикToolStripMenuItem.Click += new System.EventHandler(this.СохранитьГрафикToolStripMenuItem_Click);
+            // 
             // PlotData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 539);
+            this.Controls.Add(this.btnClosePlot);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnPlot);
             this.Controls.Add(this.tabControlPlot);
@@ -370,5 +391,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tempoilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tempwireDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnClosePlot;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьГрафикToolStripMenuItem;
     }
 }

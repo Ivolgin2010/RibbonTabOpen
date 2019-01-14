@@ -203,12 +203,12 @@ namespace RibbonTabOpen
             sheet.Cells[1, 5] = string.Format("Temp_oil");
             sheet.Cells[1, 6] = string.Format("Temp_wire");
 
-            // сохраняем данные
+            //----------------------------- сохраняем данные --------------------------------//
             // задаем путь к файлу
             string fileTest = @"C:\Users\i.geraskin\source\repos\CalcData.csv";            
 
-            // сохраняем данные
-            workBook.SaveAs(fileTest, FileFormat: XlFileFormat.xlCSVMac);
+            // сохраняем данные (задаем путь к файлу, формат CSV, используем настройки Excel)
+            workBook.SaveAs(fileTest, FileFormat: XlFileFormat.xlCSV, Local: true);
 
             // закрываем рабочую книгу
             workBook.Close();

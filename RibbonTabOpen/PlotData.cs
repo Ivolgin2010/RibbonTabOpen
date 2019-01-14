@@ -21,7 +21,7 @@ namespace RibbonTabOpen
 
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void ТаблицаРасчетныхПараметровToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,6 +84,29 @@ namespace RibbonTabOpen
 
             // делаем кнопку 'Построить график' доступной
             btnPlot.Enabled = true;
+        }
+
+        private void BtnClosePlot_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void СохранитьГрафикToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                // код для сохранения 
+                //string path = "";
+
+                // выводим сообщение об успешном сохранении
+                MessageBox.Show("График успешно сохранен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }
