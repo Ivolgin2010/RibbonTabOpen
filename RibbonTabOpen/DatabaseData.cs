@@ -14,8 +14,7 @@ namespace RibbonTabOpen
         {
             InitializeComponent();
         }
-
-       
+        
         /// <summary>
         /// Закрываем форму
         /// </summary>       
@@ -31,23 +30,26 @@ namespace RibbonTabOpen
         /// 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            // устанавливаем подключение
-            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\Database.mdf;Integrated Security=True");
+            //// устанавливаем подключение
+            //con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\Database.mdf;Integrated Security=True");
 
-            // открываем для записи
-            con.Open();
+            //// открываем для записи
+            //con.Open();
 
-            // отправка запроса записи полей формы
-            string sql = "SELECT * FROM [Database]";
+            //// отправка запроса записи полей формы
+            //string sql = "SELECT * FROM [Database]";
 
-            cmd = new SqlCommand(sql, con);
+            //cmd = new SqlCommand(sql, con);
 
-            dr = cmd.ExecuteReader();
-            DataTabs f = new DataTabs();            
+            //dr = cmd.ExecuteReader();
+            //DataTabs f = new DataTabs();             
+
+
+
         }
 
         /// <summary>
-        ///  Открываем БД
+        ///  Открываем БД для записи значений
         /// </summary>
         
         private void BtnOpen_Click(object sender, EventArgs e)
@@ -62,28 +64,33 @@ namespace RibbonTabOpen
             string sql = "INSERT INTO [Database] (Company, Name, Number, Label) VALUES (@Company, @Name, @Number, @Label)";
 
             cmd = new SqlCommand(sql, con);
-            DataTabs f = new DataTabs();
 
-            cmd.Parameters.AddWithValue("@textBox52", value: f.GetTextBox52);
-            cmd.Parameters.AddWithValue("@textBox53", value: f.GetTextBox53);
-            cmd.Parameters.AddWithValue("@textBox54", value: f.GetNumber);
-            cmd.Parameters.AddWithValue("@textBox55", value: f.GetTextBox55);
+            DataTabs databaseData = new DataTabs();
+
+            cmd.Parameters.AddWithValue("@textBox52", value: databaseData.GetTextBox52);
+            cmd.Parameters.AddWithValue("@textBox53", value: databaseData.GetTextBox53);
+            cmd.Parameters.AddWithValue("@textBox54", value: databaseData.GetNumber);
+            cmd.Parameters.AddWithValue("@textBox55", value: databaseData.GetTextBox55);
             cmd.ExecuteNonQuery();
             con.Close();
 
+            // выводим сообщение
             MessageBox.Show("Данные успешно сохранены в БД", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>
-        /// Удаляем строчку из БД
+        /// Удаляем строчку из формы и БД
         /// </summary>       
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Вы действительно хотите удалить данные?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {                
-                // удаляем данные из таблицы dataGridView
+                //------- удаляем данные из таблицы dataGridView ---------//
+                // определяем строку
                 int rowIndex = dataGridView.CurrentCell.RowIndex;
+
+                // удаляем строку
                 dataGridView.Rows.RemoveAt(rowIndex);
 
                 // ... и удаляем данные из БД
@@ -94,7 +101,7 @@ namespace RibbonTabOpen
                 con.Open();
 
                 // отправка запроса записи полей формы
-                string sql = "DELETE FROM [Database] WHERE ID=" + 6;
+                string sql = "DELETE FROM [Database] WHERE ID=" + rowIndex;
 
                 cmd = new SqlCommand(sql, con);
 
@@ -103,7 +110,7 @@ namespace RibbonTabOpen
                 // закрываем
                 con.Close();
 
-                // выыодим сообщение, что все хорошо
+                // выводим сообщение, что все хорошо
                 MessageBox.Show("Данные успешно удалены", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);                                
             }
             else if (dialogResult == DialogResult.No)

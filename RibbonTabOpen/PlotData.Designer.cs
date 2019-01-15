@@ -44,6 +44,7 @@
             this.результатыРасчетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаРасчетныхПараметровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьШаблонОтчетаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьГрафикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlPlot = new System.Windows.Forms.TabControl();
@@ -51,10 +52,10 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnPlot = new System.Windows.Forms.Button();
             this.btnClosePlot = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.depthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.termogrammaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paraffinsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +63,6 @@
             this.tempoilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tempwireDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.сохранитьГрафикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControlPlot.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -80,7 +80,7 @@
             this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(775, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(955, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,6 +122,13 @@
             this.открытьШаблонОтчетаToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
             this.открытьШаблонОтчетаToolStripMenuItem.Text = "Шаблон отчета";
             // 
+            // сохранитьГрафикToolStripMenuItem
+            // 
+            this.сохранитьГрафикToolStripMenuItem.Name = "сохранитьГрафикToolStripMenuItem";
+            this.сохранитьГрафикToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.сохранитьГрафикToolStripMenuItem.Text = "Сохранить график";
+            this.сохранитьГрафикToolStripMenuItem.Click += new System.EventHandler(this.СохранитьГрафикToolStripMenuItem_Click);
+            // 
             // помощьToolStripMenuItem
             // 
             this.помощьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -144,7 +151,7 @@
             this.tabControlPlot.Location = new System.Drawing.Point(12, 27);
             this.tabControlPlot.Name = "tabControlPlot";
             this.tabControlPlot.SelectedIndex = 0;
-            this.tabControlPlot.Size = new System.Drawing.Size(751, 465);
+            this.tabControlPlot.Size = new System.Drawing.Size(931, 668);
             this.tabControlPlot.TabIndex = 3;
             // 
             // tabPage1
@@ -154,7 +161,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(743, 439);
+            this.tabPage1.Size = new System.Drawing.Size(923, 642);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Данные";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -162,7 +169,7 @@
             // btnNext
             // 
             this.btnNext.Enabled = false;
-            this.btnNext.Location = new System.Drawing.Point(558, 375);
+            this.btnNext.Location = new System.Drawing.Point(589, 593);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(85, 23);
             this.btnNext.TabIndex = 1;
@@ -192,7 +199,7 @@
             this.dataGridViewData.DataSource = this.dataBindingSource;
             this.dataGridViewData.Location = new System.Drawing.Point(36, 22);
             this.dataGridViewData.Name = "dataGridViewData";
-            this.dataGridViewData.Size = new System.Drawing.Size(645, 312);
+            this.dataGridViewData.Size = new System.Drawing.Size(834, 544);
             this.dataGridViewData.TabIndex = 0;
             // 
             // tabPage2
@@ -201,62 +208,14 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(743, 439);
+            this.tabPage2.Size = new System.Drawing.Size(923, 642);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "График";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // chart1
-            // 
-            chartArea1.AxisX.Title = "Температура, град. С";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea1.AxisY.IsReversed = true;
-            chartArea1.AxisY.Title = "Глубина скважины, м";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "геотерма";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "парафины";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "ном. дебит";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "температура нефти";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "температура жилы";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(737, 433);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart2";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title1.Name = "Title";
-            title1.Text = "Распределение температуры по глубине скважины";
-            this.chart1.Titles.Add(title1);
-            // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(41, 505);
+            this.btnLoad.Location = new System.Drawing.Point(78, 701);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(113, 23);
             this.btnLoad.TabIndex = 1;
@@ -267,7 +226,7 @@
             // btnPlot
             // 
             this.btnPlot.Enabled = false;
-            this.btnPlot.Location = new System.Drawing.Point(174, 505);
+            this.btnPlot.Location = new System.Drawing.Point(232, 701);
             this.btnPlot.Name = "btnPlot";
             this.btnPlot.Size = new System.Drawing.Size(110, 23);
             this.btnPlot.TabIndex = 4;
@@ -277,13 +236,92 @@
             // 
             // btnClosePlot
             // 
-            this.btnClosePlot.Location = new System.Drawing.Point(645, 505);
+            this.btnClosePlot.Location = new System.Drawing.Point(791, 701);
             this.btnClosePlot.Name = "btnClosePlot";
             this.btnClosePlot.Size = new System.Drawing.Size(75, 23);
             this.btnClosePlot.TabIndex = 5;
             this.btnClosePlot.Text = "Закрыть";
             this.btnClosePlot.UseVisualStyleBackColor = true;
             this.btnClosePlot.Click += new System.EventHandler(this.BtnClosePlot_Click);
+            // 
+            // chart1
+            // 
+            this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
+            this.chart1.BorderlineWidth = 2;
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AxisX.MajorTickMark.Interval = 0D;
+            chartArea1.AxisX.MinorTickMark.Enabled = true;
+            chartArea1.AxisX.MinorTickMark.Interval = double.NaN;
+            chartArea1.AxisX.MinorTickMark.IntervalOffset = double.NaN;
+            chartArea1.AxisX.MinorTickMark.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet;
+            chartArea1.AxisX.MinorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.InsideArea;
+            chartArea1.AxisX.ScaleBreakStyle.Enabled = true;
+            chartArea1.AxisX.ScaleView.Zoomable = false;
+            chartArea1.AxisX.Title = "Температура, град. С";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX2.Title = "ghhfh";
+            chartArea1.AxisY.IsReversed = true;
+            chartArea1.AxisY.MajorTickMark.Interval = 0D;
+            chartArea1.AxisY.MinorTickMark.Enabled = true;
+            chartArea1.AxisY.MinorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.InsideArea;
+            chartArea1.AxisY.Title = "Глубина скважины, м";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisY2.Title = "sfghfgj";
+            chartArea1.IsSameFontSizeForAllAxes = true;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.BackColor = System.Drawing.SystemColors.Control;
+            legend1.BackSecondaryColor = System.Drawing.Color.White;
+            legend1.BorderColor = System.Drawing.Color.White;
+            legend1.DockedToChartArea = "ChartArea1";
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            legend1.IsTextAutoFit = false;
+            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(3, 3);
+            this.chart1.Name = "chart1";
+            this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "геотерма";
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "парафины";
+            series3.BorderWidth = 3;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "ном. дебит";
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "температура нефти";
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "температура жилы";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(917, 636);
+            this.chart1.TabIndex = 3;
+            this.chart1.Text = "chart2";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title1.Name = "Title";
+            title1.Text = "Распределение температуры по глубине скважины";
+            this.chart1.Titles.Add(title1);
             // 
             // depthDataGridViewTextBoxColumn
             // 
@@ -331,18 +369,11 @@
             // 
             this.dataBindingSource.DataSource = typeof(RibbonTabOpen.Data);
             // 
-            // сохранитьГрафикToolStripMenuItem
-            // 
-            this.сохранитьГрафикToolStripMenuItem.Name = "сохранитьГрафикToolStripMenuItem";
-            this.сохранитьГрафикToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
-            this.сохранитьГрафикToolStripMenuItem.Text = "Сохранить график";
-            this.сохранитьГрафикToolStripMenuItem.Click += new System.EventHandler(this.СохранитьГрафикToolStripMenuItem_Click);
-            // 
             // PlotData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 539);
+            this.ClientSize = new System.Drawing.Size(955, 732);
             this.Controls.Add(this.btnClosePlot);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnPlot);
@@ -353,6 +384,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PlotData";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Результирующий график";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -379,7 +411,6 @@
         private System.Windows.Forms.TabControl tabControlPlot;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataGridView dataGridViewData;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnPlot;
@@ -393,5 +424,6 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnClosePlot;
         private System.Windows.Forms.ToolStripMenuItem сохранитьГрафикToolStripMenuItem;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

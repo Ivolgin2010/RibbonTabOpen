@@ -196,9 +196,7 @@ namespace RibbonTabOpen
             cmd.Parameters.AddWithValue("@Number", value: textBox54.Text);
             cmd.Parameters.AddWithValue("@Label", value: textBox55.Text);
             cmd.ExecuteNonQuery();
-            con.Close();
-
-            //MessageBox.Show("Данные успешно сохранены в БД", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            con.Close();            
         }
 
         /// <summary>
@@ -475,10 +473,7 @@ namespace RibbonTabOpen
             sw.WriteLine(div3.ToString());
 
             /* Перед выходом из приложения не забываем закрывать файл */
-            sw.Close();
-
-            // выводим сообщение об успешности сохранения данных
-           // MessageBox.Show("Данные успешно сохранены!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            sw.Close();            
         }
 
         private void Button14_Click(object sender, EventArgs e)

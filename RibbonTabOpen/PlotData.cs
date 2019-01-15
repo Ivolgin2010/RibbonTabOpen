@@ -37,11 +37,13 @@ namespace RibbonTabOpen
         {            
             // Set chart data source
             chart1.DataSource = dataGridViewData.DataSource;
-
-            // Set series members names for the X and Y values
             
-            chart1.Series["геотерма"].XValueMember = "Depth";                 // строим глубина скважины с шагом 1 м;
+            // Set series members names for the X and Y values
+
+            chart1.Series["геотерма"].XValueMember = "Depth";                 // строим глубина скважины с шагом 1 м;            
+
             chart1.Series["геотерма"].YValueMembers = "Termogramma";          // строим термограмму скважины;
+
             chart1.Series["парафины"].YValueMembers = "Paraffins";            // строим распределение парафинов;
             chart1.Series["ном. дебит"].YValueMembers = "Nom_debit";          // скважина без обогрева;
             chart1.Series["температура нефти"].YValueMembers = "Temp_oil";    // скважина с обогревом;
@@ -66,9 +68,12 @@ namespace RibbonTabOpen
 
                     // считываем данные
                     dataBindingSource.DataSource = csv.GetRecords<Data>();
+
+                    // закрываем процесс чтения
+                    sr.Close();
                 }
             }
-            btnNext.Enabled = true;
+            btnNext.Enabled = true;            
         }
 
         private void СправкаToolStripMenuItem_Click(object sender, EventArgs e)
