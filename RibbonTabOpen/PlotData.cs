@@ -1,14 +1,9 @@
 ﻿using CsvHelper;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace RibbonTabOpen
 {
@@ -37,14 +32,26 @@ namespace RibbonTabOpen
         {            
             // Set chart data source
             chart1.DataSource = dataGridViewData.DataSource;
-            
+            chart1.Series[0].Points.Clear();
+
+            //---------------- программная настройка свойств графика -----------------------//
+
+            // задаем интервал по главным осям           
+            chart1.ChartAreas[0].AxisX.Interval = 500;            
+            chart1.ChartAreas[0].AxisY.Interval = 10;
+
+            // задаем интервал по доп. осям            
+            chart1.ChartAreas[0].AxisX.MajorTickMark.Interval = 100;
+            chart1.ChartAreas[0].AxisY.MajorTickMark.Interval = 2;
+
+            //chart1.ChartAreas[0].AxisX.ScaleView.Zoom(0, 30);            
+
+            //-----------------------------------------------------------------------------//
+
             // Set series members names for the X and Y values
-
-            chart1.Series["геотерма"].XValueMember = "Depth";                 // строим глубина скважины с шагом 1 м;            
-
+            chart1.Series["геотерма"].XValueMember = "Depth";                //строим глубина скважины с шагом 1 м;
             chart1.Series["геотерма"].YValueMembers = "Termogramma";          // строим термограмму скважины;
-
-            chart1.Series["парафины"].YValueMembers = "Paraffins";            // строим распределение парафинов;
+            chart1.Series["парафины"].YValueMembers = "Paraffins";            // строим распределение парафинов;            
             chart1.Series["ном. дебит"].YValueMembers = "Nom_debit";          // скважина без обогрева;
             chart1.Series["температура нефти"].YValueMembers = "Temp_oil";    // скважина с обогревом;
             chart1.Series["температура жилы"].YValueMembers = "Temp_wire";    // строим распределение температуры центральной жилы нагревателя;
@@ -93,25 +100,15 @@ namespace RibbonTabOpen
 
         private void BtnClosePlot_Click(object sender, EventArgs e)
         {
+            // закрываем вкладку
             Close();
         }
 
         private void СохранитьГрафикToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                // код для сохранения 
-                //string path = "";
-
-                // выводим сообщение об успешном сохранении
-                MessageBox.Show("График успешно сохранен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            // выводим сообщение
+            MessageBox.Show("Изображение сохранено успешно", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);                       
         }
     }
 }

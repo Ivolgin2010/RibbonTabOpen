@@ -2710,7 +2710,7 @@ namespace RibbonTabOpen
             if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
 
             {
-
+                // do nothing
             }
 
             else

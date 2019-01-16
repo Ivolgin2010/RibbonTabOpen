@@ -228,7 +228,7 @@
             // 
             this.ribbonOrbRecentItem1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonOrbRecentItem1.Image")));
             this.ribbonOrbRecentItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonOrbRecentItem1.SmallImage")));
-            this.ribbonOrbRecentItem1.Text = "История сохранения";
+            this.ribbonOrbRecentItem1.Text = "Ранее открытые файлы";
             this.ribbonOrbRecentItem1.Click += new System.EventHandler(this.Click_History);
             // 
             // ribbonButton12

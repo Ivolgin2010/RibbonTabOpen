@@ -52,10 +52,10 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnPlot = new System.Windows.Forms.Button();
             this.btnClosePlot = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.depthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.termogrammaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paraffinsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -213,60 +213,29 @@
             this.tabPage2.Text = "График";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(78, 701);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(113, 23);
-            this.btnLoad.TabIndex = 1;
-            this.btnLoad.Text = "Загрузить данные";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
-            // 
-            // btnPlot
-            // 
-            this.btnPlot.Enabled = false;
-            this.btnPlot.Location = new System.Drawing.Point(232, 701);
-            this.btnPlot.Name = "btnPlot";
-            this.btnPlot.Size = new System.Drawing.Size(110, 23);
-            this.btnPlot.TabIndex = 4;
-            this.btnPlot.Text = "Построить график";
-            this.btnPlot.UseVisualStyleBackColor = true;
-            this.btnPlot.Click += new System.EventHandler(this.BtnPlot_Click);
-            // 
-            // btnClosePlot
-            // 
-            this.btnClosePlot.Location = new System.Drawing.Point(791, 701);
-            this.btnClosePlot.Name = "btnClosePlot";
-            this.btnClosePlot.Size = new System.Drawing.Size(75, 23);
-            this.btnClosePlot.TabIndex = 5;
-            this.btnClosePlot.Text = "Закрыть";
-            this.btnClosePlot.UseVisualStyleBackColor = true;
-            this.btnClosePlot.Click += new System.EventHandler(this.BtnClosePlot_Click);
-            // 
             // chart1
             // 
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDotDot;
             this.chart1.BorderlineWidth = 2;
             chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AxisX.MajorGrid.Interval = 0D;
+            chartArea1.AxisX.MajorGrid.IntervalOffset = 0D;
+            chartArea1.AxisX.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisX.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
             chartArea1.AxisX.MajorTickMark.Interval = 0D;
-            chartArea1.AxisX.MinorTickMark.Enabled = true;
-            chartArea1.AxisX.MinorTickMark.Interval = double.NaN;
-            chartArea1.AxisX.MinorTickMark.IntervalOffset = double.NaN;
-            chartArea1.AxisX.MinorTickMark.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.NotSet;
             chartArea1.AxisX.MinorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.InsideArea;
             chartArea1.AxisX.ScaleBreakStyle.Enabled = true;
-            chartArea1.AxisX.ScaleView.Zoomable = false;
-            chartArea1.AxisX.Title = "Температура, град. С";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX.Title = "Глубина скважины, м";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.DarkRed;
             chartArea1.AxisX2.Title = "ghhfh";
-            chartArea1.AxisY.IsReversed = true;
             chartArea1.AxisY.MajorTickMark.Interval = 0D;
-            chartArea1.AxisY.MinorTickMark.Enabled = true;
             chartArea1.AxisY.MinorTickMark.TickMarkStyle = System.Windows.Forms.DataVisualization.Charting.TickMarkStyle.InsideArea;
-            chartArea1.AxisY.Title = "Глубина скважины, м";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisY.Title = "Температура, °С";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.DarkRed;
             chartArea1.AxisY2.Title = "sfghfgj";
+            chartArea1.CursorX.AutoScroll = false;
             chartArea1.IsSameFontSizeForAllAxes = true;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
@@ -283,8 +252,9 @@
             legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(3, 3);
+            this.chart1.Margin = new System.Windows.Forms.Padding(0);
             this.chart1.Name = "chart1";
-            this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -317,11 +287,43 @@
             this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(917, 636);
             this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart2";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chart1.Text = "График";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title1.ForeColor = System.Drawing.Color.DarkRed;
             title1.Name = "Title";
             title1.Text = "Распределение температуры по глубине скважины";
             this.chart1.Titles.Add(title1);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(78, 701);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(113, 23);
+            this.btnLoad.TabIndex = 1;
+            this.btnLoad.Text = "Загрузить данные";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
+            // 
+            // btnPlot
+            // 
+            this.btnPlot.Enabled = false;
+            this.btnPlot.Location = new System.Drawing.Point(232, 701);
+            this.btnPlot.Name = "btnPlot";
+            this.btnPlot.Size = new System.Drawing.Size(110, 23);
+            this.btnPlot.TabIndex = 4;
+            this.btnPlot.Text = "Построить график";
+            this.btnPlot.UseVisualStyleBackColor = true;
+            this.btnPlot.Click += new System.EventHandler(this.BtnPlot_Click);
+            // 
+            // btnClosePlot
+            // 
+            this.btnClosePlot.Location = new System.Drawing.Point(791, 701);
+            this.btnClosePlot.Name = "btnClosePlot";
+            this.btnClosePlot.Size = new System.Drawing.Size(75, 23);
+            this.btnClosePlot.TabIndex = 5;
+            this.btnClosePlot.Text = "Закрыть";
+            this.btnClosePlot.UseVisualStyleBackColor = true;
+            this.btnClosePlot.Click += new System.EventHandler(this.BtnClosePlot_Click);
             // 
             // depthDataGridViewTextBoxColumn
             // 
