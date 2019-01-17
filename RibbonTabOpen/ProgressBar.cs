@@ -1,9 +1,9 @@
 ﻿using CsvHelper;
-using Microsoft.Office.Interop.Excel;
 using System;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 
 
@@ -36,8 +36,7 @@ namespace RibbonTabOpen
             else
             {
                 //Thread.Sleep(100);
-
-                //WriteCsvFile();
+                
                 WriteCsvFilebyInterop();
 
                 //backgroundWorker.ReportProgress(i);
@@ -84,36 +83,36 @@ namespace RibbonTabOpen
         /// Сохраняем данные при помощи CsvHelper
         /// </summary>
 
-        private void WriteCsvFile()
-        {
-            // сохраняем заголовки в файл 
-            string FileName = @"C:\Users\i.geraskin\source\repos\CalcData.csv";
-            
-            using (StreamWriter streamWriter = new StreamWriter(FileName))
-            {
+        //private void WriteCsvFile()
+        //{
+        //    // сохраняем заголовки в файл 
+        //    string FileName = "CalcData.csv";        //    
 
-                using (var csvWriter = new CsvWriter(streamWriter))
-                {
-                    // указываем разделитель (каждый заголовок запишется в свою ячейку)
-                    csvWriter.Configuration.Delimiter = ";";
+        //    using (StreamWriter streamWriter = new StreamWriter(FileName))
+        //    {
 
-                    //csvWriter.WriteField(string.Empty);
-                    //csvWriter.WriteField(string.Empty);
+        //        using (var csvWriter = new CsvWriter(streamWriter))
+        //        {
+        //            // указываем разделитель (каждый заголовок запишется в свою ячейку)
+        //            csvWriter.Configuration.Delimiter = ";";
+
+        //            //csvWriter.WriteField(string.Empty);
+        //            //csvWriter.WriteField(string.Empty);
                     
 
-                    // записываем заголовки
-                    csvWriter.WriteField("Depth");
-                    csvWriter.WriteField("Termogramma");
-                    csvWriter.WriteField("Paraffins");
-                    csvWriter.WriteField("Nom_debit");
-                    csvWriter.WriteField("Temp_oil");
-                    csvWriter.WriteField("Temp_wire");
-                    csvWriter.WriteField("");                    
-                    csvWriter.NextRecord();
-                }
+        //            // записываем заголовки
+        //            csvWriter.WriteField("Depth");
+        //            csvWriter.WriteField("Termogramma");
+        //            csvWriter.WriteField("Paraffins");
+        //            csvWriter.WriteField("Nom_debit");
+        //            csvWriter.WriteField("Temp_oil");
+        //            csvWriter.WriteField("Temp_wire");
+        //            csvWriter.WriteField("");                    
+        //            csvWriter.NextRecord();
+        //        }
                 
-            }            
-        }
+        //    }            
+        //}
 
         /// <summary>
         /// Сохраняем данные в CSV файл при помощи библиотеки Microsoft.Office.Interopt
@@ -205,7 +204,12 @@ namespace RibbonTabOpen
 
             //----------------------------- сохраняем данные --------------------------------//
             // задаем путь к файлу
-            string fileTest = @"C:\Users\i.geraskin\source\repos\CalcData.csv";            
+
+            //Directory.CreateDirectory("Resources\\Results");
+            //string fileTest = @"C:\Users\i.geraskin\Documents\GitHub\RibbonTabOpen\RibbonTabOpen\Resources\CalcData.csv";
+            string fileTest = @"C:\Program Files(x86)\OKB Gamma\Setup\CalcData.csv";
+            
+            
 
             // сохраняем данные (задаем путь к файлу, формат CSV, используем настройки Excel)
             workBook.SaveAs(fileTest, FileFormat: XlFileFormat.xlCSV, Local: true);

@@ -252,7 +252,6 @@
             legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Margin = new System.Windows.Forms.Padding(0);
             this.chart1.Name = "chart1";
             this.chart1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             series1.BorderWidth = 3;
@@ -286,7 +285,7 @@
             this.chart1.Series.Add(series4);
             this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(917, 636);
-            this.chart1.TabIndex = 3;
+            this.chart1.TabIndex = 1;
             this.chart1.Text = "График";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             title1.ForeColor = System.Drawing.Color.DarkRed;
